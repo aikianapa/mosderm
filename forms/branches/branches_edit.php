@@ -17,6 +17,16 @@
 	  <label class="col-sm-3 form-control-label">Наименование</label>
 	   <div class="col-sm-9"><input type="text" class="form-control" name="name" placeholder="Наименование"></div>
 	</div>
+    
+	<div class="form-group row">
+	  <label class="col-sm-3 form-control-label">Тип</label>
+	   <div class="col-sm-9">
+           <select class="form-control" name="type" placeholder="Тип">
+               <option value="branch">Филиал</option>
+               <option value="office">Отделение</option>
+           </select>
+        </div>
+	</div>
 
 <div class="nav-active-primary">
 <ul class="nav nav-tabs" role="tablist">
@@ -31,11 +41,19 @@
 <br />
 <div id="{{_form}}Descr" class="tab-pane fade show active" role="tabpanel">
 
-
+	<div class="form-group row">
+	  <label class="col-sm-3 form-control-label">Номер на карте</label>
+	   <div class="col-sm-9"><input type="text" class="form-control" name="mapnum" placeholder="Номер на карте"></div>
+	</div>
 
 	<div class="form-group row">
 	  <label class="col-sm-3 form-control-label">Адрес филиала</label>
 	   <div class="col-sm-9"><input type="text" class="form-control" name="address" placeholder="Адрес филиала"></div>
+	</div>
+    
+	<div class="form-group row">
+	  <label class="col-sm-3 form-control-label">Время работы</label>
+	   <div class="col-sm-9"><input type="text" class="form-control" name="worktime" placeholder="Время работы"></div>
 	</div>
     
 	<div class="form-group row">

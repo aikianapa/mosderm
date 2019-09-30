@@ -1,4 +1,4 @@
-    <section id="banner" data-name="Слайдшоу">
+    <section id="banner" data-name="Слайдшоу главной страницы">
         <div class="container">
             <div class="banner__slider" data-wb-role="foreach" data-wb-from="data.content.slide" data-wb-tpl="false" data-wb-hide="wb">
                 <div class="banner__item">

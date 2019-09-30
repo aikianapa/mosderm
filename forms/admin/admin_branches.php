@@ -74,6 +74,13 @@
         </div>
     </div>
 
+    <div class="form-group row v-slidersimple">
+        <div class="col-12">
+                <input type="hidden" class="form-control" name="images" data-wb-path="/uploads/{{_post._form}}/{{_post._item}}" data-wb-role="uploader" multiple>
+        </div>
+    </div>
+
+
     <div class="form-group row v-progress">
 	    <label class="col-sm-3 form-control-label">Текст</label>
         <div class="col-sm-9">

@@ -1601,11 +1601,11 @@ padding-bottom: 20px;
     color: #619bff;
 }
 
-#consultation .slick-dots li button::before{
+.slidersimple .slick-dots li button::before{
     display: none;
 }
 
-#consultation .consultation__slider .slick-dots li.slick-active button{
+.slidersimple .consultation__slider .slick-dots li.slick-active button{
     background: #619bff;
     border: none;
 }
