@@ -14,27 +14,9 @@
 <input type="hidden" class="form-control" name="id">
 
 
-<div class="nav-active-primary">
-<ul class="nav nav-tabs" role="tablist">
-	<li class="nav-item"><a class="nav-link active" href="#{{_GET[form]}}Descr" data-toggle="tab">{{_LANG[descr]}}</a></li>
-	<li class="nav-item"><a class="nav-link" href="#{{_GET[form]}}Property" data-toggle="tab" >{{_LANG[prop]}}</a></li>
-	<li class="nav-item"><a class="nav-link" href="#{{_GET[form]}}Images" data-toggle="tab">{{_LANG[images]}}</a></li>
-</ul>
-</div>
-<div class="tab-content  p-a m-b-md">
-<br />
-<div id="{{_GET[form]}}Descr" class="tab-pane fade show active" role="tabpanel">
-
 	<div class="form-group row">
 	  <label class="col-sm-3 form-control-label">{{_LANG[name]}}</label>
 	   <div class="col-sm-9"><input type="text" class="form-control" name="name" placeholder="{{_LANG[name]}}" required></div>
-	</div>
-	<div data-wb-role="tree" name="lang" data-wb-dict="content"></div>
-	<div class="form-group row">
-	  <label class="col-sm-3 form-control-label">{{_LANG[articul]}}</label>
-	   <div class="col-sm-3"><input type="text" class="form-control" name="articul" placeholder="{{_LANG[articul]}}"></div>
-		<label class="col-sm-3 form-control-label">{{_LANG[visible]}}</label>
-		<div class="col-sm-3"><label class="switch switch-success"><input type="checkbox" name="active"><span></span></label></div>
 	</div>
 
 	<div class="form-group row">
@@ -45,37 +27,31 @@
 		   </select>
 		</div>
 	</div>
+    
+	<div class="form-group row">
+	  <label class="col-sm-3 form-control-label">{{_LANG[articul]}}</label>
+	   <div class="col-sm-3"><input type="text" class="form-control" name="articul" placeholder="{{_LANG[articul]}}"></div>
+		<label class="col-sm-3 form-control-label">{{_LANG[visible]}}</label>
+		<div class="col-sm-3"><label class="switch switch-success"><input type="checkbox" name="active"><span></span></label></div>
+	</div>
 
 	<div class="form-group row">
 	  <label class="col-sm-3 form-control-label">{{_LANG[price]}}</label>
 	   <div class="col-sm-3"><input type="number" class="form-control" name="price" min="1" placeholder="{{_LANG[price]}}"></div>
-	  <label class="col-sm-3 form-control-label">{{_LANG[price_sale]}}</label>
-	   <div class="col-sm-3"><input type="number" class="form-control" name="sale" min="1" placeholder="{{_LANG[price_sale]}}"></div>
-
+    </div>
+    
+    <div class="form-group row">
+        <div class="col-12">
+	       <label class="form-control-label">Филиалы оказывающие услугу</label>
+		   <select class="form-control select2" name="branches[]" multiple
+                   data-wb-role="foreach" data-wb-form="branches" data-wb-where='active="on"' data-wb-sort="name">
+				<option value="{{id}}">{{name}}</option>
+		   </select>
+		</div>
 	</div>
-
-	<div class="form-group row">
-	  <label class="col-sm-3 form-control-label">META {{_LANG[descr]}}</label>
-	   <div class="col-sm-9"><input type="text" class="form-control" name="meta_description" placeholder="META {{_LANG[descr]}}"></div>
-	</div>
-
-	<div class="form-group row">
-	  <label class="col-sm-3 form-control-label">META {{_LANG[keywords]}}</label>
-	   <div class="col-sm-9"><input type="text" class="form-control input-tags" name="meta_keywords" placeholder="META {{_LANG[keywords]}}"></div>
-	</div>
-
-
-</div>
-
-<div id="{{_GET[form]}}Property" class="tab-pane fade" role="tabpanel">
-	<div data-wb-role="multiinput" name="property">
-			<div class="col-sm-5"><input type="text" class="form-control" name="prop" placeholder="{{_LANG[property]}}"></div>
-			<div class="col-sm-7"><input type="text" class="form-control" name="value" placeholder="{{_LANG[value]}}"></div>
-	</div>
-
-</div>
-<div id="{{_GET[form]}}Images" class="tab-pane fade" data-wb-role="include" src="uploader" role="tabpanel"></div>
-</div>
+    
+    <div data-wb-role="tree" name="blocks" data-wb-dict="page_content"></div>
+    
 </form>
 
 

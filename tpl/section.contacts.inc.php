@@ -108,9 +108,9 @@
                                 <th>Онлайн-запись</th>
                             </tr>
                         </thead>
-                        <tbody data-wb-role="foreach" data-wb-form="branches" data-wb-tpl="false" data-wb-size="false" data-wb-where='type = "office"' data-wb-hide="wb">
+                        <tbody data-wb-role="foreach" data-wb-form="branches" data-wb-tpl="false" data-wb-size="false" data-wb-where='type = "office"'  data-wb-hide="wb">
                             <tr>
-                                <th>{{_ndx}}</th>
+                                <td>{{_ndx}}</td>
                                 <td>{{name}}</td>
                                 <td><nobr>{{phone}}</nobr></td>
                                 <td>{{address}}<br>
@@ -141,7 +141,7 @@
                         </thead>
                         <tbody data-wb-role="foreach" data-wb-form="branches" data-wb-tpl="false" data-wb-size="false" data-wb-where='type = "branch"' data-wb-hide="wb">
                             <tr>
-                                <th>{{_ndx}}</th>
+                                <td>{{_ndx}}</td>
                                 <td>{{name}}</td>
                                 <td><nobr>{{phone}}</nobr></td>
                                 <td>{{address}}<br>
@@ -1907,3 +1907,4 @@
     })();
 
 </script>
+<link rel="stylesheet" href="css/stacktable.css" data-wb-append="head">

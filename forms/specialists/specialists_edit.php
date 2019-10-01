@@ -13,7 +13,7 @@
                     <input type="hidden" class="form-control" name="id">
                     <div class="row">
                         <div class="col-sm-4">
-                            <div class="form-group row v-all">
+                            <div class="form-group row">
                                 <label class="col-sm-6 form-control-label">Отображать</label>
                                 <div class="col-sm-6"><label class="switch switch-success"><input type="checkbox" value="on" name="active"><span></span></label></div>
                             </div>
@@ -21,12 +21,12 @@
                         </div>
                         <div class="col">
                             
-                            <div class="form-group row v-attention">
+                            <div class="form-group row">
                                 <label class="col-sm-3 form-control-label">Полное имя</label>
                                 <div class="col-sm-9"><input type="text" placeholder="Ф.И.О." name="name" class="form-control" required></div>
                             </div>
                             
-                            <div class="form-group row v-attention">
+                            <div class="form-group row">
                                 <label class="col-sm-3 form-control-label">Должность</label>
                                 <div class="col-sm-9"><input type="text" placeholder="Должность" name="spec" class="form-control" required></div>
                             </div>
@@ -36,14 +36,18 @@
                               <div class="col-sm-9"><textarea class="w-100" placeholder="Короткое описание" rows="auto" name="descr"></textarea></div>
                             </div>
                             
-                            <div class="form-group row v-all">
+                            <div class="form-group row">
                                 <label class="col-sm-3 form-control-label">Филиал</label>
                                 <div class="col-sm-9">
                                 <select class="form-control select-type" name="branch" placeholder="Филиал" data-wb-role="foreach" data-wb-tpl="false" data-wb-form="branches" data-wb-where='active = "on"'>
                                     <option value="{{id}}">{{name}}</option>
                                 </select>
                                 </div>
-                            </div>                          
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-3 form-control-label">В виджет</label>
+                                <div class="col-sm-2"><label class="switch switch-success"><input type="checkbox" name="widget"><span></span></label></div>
+                            </div>
                         </div>
                     
                     </div>

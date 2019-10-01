@@ -1,4 +1,5 @@
 <?php
+wbRouterAdd("/products/(:any)/(:any)",'/controller:form/form:products/mode:show/item:$1/tpl:service.php');
 
 function products_vitrina() {
 	$tree=wbTreeRead("products_category");

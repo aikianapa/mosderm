@@ -8,7 +8,7 @@
                 data-wb-children="false" 
                 data-wb-hide="wb">
             <div class="activity__block">
-                <a href="#" class="activity__item">
+                <a href="/products/{{id}}/{{wbFurlGenerate({{name}})}}" class="activity__item">
                     <img src="img/paid/paid-3.jpg" alt="">
                     <div class="activity__text">
                         <p>{{name}}</p>

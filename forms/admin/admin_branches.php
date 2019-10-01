@@ -170,8 +170,8 @@
 	</div>
 
 <script>
-$(".modal.tree-edit form .select-type").off("change");
-$(".modal.tree-edit form .select-type").on("change",function(){
+$(".modal.tree-edit form .select-type, .modal#tree_edit form .select-type").off("change");
+$(".modal.tree-edit form .select-type, .modal#tree_edit form .select-type").on("change",function(){
     var form = $(this).parents("form");
     var type = str_replace("section.","",$(this).val());
     var name = $(this).find("option:selected").text();
@@ -203,5 +203,5 @@ $(".modal.tree-edit form .select-type").on("change",function(){
     });
     wb_delegates();
 });
-$(".modal.tree-edit form .select-type").trigger("change");
+$(".modal.tree-edit form .select-type, .modal#tree_edit form .select-type").trigger("change");
 </script>

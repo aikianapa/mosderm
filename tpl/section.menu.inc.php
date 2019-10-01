@@ -19,9 +19,13 @@
                                 <b>
                                     <a href="/{{data.prop.item}}">{{name}}</a>
                                 </b>
-                                <ul data-wb-role="tree" data-wb-item="structure" data-wb-branch="dropmenu-right->{{id}}" data-wb-parent="false" data-wb-where='"{{count(children)}}" > "0"'  data-wb-children="false">
+                                <ul data-wb-role="tree" data-wb-item="structure" data-wb-branch="dropmenu-right->{{id}}" data-wb-parent="false" data-wb-where='"{{count(children)}}" > "0" AND id != "services-paid"'  data-wb-children="false">
                                     <li><a href="/{{data.prop.item}}">{{name}}</a></li>
                                 </ul>
+                                <ul data-wb-role="tree" data-wb-item="products_category" data-wb-branch="paid" data-wb-parent="false" data-wb-where='id = "services-paid"'  data-wb-children="false">
+                                    <li><a href="/products/{{id}}/{{wbFurlGenerate({{name}})}}">{{name}}</a></li>
+                                </ul>
+                                
                             </div>
                         </div>
 
