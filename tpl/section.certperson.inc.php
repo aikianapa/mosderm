@@ -4,13 +4,10 @@
             <div class="our-porgress__item flex" data-wb-where='"{{data.content.type}}"="person" AND "{{data.content.visible}}"="on"'>
                 <div class="our-porgress__img-box">
             
-                    
                 <a data-fancybox="" href="/uploads/tree/certificates/{{data.content.image[0].img}}" data-fancybox="gallery">
                     <img data-wb-role="thumbnail" data-wb-size="290;191;bkg" contain="false" src="/uploads/tree/certificates/{{data.content.image[0].img}}" data-wb-noimg="/tpl/img/our-progress/diplom.jpg" alt="{{name}}">
                 </a>
 
-                    
-                    
                 </div>
                 <div class="our-porgress__text-box">
                     <strong>{{name}}</strong>

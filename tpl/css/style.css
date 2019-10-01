@@ -538,6 +538,7 @@ section{
     font-weight: normal;
     transition: all ease .3s;
     border: 1px solid transparent;
+    cursor: pointer;
 }
 
 .vacancy__btn > a, .for-doctors__img > img{

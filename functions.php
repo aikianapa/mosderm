@@ -31,6 +31,18 @@ function wbAfterInit() {
 	}
 }
 
+function getChunkComments($list=[]) {
+    return array_chunk($list,2);
+}
+
+function stdDate($date) {
+    return date("d.m.Y",strtotime($date));
+}
+
+function stdDateTime($date) {
+    return date("d.m.Y H:i",strtotime($date));
+}
+
 
 function sectionName($section) {
     $name = "";

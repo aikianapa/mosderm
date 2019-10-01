@@ -10,7 +10,7 @@
                 <input type="text" class="input-control" placeholder="Введите ваш запрос">
                 <a href="#"><img src="img/header/magnifying-glass.png"/></a></div>
             <div class="request__number flex">
-                <p>+7 (499) 558-58-28</p>
+                <p>{{_sett.phone}}</p>
                 <a href="/direction" class="btn">
                     Онлайн запись
                 </a>

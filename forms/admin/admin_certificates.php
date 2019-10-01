@@ -23,7 +23,7 @@
         <div class="form-group row v-person">
                 <label class="col-12 form-control-label">Выдан специалисту</label>
                 <div class="col-12">
-                    <select class="form-control select2" data-wb-role="foreach" data-wb-form="specialists">
+                    <select class="form-control select2" data-wb-role="foreach" name="specialist" data-wb-form="specialists">
                         <option value="{{id}}">{{name}}</option>
                     </select>
                 </div>
@@ -31,7 +31,7 @@
         <div class="form-group row v-common">
                 <label class="col-12 form-control-label">Выдан отделению</label>
                 <div class="col-12">
-                    <select class="form-control select2" data-wb-role="foreach" data-wb-form="branches">
+                    <select class="form-control select2" data-wb-role="foreach" name="branch" data-wb-form="branches">
                         <option value="{{id}}">{{name}}</option>
                     </select>
                 </div>

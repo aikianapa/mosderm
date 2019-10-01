@@ -1,5 +1,9 @@
 <?php
-function specialists__list() {
+
+wbRouterAdd("/specialists/(:any)/(:any)",'/controller:form/form:specialists/mode:show/item:$1/tpl:specialist.php');
+wbRouterAdd("/specialists/(:any)",'/controller:form/form:specialists/mode:show/item:404');
+
+function specialists_list() {
 	$out=wbGetForm($_ENV["route"]["form"],$_ENV["route"]["mode"]);
 	$flag=""; $where=""; $Item=array();
 	if (isset($_ENV["route"]["item"]) && $_ENV["route"]["item"]>"") {
@@ -12,5 +16,12 @@ function specialists__list() {
 	$out->wbSetData($Item);
 	//if ($flag=="category") {$out->replaceWith($out->find("#{$_ENV["route"]["form"]}List .list")->html());}
     return $out;
+}
+
+function specialistsAfterItemRead($Item) {
+    if ($_ENV["route"]["mode"]==="show") {
+        $Item["header"]=$Item["name"];
+    }
+    return $Item;
 }
 ?>
