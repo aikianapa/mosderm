@@ -60,9 +60,9 @@
         <div class="question__border" data-wb-role="formdata" data-wb-json='{"name":"","text":"","phone":"","email"}:""'>
             <form class="question__wrap flex" id="Comment" data-wb-form="comments" data-wb-item="_new">
                 <div class="question__right">
-                    <input type="text" placeholder="Ваше Имя" name="name" required>
-                    <input type="phone" placeholder="Телефон" name="phone" required>
-                    <input type="email" placeholder="E-mail" name="email" required>
+                    <input type="text" placeholder="Ваше Имя" name="name" required value="">
+                    <input type="phone" placeholder="Телефон" name="phone" required value="">
+                    <input type="email" placeholder="E-mail" name="email" required value="">
                     <input type="hidden" name="spec" value="{{_item}}">
                 </div>
                 <div class="question__left">

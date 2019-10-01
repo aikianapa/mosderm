@@ -74,6 +74,19 @@
         </div>
     </div>
 
+    <div class="form-group row v-cols-imgtext">
+        <div class="col-12">
+        <div data-wb-role="multiinput" name="slide">
+            <div class="col-sm-4">
+                <input type="hidden" class="form-control" name="image" data-wb-path="/uploads/{{_post._form}}/{{_post._item}}" data-wb-role="uploader" >
+            </div>
+            <div class="col-sm-8">
+                <textarea data-wb-role="module" src="summernote" class="summernote" name="text"></textarea>
+            </div>
+        </div>
+        </div>
+    </div>
+
     <div class="form-group row v-slidersimple">
         <div class="col-12">
                 <input type="hidden" class="form-control" name="images" data-wb-path="/uploads/{{_post._form}}/{{_post._item}}" data-wb-role="uploader" multiple>
