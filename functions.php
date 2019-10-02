@@ -31,6 +31,14 @@ function wbAfterInit() {
 	}
 }
 
+function ajax_getBranchForm() {
+    $out = wbGetForm("admin","branches");
+    $content = "";
+    $visible = $out->find("script[type='text/template']")->find(".form-group.v-all, .form-group[class*='v-'].v-{$_ENV["route"]["params"]["type"]}");
+    foreach($visible as $v) $content .= $v->outerHtml();
+    return $content;
+}
+
 function getChunkComments($list=[]) {
     return array_chunk($list,2);
 }

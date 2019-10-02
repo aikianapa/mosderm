@@ -87,6 +87,21 @@
         </div>
     </div>
 
+
+    <div class="form-group row v-widget-downloadpdf">
+        <div class="col-12">
+        <div data-wb-role="multiinput" name="files">
+            <div class="col-sm-2">
+                <input type="hidden" class="form-control" name="image" data-wb-path="/uploads/{{_post._form}}/{{_post._item}}" data-wb-role="uploader" data-wb-ext="pdf" >
+            </div>
+            <div class="col-sm-10">
+                <input type="text" name="name" class="form-control" placeholder="Описание файла" >
+            </div>
+        </div>
+        </div>
+    </div>
+
+
     <div class="form-group row v-slidersimple">
         <div class="col-12">
                 <input type="hidden" class="form-control" name="images" data-wb-path="/uploads/{{_post._form}}/{{_post._item}}" data-wb-role="uploader" multiple>
