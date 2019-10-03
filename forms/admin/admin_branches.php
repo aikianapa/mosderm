@@ -104,6 +104,18 @@
             </div>
     </div>
 
+    <div class="form-group row v-union-blocks">
+            <label class="col-12 form-control-label">Левый блок (белый фон)</label>
+            <div class="col-12">
+                <textarea data-wb-role="module" src="summernote" class="summernote" name="left"></textarea>
+            </div>
+            <label class="col-12 form-control-label">Правый блок (серый фон)</label>
+            <div class="col-12">
+                <textarea data-wb-role="module" src="summernote" class="summernote" name="right"></textarea>
+            </div>
+
+    </div>
+
     <div class="form-group row v-widget-downloadpdf">
         <div class="col-12">
         <div data-wb-role="multiinput" name="files">

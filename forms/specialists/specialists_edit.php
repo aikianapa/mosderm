@@ -10,6 +10,15 @@
             <div class="modal-body">
                 <form id="{{_GET[form]}}EditForm" data-wb-form="{{_GET[form]}}" data-wb-item="{{_GET[item]}}" class="form-horizontal" role="form">
 
+<div class="nav-active-primary">
+<ul class="nav nav-tabs" role="tablist">
+	<li class="nav-item"><a class="nav-link active" href="#{{_form}}Descr" data-toggle="tab">Основное</a></li>
+	<li class="nav-item"><a class="nav-link" href="#{{_form}}Union" data-toggle="tab">Профсоюз</a></li>
+</ul>
+</div>
+<div class="tab-content  p-a m-b-md">
+    <br />
+    <div id="{{_form}}Descr" class="tab-pane fade show active" role="tabpanel">    
                     <input type="hidden" class="form-control" name="id">
                     <div class="row">
                         <div class="col-sm-4">
@@ -44,6 +53,7 @@
                                 </select>
                                 </div>
                             </div>
+                            
                             <div class="form-group row">
                                 <label class="col-sm-3 form-control-label">В виджет</label>
                                 <div class="col-sm-2"><label class="switch switch-success"><input type="checkbox" name="widget"><span></span></label></div>
@@ -51,11 +61,29 @@
                         </div>
                     
                     </div>
-                    
                     <div class="form-group row v-textonly">
                         <div class="col-12"><textarea data-wb-role="module" src="summernote" class="summernote" name="text"></textarea></div>
                     </div>
-
+    </div>
+    <div id="{{_form}}Union" class="tab-pane fade" role="tabpanel">
+        <div class="form-group row">
+            <label class="col-sm-3 form-control-label">В профсоюзе</label>
+            <div class="col-sm-2"><label class="switch switch-success"><input type="checkbox" name="union"><span></span></label></div>
+            <label class="col-sm-3 form-control-label">Виджет профсоюза</label>
+            <div class="col-sm-2"><label class="switch switch-success"><input type="checkbox" name="uniwidget"><span></span></label></div>
+        </div>
+        
+        <div class="form-group row">
+            <label class="col-sm-3 form-control-label">Телефон</label>
+            <div class="col-sm-9"><input type="phone" data-wb-mask="+7 (999) 999-99-99" placeholder="Телефон" name="phone" class="form-control"></div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-3 form-control-label">Часы приема по личным вопросам</label>
+            <div class="col-sm-9"><input type="text" placeholder="Часы приема по личным вопросам" name="worktime" class="form-control"></div>
+        </div>
+    
+    </div>
+</div>
 
                 </form>
             </div>
