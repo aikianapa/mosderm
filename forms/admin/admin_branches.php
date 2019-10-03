@@ -87,6 +87,22 @@
         </div>
     </div>
 
+    <div class="form-group row v-textimglink">
+            <div class="col-sm-4">
+                <div class="row">
+                    <div class="col-12">
+                        <input type="text" name="header" class="form-control" placeholder="Заголовок над текстом">
+                    </div>
+                    <div class="col-12">
+                        <input type="text" name="link" class="form-control" placeholder="Ссылка">
+                    </div>
+                </div>
+                <input type="hidden" class="form-control" name="image" data-wb-path="/uploads/{{_post._form}}/{{_post._item}}" data-wb-role="uploader" >
+            </div>
+            <div class="col-sm-8">
+                <textarea data-wb-role="module" src="summernote" class="summernote" name="text"></textarea>
+            </div>
+    </div>
 
     <div class="form-group row v-widget-downloadpdf">
         <div class="col-12">
