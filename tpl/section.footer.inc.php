@@ -32,7 +32,7 @@
                     <p>@2019 Государственное бюджетное учреждение здравоохранения г. Москвы «Московский научно-практический центр дерматовенерологии и косметологии Департамента здравоохранения г. Москвы»</p>
                 </div>
                 <div class="bottom-menu__ic">
-                    <a class="underline" href="confidentiality.html">Политика конфиденциальности</a>
+                    <a class="underline" href="/confidentiality">Политика конфиденциальности</a>
                     <a href="http://idees.ru/ "><p>Создавайте сайты у нас <img src="img/main/id-logo.png"/></a>
                 </div>
             </div>
