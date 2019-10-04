@@ -4,14 +4,15 @@
             <div class="question__border">
                 <div class="question__wrap flex">
                     <div class="question__right">
-                        <input type="text" placeholder="Ваше Имя">
-                        <input type="text" placeholder="Телефон">
-                        <input type="text" placeholder="E-mail">
+                        <input type="text" name="_subject" value="Вопрос с сайта" style="display:none;">
+                        <input type="text" name="fullname" placeholder="Ваше Имя">
+                        <input type="phone" data-mask="+7 (999) 999-99-99" name="phone" placeholder="Телефон">
+                        <input type="email" name="email" placeholder="E-mail">
                     </div>
                     <div class="question__left">
                         <textarea placeholder="Коментарий"></textarea>
                         <div class="question__bottom flex">
-                            <a href="#" data-wb-ajax="/ajax/mail/" class="btn" style="cursor:pointer;">Отправить</a>
+                            <a href="javascript:void(0)" data-wb-ajax="/ajax/mail/" class="btn" style="cursor:pointer;">Отправить</a>
                             <p>Нажимая кнопку «Отправить», Вы соглашаетесь с обработкой персональных данных</p>
                         </div>
                     </div>
