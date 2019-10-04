@@ -47,8 +47,13 @@
 	</div>
 
 	<div class="form-group row">
-	  <label class="col-sm-3 form-control-label">Адрес филиала</label>
-	   <div class="col-sm-9"><input type="text" class="form-control" name="address" placeholder="Адрес филиала"></div>
+	  <label class="col-sm-3 form-control-label">Адрес филиала / Округ</label>
+	   <div class="col-sm-7"><input type="text" class="form-control" name="address" placeholder="Адрес филиала"></div>
+        <div class="col-sm-2">
+		   <select class="form-control select2" name="area" placeholder="Округ" data-wb-role="tree" data-wb-item="area" required>
+				<option value="{{id}}">{{name}}</option>
+		   </select>
+        </div>
 	</div>
     
 	<div class="form-group row">
@@ -100,6 +105,7 @@
 <div id="{{_form}}Schedule" class="tab-pane fade" role="tabpanel">
 <p>Расписание приёма граждан по личным вопросам</p>
     <div data-wb-role="multiinput" name="schedule">
+        <input type="hidden">
         <div class="col-4">
             <label class="form-control-label">Адрес приёмной</label>
             <textarea class="summernote" name="address" data-height="90" 
@@ -107,7 +113,7 @@
         </div>
         <div class="col-4">
             <label class="form-control-label">Время приёма</label>
-            <textarea class="summernote" name="address" data-height="90" 
+            <textarea class="summernote" name="worktime" data-height="90" 
             data-toolbar="[['style', ['bold', 'italic', 'codeview', 'clear']]]"></textarea>
         </div>
         <div class="col mt-4">
