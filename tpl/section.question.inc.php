@@ -1,13 +1,13 @@
     <section id="{{_var.qid}}" data-name="Виджет - Задать вопрос">
         <div class="container">
             <h2>Задайте ваш вопрос</h2>
-            <div class="question__border">
+            <form class="question__border">
                 <div class="question__wrap flex">
                     <div class="question__right">
                         <input type="text" name="_subject" value="Вопрос с сайта" style="display:none;">
-                        <input type="text" name="fullname" placeholder="Ваше Имя">
-                        <input type="phone" data-mask="+7 (999) 999-99-99" name="phone" placeholder="Телефон">
-                        <input type="email" name="email" placeholder="E-mail">
+                        <input type="text" name="fullname" placeholder="Ваше Имя" required>
+                        <input type="phone" data-mask="+7 (999) 999-99-99" name="phone" placeholder="Телефон" required>
+                        <input type="email" name="email" placeholder="E-mail" required>
                     </div>
                     <div class="question__left">
                         <textarea placeholder="Коментарий"></textarea>
@@ -19,7 +19,7 @@
 
                 </div>
 
-            </div>
+            </form>
 
 
         </div>

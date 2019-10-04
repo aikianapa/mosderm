@@ -5,9 +5,9 @@
             <div class="question__wrap flex">
                 <div class="question__right">
                     <input type="text" name="_subject" value="Резюме с сайта" style="display:none;">
-                    <input type="text" name="fullname" placeholder="Ваше Имя">
-                    <input type="phone" data-mask="+7 (999) 999-99-99" name="phone" placeholder="Телефон">
-                    <input type="email" name="email" placeholder="E-mail">
+                    <input type="text" name="fullname" placeholder="Ваше Имя" required>
+                    <input type="phone" data-mask="+7 (999) 999-99-99" name="phone" placeholder="Телефон"  required>
+                    <input type="email" name="email" placeholder="E-mail"  required>
                 </div>
                 <div class="question__left">
                     <textarea placeholder="Сопроводительное письмо"></textarea>
