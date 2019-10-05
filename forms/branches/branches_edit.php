@@ -57,17 +57,22 @@
 	</div>
     
 	<div class="form-group row">
-	  <label class="col-sm-3 form-control-label">Время работы</label>
-	   <div class="col-sm-9"><input type="text" class="form-control" name="worktime" placeholder="Время работы"></div>
-	</div>
-    
-	<div class="form-group row">
 	  <label class="col-sm-3 form-control-label">Как добраться</label>
 	   <div class="col-sm-9">
            <textarea class="w-100" rows="auto" name="howto" placeholder="Как добраться"></textarea>
         </div>
 	</div>
 
+	<div class="form-group row">
+	  <label class="col-sm-3 form-control-label">Время работы</label>
+	   <div class="col-sm-9"><input type="text" class="form-control" name="worktime" placeholder="Время работы"></div>
+	</div>
+    
+	<div class="form-group row">
+	  <label class="col-sm-3 form-control-label">Скрипт записи</label>
+	   <div class="col-sm-9"><input type="text" class="form-control" name="script" placeholder="Скрипт записи"></div>
+	</div>
+    
 	<div class="form-group row">
 	  <label class="col-sm-3 form-control-label">Заведующий</label>
 	   <div class="col-sm-9">

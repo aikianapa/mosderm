@@ -1,4 +1,7 @@
 <?php
+wbRouterAdd("/branches/(:any)/order",'/controller:form/form:branches/mode:order/item:$1');
+wbRouterAdd("/branches/(:any)/(:any)",'/controller:form/form:branches/mode:show/item:$1');
+
 function branches_list() {
 	$out=wbGetForm($_ENV["route"]["form"],$_ENV["route"]["mode"]);
 	$flag=""; $where=""; $Item=array();
@@ -12,5 +15,10 @@ function branches_list() {
 	$out->wbSetData($Item);
 	//if ($flag=="category") {$out->replaceWith($out->find("#{$_ENV["route"]["form"]}List .list")->html());}
     return $out;
+}
+
+function branchesAfterItemRead($Item) {
+    $Item["header"]=$Item["name"];
+    return $Item;
 }
 ?>
