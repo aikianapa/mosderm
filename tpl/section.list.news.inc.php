@@ -1,6 +1,6 @@
 <section id="news-desc" class="sm-section" data-name="Список новостей">
     <div class="container">
-        <div class="news__wrap flex" data-wb-role="foreach" data-wb-form="news" data-wb-size="6" data-wb-sort="date:d" data-wb-where='active = "on"'>
+        <div class="news__wrap flex" data-wb-role="foreach" data-wb-form="news" data-wb-size="6" data-wb-sort="date:d" data-wb-where='active = "on" AND ("{{_post.search_name}}" > "" AND "{{_post.search_name}}" LIKE "{{header}}")'>
             <div class="news-block flex">
                 <div class="news-block__img">
                     <img data-wb-role="thumbnail" data-wb-size="251;169;src" src="/uploads/news/{{id}}/{{image[0].img}}" data-wb-noimg="/tpl/img/news/news-img.png" alt="{{header}}">

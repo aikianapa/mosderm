@@ -87,6 +87,21 @@
         </div>
     </div>
 
+    <div class="form-group row v-textbtn">
+                    <label class="col-3 form-control-label">Надпись на кнопке</label>
+                    <div class="col-9">
+                        <input type="text" name="header" class="form-control" placeholder="Надпись на кнопке">
+                    </div>
+                    <label class="col-3 form-control-label">Ссылка</label>
+                    <div class="col-9">
+                        <input type="text" name="link" class="form-control" placeholder="Ссылка">
+                    </div>
+
+            <div class="col-sm-12">
+                <textarea data-wb-role="module" src="summernote" class="summernote" name="text"></textarea>
+            </div>
+    </div>
+
     <div class="form-group row v-textimglink">
             <div class="col-sm-4">
                 <div class="row">

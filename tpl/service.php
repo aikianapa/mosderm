@@ -24,7 +24,7 @@
     </div>
 </section>
 
-<section class="sm-section-bottom sm-section container slidersimple" data-wb-where="{{count({{data.images}})}} > 0">
+<section class="sm-section-bottom sm-section container slidersimple" data-wb-where='"{{count({{data.images}})}}" > "0"'>
     <div class="container">
     <div class="consultation__slider" data-wb-role="foreach" data-wb-from="data.images" data-wb-where='visible="on"' data-wb-tpl="false" data-wb-hide="wb">
         <div class="consultation__slider-item"><img data-wb-role="thumbnail" data-wb-size="1110;424;src" src="/uploads/tree/products_category/{{_item}}/{{img}}" data-wb-hide="wb" /></div>
