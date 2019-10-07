@@ -1,8 +1,8 @@
     <div class="form-group row v-all">
         <label class="col-sm-3 form-control-label">Тип блока</label>
         <div class="col-sm-9">
-        <select class="form-control select-type" name="type" placeholder="Тип блока" data-wb-role="foreach" data-wb-tpl="false" data-wb-from="_ENV[templates]" data-wb-where='_value LIKE ".inc.php"'>
-            <option value="{{_value}}">{{sectionName({{_value}})}}</option>
+        <select class="form-control select-type" name="type" placeholder="Тип блока" data-wb-role="foreach" data-wb-tpl="false" data-wb-from="_ENV[templates]">
+            <option value="{{_value}}"  data-wb-where='"{{_value}}" LIKE ".inc.php"'>{{sectionName({{_value}})}}</option>
         </select>
         </div>
     </div>

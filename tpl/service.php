@@ -68,12 +68,69 @@
                 </table>
             </div>
         </div>
-
-
-
-
+        <script data-wb-append="body">
+            $("#price-list table input[type=checkbox]").off("change");
+            $("#price-list table input[type=checkbox]").on("change",function(){
+                $("#srvlist").html("");
+                $("#srvinp").html("");
+                var total = 0;
+                var ndx = 0;
+                $("#price-list table input[type=checkbox]").each(function(){
+                    if ($(this).prop("checked")) {
+                        var name = $(this).parents("tr").find("td:eq(0)").text();
+                        var price = $(this).parents("tr").find("td:eq(1)").text();
+                        total += price*1;
+                        ndx++;
+                        $("#question-2 #srvlist").append("<p>"+name+"<strong> "+price+" руб.</strong></p>");
+                        $("#question-2 #srvinp").append('<input type="hidden" name="order[]">');
+                        $("#question-2 #srvinp input:last-child")
+                            .attr("value",name+' = ' +price+ ' руб.')
+                            .attr("placeholder",ndx)
+                    }
+                });
+                $("#question-2 .total").html(total);
+                $("#question-2 input[name=total]").val(total+ ' руб.');
+            });
+        
+        </script>
     </div>
 </section>
+    
+<section id="question-2" class="consultation__question sm-section-bottom">
+    <div class="container">
+        <form>
+        <h2>Записаться на прием</h2>
+        <div class="order">
+            <p><strong>Вы записываетесь на услуги:</strong></p>
+            <div id="srvlist">
+            </div>
+            <strong>Итого: <span class="total">0</span> руб.</strong>
+        </div>
+        <div class="question__border">
+            <div class="question__wrap flex">
+                <div class="question__right">
+                    <input type="hidden" name="_subject" value="Запись на консуьтацию">
+                    <input type="text" name="fullname" placeholder="Ваше Имя">
+                    <input type="phone" name="phone" data-wb-mask="+7 (999) 999-99-99" placeholder="Телефон">
+                    <input type="email" name="email" placeholder="E-mail">
+                    <div id="srvinp"></div>
+                    <input type="hidden" name="total" placeholder="Итого">
+                </div>
+                <div class="question__left">
+                    <textarea placeholder="Коментарий" name="text"></textarea>
+                    <div class="question__bottom flex">
+                        <a href=":javascript:void(0);" data-wb-ajax="/ajax/mail/" class="btn">Отправить</a>
+                        <p>Нажимая кнопку «Отправить», Вы соглашаетесь с обработкой персональных данных</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        </form>
+    </div>
+</section>
+
 
 <meta data-wb-role="include" src="template" data-wb-name="section.widget.spec.inc.php" >
     
