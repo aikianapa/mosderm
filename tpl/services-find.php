@@ -54,9 +54,9 @@
 
     </div>
 </section>
-
+<link rel="stylesheet" href="css/stacktable.css" data-wb-append="head">
+<script src="js/stacktable.js"  data-wb-append="body"></script>
 <meta data-wb-role="include" src="template" data-wb-name="section.question.inc.php">
-<meta data-wb-role="include" src="template" data-wb-name="section.footer.inc.php">
 <meta data-wb-role="include" src="template" data-wb-name="section.footer.inc.php">
 <meta data-wb-role="include" src="template" data-wb-name="scripts.inc.php">
 </body>
