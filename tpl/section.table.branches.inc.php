@@ -1,6 +1,7 @@
-<meta data-wb-role="variable" var="where" value='AND active = "on"'>
-<meta data-wb-role="variable" var="where" data-wb-where='"{{_post.branch_name}}" > ""' value='{{_var.where}} AND name LIKE "{{_post.branch_name}}"'>
 <div class="container">
+    <meta data-name="Таблица филиалов и контакты">
+    <meta data-wb-role="variable" var="where" value='AND active = "on"'>
+    <meta data-wb-role="variable" var="where" data-wb-where='"{{_post.branch_name}}" > ""' value='{{_var.where}} AND name LIKE "{{_post.branch_name}}"'>
     <div class="schedule-table__item">
                 <h3>Отделы центра</h3>
                 <div class="stacktable-table">
@@ -23,7 +24,7 @@
                                     <nobr>{{phone}}</nobr>
                                 </td>
                                 <td>{{address}}<br>
-                                    <a href="#">Показать на карте</a></td>
+                                    <a href="/branches/{{id}}/{{wbFurlGenerate({{name}})}}/">Показать на карте</a></td>
                                 <td>{{worktime}}
                                 </td>
                                 <td><a href="/branches/{{id}}/order/">Онлайн-запись</a></td>
@@ -56,7 +57,7 @@
                                     <nobr>{{phone}}</nobr>
                                 </td>
                                 <td>{{address}}<br>
-                                    <a href="#">Показать на карте</a></td>
+                                    <a href="/branches/{{id}}/{{wbFurlGenerate({{name}})}}/">Показать на карте</a></td>
                                 <td>{{worktime}}
                                 </td>
                                 <td><a href="/branches/{{id}}/order/">Онлайн-запись</a></td>
@@ -66,5 +67,4 @@
                     </table>
                 </div>
             </div>
-<meta data-name="Таблица филиалов и контакты">
 </div>
