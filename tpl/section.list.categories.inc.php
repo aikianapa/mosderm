@@ -1,5 +1,8 @@
-<section id="paid-desc" class="sm-section-bottom" data-name="Список категорий услуг">
+<section id="paid-desc" class="sm-section sm-section-bottom" data-name="Список категорий услуг">
     <div class="container">
+        
+        <meta data-wb-role="include" src="template" data-wb-name="section.form.find.services.php">
+        
         <div class="activity__wrap flex" 
                 data-wb-role="tree" 
                 data-wb-item="products_category" 

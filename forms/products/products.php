@@ -1,4 +1,5 @@
 <?php
+wbRouterAdd("/services-find",'/controller:form/form:products/mode:find/item:find');
 wbRouterAdd("/products/(:any)/(:any)",'/controller:form/form:products/mode:show/item:$1/tpl:service.php');
 
 function products_vitrina() {
@@ -20,5 +21,21 @@ function productsAfterItemRead($Item) {
 	}
 
 	return $Item;
+}
+
+function  products_find() {
+    $where='active = "on"';
+    if (isset($_POST["service_name"]) AND $_POST["service_name"]>"") $where.= 'AND name LIKE "'.$_POST["service_name"].'"';
+    if (isset($_POST["category_id"]) AND $_POST["category_id"]>"") $where.= 'AND category LIKE "'.$_POST["category_id"].'"';
+    if (isset($_POST["branch_id"]) AND $_POST["branch_id"]>"") $where.= 'AND branches LIKE "'.$_POST["branch_id"].'"';
+    $out=wbGetTpl("services-find.php");
+    $Item=[
+        "header"=> $out->find("#paid-desc")->attr("data-name"),
+        "where" => $where
+    ];
+    $out->wbSetData($Item);
+    $out->find("#question")->attr("id","question-2");
+    $out->find(".specialists__forms > h3")->remove();
+    return $out;
 }
 ?>

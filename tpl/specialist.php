@@ -33,7 +33,7 @@
     <section id="spec-reviews">
         <div class="container">
             <h2>Отзывы</h2>
-            <div class="spec-reviews__slider" data-wb-role="foreach" data-wb-form="comments" data-wb-call="getChunkComments" data-wb-where1111='active="on"'>
+            <div class="spec-reviews__slider" data-wb-role="foreach" data-wb-form="comments" data-wb-call="getChunkComments" data-wb-where='active="on"'>
                 <div class="spec-reviews__slider-item">
                     <div class="spec-reviews__slider-wrap flex" data-wb-role="foreach" data-wb-from="_value" data-wb-sort="date:d" data-wb-tpl="false" data-wb-step="2">
                         <div class="spec-reviews__item">
