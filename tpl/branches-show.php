@@ -57,7 +57,7 @@
                     </div>
                 </div>
                 <div class="record__img">
-                    <img data-wb-role="thumbnail" data-wb-size="261;381;src" src="{{_image}}" data-wb-noimg="img/record/record-img.png"/>
+                    <img data-wb-role="thumbnail" data-wb-size="261;381;src" src="{{_image}}" data-wb-noimg="/tpl/img/record/record-img.png"/>
                 </div>
 
             </div>

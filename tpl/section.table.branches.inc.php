@@ -1,3 +1,5 @@
+<meta data-wb-role="variable" var="where" value='AND active = "on"'>
+<meta data-wb-role="variable" var="where" data-wb-where='"{{_post.branch_name}}" > ""' value='{{_var.where}} AND name LIKE "{{_post.branch_name}}"'>
 <div class="container">
     <div class="schedule-table__item">
                 <h3>Отделы центра</h3>
@@ -13,7 +15,7 @@
                                 <th>Онлайн-запись</th>
                             </tr>
                         </thead>
-                        <tbody data-wb-role="foreach" data-wb-form="branches" data-wb-tpl="false" data-wb-size="false" data-wb-where='type = "office"' data-wb-hide="wb">
+                        <tbody data-wb-role="foreach" data-wb-form="branches" data-wb-tpl="false" data-wb-size="false" data-wb-where='type = "office" {{_var.where}}' data-wb-hide="wb">
                             <tr>
                                 <td>{{_ndx}}</td>
                                 <td>{{name}}</td>
@@ -46,7 +48,7 @@
                                 <th>Онлайн-запись</th>
                             </tr>
                         </thead>
-                        <tbody data-wb-role="foreach" data-wb-form="branches" data-wb-tpl="false" data-wb-size="false" data-wb-where='type = "branch"' data-wb-hide="wb">
+                        <tbody data-wb-role="foreach" data-wb-form="branches" data-wb-tpl="false" data-wb-size="false" data-wb-where='type = "branch" {{_var.where}}' data-wb-hide="wb">
                             <tr>
                                 <td>{{_ndx}}</td>
                                 <td>{{name}}</td>

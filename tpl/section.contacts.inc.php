@@ -1,27 +1,25 @@
 <section id="contacts" class="sm-section sm-section-bottom" data-name="Контакты">
     <div class="container">
-        <div class="branches__forms inner-pages-forms">
-            <input type="text" class="input-control" placeholder="Поиск по названию филиала">
+        <form class="branches__forms inner-pages-forms" method="post">
+            <input type="text" name="branch_name" class="name input-control" placeholder="Поиск по названию филиала">
             <div class="branches__forms-bottom flex">
                 <div class="branches__forms-list">
-                    <input type="text" class="input-control" placeholder="Выбор из списка">
+                    <input type="text" class="select input-control" placeholder="Выбор из списка">
                     <div class="spec-dropdown">
-                        <ul>
-                            <li><a href="#">Пункт</a></li>
-                            <li><a href="#">Пункт</a></li>
-                            <li><a href="#">Пункт</a></li>
-                            <li><a href="#">Пункт</a></li>
-                            <li><a href="#">Пункт</a></li>
-                            <li><a href="#">Пункт</a></li>
+                        <ul data-wb-role="foreach" data-wb-form="branches" data-wb-tpl="false" data-wb-where='active="on"' data-wb-sort="name" data-wb-hide="wb">
+                            <li>
+                                <a href="/branches/{{id}}/{{wbFurlGenerate({{name}})}}/">{{name}}</a>
+                            </li>
                         </ul>
                     </div>
 
                 </div>
                 <div class="branches__forms-btn">
-                    <a href="#">Применить</a>
+                    <a href="javascript:$('.branches__forms').submit();">Применить</a>
                 </div>
             </div>
-        </div>
+        </form>
+
         <div class="contacts-btn contact-us-btn flex">
             <a href="#">
                 <div class="contacts-btn__item flex svg-color active map-btn">
@@ -93,8 +91,7 @@
 
     <div id="ip-table" class="sm-section sm-section-bottom">
         <div class="container">
-
-<meta data-wb-role="include" src="template" data-wb-name="section.table.branches.inc.php">
+            <meta data-wb-role="include" src="template" data-wb-name="section.table.branches.inc.php">
         </div>
     </div>
     <div id="contacts-map" class="sm-section sm-section-bottom">
@@ -104,7 +101,9 @@
                     <div class="map-container" class="panzoom">
                         <div id="map" class="panzoom">
                             <img src="img/map.jpg">
-<div data-wb-role="foreach" data-wb-form="branches">
+<meta data-wb-role="variable" var="where" value='active = "on"'>
+<meta data-wb-role="variable" var="where" data-wb-where='"{{_post.branch_name}}" > ""' value='{{_var.where}} AND name LIKE "{{_post.branch_name}}"'>
+<div data-wb-role="foreach" data-wb-form="branches" data-wb-tpl="false" data-wb-hide="wb" data-wb-where='{{_var.where}}'>
                             <div class="baloon-group-1 baloon-group" data-wb-where='mapnum = "1"'>
                                 <div class="svg-map baloon-off">
                                     <svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 150 160" width="30" height="30">
@@ -1844,6 +1843,14 @@
             maxScale: 2,
             contain: 'automatic'
         }).panzoom('zoom');
+        
+        
+        $(".schedule-table__item tbody").each(function(){
+           if ($(this).find("tr").length == 0) {
+               $(this).parents(".schedule-table__item").remove();
+           }
+        });
+        
     })();
 
 </script>

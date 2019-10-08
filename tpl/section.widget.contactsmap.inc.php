@@ -3,7 +3,7 @@
                     <div class="map-container" class="panzoom">
                         <div id="map" class="panzoom">
                             <img src="img/map.jpg">
-<div data-wb-role="foreach" data-wb-form="branches">
+<div data-wb-role="foreach" data-wb-form="branches" data-wb-tpl="false" data-wb-hide="wb">
                             <div class="baloon-group-1 baloon-group" data-wb-where='mapnum = "1"'>
                                 <div class="svg-map baloon-off">
                                     <svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 150 160" width="30" height="30">
