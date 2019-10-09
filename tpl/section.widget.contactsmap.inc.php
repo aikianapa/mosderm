@@ -4,7 +4,7 @@
                         <div id="map" class="panzoom">
                             <img src="img/map.jpg">
 <div data-wb-role="foreach" data-wb-form="branches" data-wb-tpl="false" data-wb-hide="wb">
-                            <div class="baloon-group-1 baloon-group" data-wb-where='mapnum = "1"'>
+                            <div class="baloon-group-1 baloon-group" data-wb-where='mapnum = "1"' idx="{{id}}">
                                 <div class="svg-map baloon-off">
                                     <svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 150 160" width="30" height="30">
                                         <defs>
@@ -103,7 +103,7 @@
                                 </div>
                             </div>
 
-                            <div class="baloon-group-2 baloon-group" data-wb-where='mapnum = "2"'>
+                            <div class="baloon-group-2 baloon-group" data-wb-where='mapnum = "2"' idx="{{id}}">
                                 <div class="svg-map baloon-off">
                                     <svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 150 160" width="30" height="30">
                                         <defs>
@@ -202,7 +202,7 @@
                                 </div>
                             </div>
 
-                            <div class="baloon-group-3 baloon-group" data-wb-where='mapnum = "3"'>
+                            <div class="baloon-group-3 baloon-group" data-wb-where='mapnum = "3"' idx="{{id}}">
                                 <div class="svg-map baloon-off">
                                     <svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 150 160" width="30" height="30">
                                         <defs>
@@ -301,7 +301,7 @@
                                 </div>
                             </div>
 
-                            <div class="baloon-group-4 baloon-group" data-wb-where='mapnum = "4"'>
+                            <div class="baloon-group-4 baloon-group" data-wb-where='mapnum = "4"' idx="{{id}}">
                                 <div class="svg-map baloon-off">
                                     <svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 150 160" width="30" height="30">
                                         <defs>
@@ -400,7 +400,7 @@
                                 </div>
                             </div>
 
-                            <div class="baloon-group-8 baloon-group" data-wb-where='mapnum = "5"'>
+                            <div class="baloon-group-8 baloon-group" data-wb-where='mapnum = "5"' idx="{{id}}">
                                 <div class="svg-map baloon-off">
                                     <svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 150 160" width="30" height="30">
                                         <defs>
@@ -600,7 +600,7 @@
                                 </div>
                             </div>
 
-                            <div class="baloon-group-6 baloon-group" data-wb-where='mapnum = "7"'>
+                            <div class="baloon-group-6 baloon-group" data-wb-where='mapnum = "7"' idx="{{id}}">
                                 <div class="svg-map baloon-off">
                                     <svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 150 160" width="30" height="30">
                                         <defs>
@@ -700,7 +700,7 @@
                                 </div>
                             </div>
 
-                            <div class="baloon-group-5 baloon-group" data-wb-where='mapnum = "8"'>
+                            <div class="baloon-group-5 baloon-group" data-wb-where='mapnum = "8"' idx="{{id}}">
                                 <div class="svg-map baloon-off">
                                     <svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 150 160" width="30" height="30">
                                         <defs>
@@ -800,7 +800,7 @@
                                 </div>
                             </div>
 
-                            <div class="baloon-group-9 baloon-group" data-wb-where='mapnum = "9"'>
+                            <div class="baloon-group-9 baloon-group" data-wb-where='mapnum = "9"' idx="{{id}}">
                                 <div class="svg-map baloon-off">
                                     <svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 150 160" width="30" height="30">
                                         <defs>
@@ -899,7 +899,7 @@
                                 </div>
                             </div>
 
-                            <div class="baloon-group-10 baloon-group" data-wb-where='mapnum = "10"'>
+                            <div class="baloon-group-10 baloon-group" data-wb-where='mapnum = "10"' idx="{{id}}">
                                 <div class="svg-map baloon-off">
                                     <svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 150 160" width="30" height="30">
                                         <defs>
@@ -1000,7 +1000,7 @@
                                 </div>
                             </div>
 
-                            <div class="baloon-group-11 baloon-group" data-wb-where='mapnum = "11"'>
+                            <div class="baloon-group-11 baloon-group" data-wb-where='mapnum = "11"' idx="{{id}}">
                                 <div class="svg-map baloon-off">
                                     <svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 150 160" width="30" height="30">
                                         <defs>
@@ -1101,7 +1101,7 @@
                                 </div>
                             </div>
 
-                            <div class="baloon-group-12 baloon-group" data-wb-where='mapnum = "12"'>
+                            <div class="baloon-group-12 baloon-group" data-wb-where='mapnum = "12"' idx="{{id}}">
                                 <div class="svg-map baloon-off">
                                     <svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 150 160" width="30" height="30">
                                         <defs>
@@ -1202,7 +1202,7 @@
                                 </div>
                             </div>
 
-                            <div class="baloon-group-13 baloon-group" data-wb-where='mapnum = "13"'>
+                            <div class="baloon-group-13 baloon-group" data-wb-where='mapnum = "13"' idx="{{id}}">
                                 <div class="svg-map baloon-off">
                                     <svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 150 160" width="30" height="30">
                                         <defs>
@@ -1303,7 +1303,7 @@
                                 </div>
                             </div>
 
-                            <div class="baloon-group-14 baloon-group" data-wb-where='mapnum = "14"'>
+                            <div class="baloon-group-14 baloon-group" data-wb-where='mapnum = "14"' idx="{{id}}">
                                 <div class="svg-map baloon-off">
                                     <svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 150 160" width="30" height="30">
                                         <defs>
@@ -1404,7 +1404,7 @@
                                 </div>
                             </div>
 
-                            <div class="baloon-group-15 baloon-group" data-wb-where='mapnum = "15"'>
+                            <div class="baloon-group-15 baloon-group" data-wb-where='mapnum = "15"' idx="{{id}}">
                                 <div class="svg-map baloon-off">
                                     <svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 150 160" width="30" height="30">
                                         <defs>
@@ -1505,7 +1505,7 @@
                                 </div>
                             </div>
 
-                            <div class="baloon-group-16 baloon-group" data-wb-where='mapnum = "16"'>
+                            <div class="baloon-group-16 baloon-group" data-wb-where='mapnum = "16"' idx="{{id}}">
                                 <div class="svg-map baloon-off">
                                     <svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 150 160" width="30" height="30">
                                         <defs>
@@ -1606,7 +1606,7 @@
                                 </div>
                             </div>
 
-                            <div class="baloon-group-17 baloon-group" data-wb-where='mapnum = "17"'>
+                            <div class="baloon-group-17 baloon-group" data-wb-where='mapnum = "17"' idx="{{id}}">
                                 <div class="svg-map baloon-off">
                                     <svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 150 160" width="30" height="30">
                                         <defs>
