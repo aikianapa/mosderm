@@ -11,20 +11,23 @@
     
 <section id="paid-desc" class="sm-section sm-section-bottom" data-name="Поиск услуг">
     <div class="container">
-                
-            <meta data-wb-role="include" src="template" data-wb-name="section.form.find.services.php">
-            <h4 class="mb-5">Результаты поиска:</h4>
-
-                        <div data-wb-role="foreach" data-wb-from="result" data-wb-size="5" data-wb-where='{{where}}'>
+                        <div data-wb-role="foreach" data-wb-from="result" data-wb-size="10" data-wb-where='{{where}}'>
+                            <div class="mb-5">
                             <meta data-wb-role="variable" var="link" value="/{{id}}" data-wb-where='_table = "pages"'>
-                            <h4>{{header}}</h4>
-                            <p class="mb-2">
-                                {{wbGetWords({{text}},50)}}
-                            </p>
-                            <a href="{{_var.link}}">Подробно</a><br><br>
+                            <meta data-wb-role="variable" var="link" value="/{{id}}" data-wb-where='_table = "news"'>
+                            <h4><a class="link" href="{{_var.link}}">
+                                <span data-wb-where='header > ""'>{{header}}</span>
+                                <span data-wb-where='header = ""'>Заголовок</span>
+                            </a></h4>
+                            <div class="mb-2" style="padding:5px 20px">
+                                <div class="mb-2">{{wbGetWords({{text}},40)}}</div>
+                                <a class="link" href="{{_var.link}}">Подробно</a>
+                            </div>
+                            </div>
                             <empty>
                                 <h4>Ничего не найдено</h4>
                             </empty>
+                                
                         </div>
 
 
@@ -32,7 +35,7 @@
 </section>
 <link rel="stylesheet" href="css/stacktable.css" data-wb-append="head">
 <script src="js/stacktable.js"  data-wb-append="body"></script>
-<meta data-wb-role="include" src="template" data-wb-name="section.question.inc.php">
+<meta data-wb-role="include" src="template" data-wb-name="section.question.inc.php" data-wb-id="question-2">
 <meta data-wb-role="include" src="template" data-wb-name="section.footer.inc.php">
 <meta data-wb-role="include" src="template" data-wb-name="scripts.inc.php">
 </body>

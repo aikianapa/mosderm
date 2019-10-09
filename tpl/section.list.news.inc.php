@@ -1,6 +1,7 @@
 <section id="news-desc" class="sm-section" data-name="Список новостей">
     <div class="container">
-        <div class="news__wrap flex" data-wb-role="foreach" data-wb-form="news" data-wb-size="6" data-wb-sort="date:d" data-wb-where='active = "on" AND ("{{_post.search_name}}" > "" AND "{{_post.search_name}}" LIKE "{{header}}")'>
+        <meta data-wb-role="variable" var="where" data-wb-if='"{{_post.search_name}}" > ""' value=' AND "{{_post.search_name}}" LIKE "{{header}}"' else="">
+        <div class="news__wrap flex" data-wb-role="foreach" data-wb-form="news" data-wb-size="6" data-wb-sort="date:d" data-wb-where='active = "on" {{_var.where}}' data-wb-hide="false">
             <div class="news-block flex">
                 <div class="news-block__img">
                     <img data-wb-role="thumbnail" data-wb-size="251;169;src" src="/uploads/news/{{id}}/{{image[0].img}}" data-wb-noimg="/tpl/img/news/news-img.png" alt="{{header}}">
@@ -20,6 +21,13 @@
                 </div>
 
             </div>
+                            <empty>
+                                <div>
+                                <h4>Ничего не найдено</h4>
+                                    <br>
+                                <p><a class="link" href="/news">Вернуться к списку новостей</a></p>
+                                </div>
+                            </empty>
             <meta data-wb-selector=".container nav ul" data-wb-addclass="flex">
         </div>
         

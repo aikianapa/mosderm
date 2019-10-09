@@ -36,10 +36,9 @@ $(document).ready(function () {
         $(this).find('.spec-dropdown').fadeToggle();
 
     })
-
+    
     if($(window).width() < 1200){
         $('.dws').appendTo('.center__img-wrap');
-
     }
 
     if ($('.progress__slider').length > 0){   $('.progress__slider').slick({

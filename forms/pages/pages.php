@@ -46,18 +46,19 @@ function pages_search() {
     
     $vacancy = searchTable("vacancy",["name","descr","text"],["name","descr","text"]);
     $result = array_merge($result, $vacancy);
-    $out->wbSetData(["result"=>$result]) ;
+    $out->wbSetData(["result"=>$result,"header"=>"Результаты поиска"]) ;
     return $out;
 }
 
 function searchTable($table="pages",$flds=["text"],$ret=["text"]) {
+    $result = [];
+    if (!isset($_POST["search"])) return $result;
     $app = new wbApp();
     $find = explode(" ",mb_strtolower($_POST["search"]));
     $items = $app->json($table)->where("active","=","on")->get();
     $_ENV["sitesearchkeys"]=["header","text","descr"];
     $_ENV["sitesearchkeys"]=$flds;
     $_ENV["sitesearchretn"]=$ret;
-    $result = [];
     foreach($items as $item) {
         $_ENV["sitesearchtext"]="";
         $_ENV["sitesearchcont"]="";
