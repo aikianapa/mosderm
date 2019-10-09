@@ -13,8 +13,12 @@
     <div class="container">
                         <div data-wb-role="foreach" data-wb-from="result" data-wb-size="10" data-wb-where='{{where}}'>
                             <div class="mb-5">
-                            <meta data-wb-role="variable" var="link" value="/{{id}}" data-wb-where='_table = "pages"'>
-                            <meta data-wb-role="variable" var="link" value="/{{id}}" data-wb-where='_table = "news"'>
+                            <meta data-wb-role="variable" var="link" value="/{{id}}" data-wb-where='"{{_table}}" = "pages"'>
+                            <meta data-wb-role="variable" var="link" value="/news/{{id}}/{{wbFurlGenerate({{header}})}}" data-wb-where='"{{_table}}" = "news"'>
+                            <meta data-wb-role="variable" var="link" value="/activity/{{id}}/{{wbFurlGenerate({{header}})}}" data-wb-where='"{{_table}}" = "activities"'>
+                            <meta data-wb-role="variable" var="link" value="/specialists/{{id}}/{{wbFurlGenerate({{header}})}}" data-wb-where='"{{_table}}" = "specialists"'>
+                            <meta data-wb-role="variable" var="link" value="/vacancy/{{id}}/{{wbFurlGenerate({{header}})}}" data-wb-where='"{{_table}}" = "vacancy"'>
+
                             <h4><a class="link" href="{{_var.link}}">
                                 <span data-wb-where='header > ""'>{{header}}</span>
                                 <span data-wb-where='header = ""'>Заголовок</span>

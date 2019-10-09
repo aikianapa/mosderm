@@ -78,7 +78,7 @@ function searchTable($table="pages",$flds=["text"],$ret=["text"]) {
         if ($res == true) {
             $result[] = [
                  "id" =>  $item["id"]
-                ,"_table" => $item["_table"]
+                ,"_table" => $table
                 ,"header" => $_ENV["sitesearchhead"]
                 ,"text" => trim($_ENV["sitesearchcont"])
             ];
