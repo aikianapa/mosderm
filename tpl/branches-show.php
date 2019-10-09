@@ -15,10 +15,8 @@
             <div class="branches-card__address-info">
                 <strong>Адрес филиала:</strong>
                 <p>{{address}}</p>
-
                 <strong>Как добраться:</strong>
                 <p>{{howto}}</p>
-
                 <strong>Единый телефон  для справок и предварительной записи МНПЦДК:</strong>
                 <p><nobr>{{phone}}</nobr><br>
                     Факс:<nobr> {{fax}}</nobr><br>
@@ -29,7 +27,6 @@
 
                 <strong>Адрес электронной почты: </strong>
                 <p>{{email}}</p>
-
             </div>
             <div class="branches-card__address-map">
                 <meta data-wb-role="include" src="template" data-wb-name="section.widget.contactsmap.inc.php">
