@@ -6,7 +6,7 @@
         <option value="{{id}}">[{{id}}] {{header}}</option>
     </select>
     </div>
-    <button class="col-2 btn btn-default" data-wb-ajax="/form/edit/pages/home" data-wb-append="body"  id="__edit_button">
+    <button type="button" class="col-2 btn btn-default" data-wb-ajax11111="/form/edit/pages/home" data-wb-append="body"  id="__edit_button">
         <i class="fa fa-pencil"></i>&nbsp;Редакт.
     </button>
 
@@ -18,16 +18,44 @@
 	</div>
 </div>
 <script>
+    
+$("#__edit_button").off("click");
+$("#__edit_button").on("click",function(){
+    wb_ajax_loader();
+    var page = $(this).attr("data-name");
+    $("#tree_edit [data-wb-formsave]").trigger("click");
+    $('#tree_edit').modal('hide');
+    $('#tree_edit').on('hidden.bs.modal', function (e) {
+        $(this).remove();
+        var list = wbapp.getWait("/form/list/pages");
+        $(".content-box").html(list);
+        wb_delegates();
+        var edit = wbapp.getWait("/form/edit/pages/"+page);
+        $('#pages_edit').remove();
+        $("body").append(edit);
+        $('#pages_edit').addClass("temp");
+        wb_delegates();
+        $('#pages_edit.temp').on('show.bs.modal', function (e) {
+            wb_ajax_loader_done();
+        });
+        $('#pages_edit').on('hide.bs.modal', function (e) {
+            $('#pages_edit.temp').remove();
+        });
+        $("#pages_edit.temp").modal("show");
+    });
+})
+    
+    
 $("#__select_page").off("change");
 $("#__select_page").on("change",function(){
     if ($(this).val() == "") {
-        $("#__edit_button").removeAttr("data-wb-ajax").prop("disabled",true);
+        $("#__edit_button").removeAttr("data-name").prop("disabled",true);
         var create = $(this).parents(".tree-edit").find("form",0).find("[name='data-id']").val();
         if (create > "") {
-            $("#__edit_button").attr("data-wb-ajax","/form/edit/pages/"+create).prop("disabled",false);
+            $("#__edit_button").attr("data-name",create).prop("disabled",false);
         }
     } else {
-        $("#__edit_button").attr("data-wb-ajax","/form/edit/pages/"+$(this).val()).prop("disabled",false);
+        $("#__edit_button").attr("data-name",$(this).val()).prop("disabled",false);
     }
 });
     
