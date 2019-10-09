@@ -45,7 +45,7 @@
                 </div>
             </div>
 
-            <a href="#">
+            <a href="#" id="specialButton">
                 <div class="menu__vision flex">
                     <img src="img/header/look.png" alt="Версия для слабовидящих">
                     <p>Версия для слабовидящих</p>

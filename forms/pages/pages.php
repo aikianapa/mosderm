@@ -1,4 +1,6 @@
 <?php
+wbRouterAdd("/search",'/controller:form/form:pages/mode:search/item:search');
+
 function pages_edit() {
 	$out=wbGetForm("pages","edit");
 	$id=$_ENV["route"]["item"];
@@ -27,7 +29,62 @@ function pagesAfterItemRead($Item=null) {
 	return $Item;
 }
 
+function pages_search() {
+    $out=wbGetTpl("site-find.php");
+    $result = [];
+    $pages = searchTable("pages",["header","text"],["header","text"]);
+    $result = array_merge($result, $pages);
+    
+    $news = searchTable("news",["header","text"],["header","text"]);
+    $result = array_merge($result, $news);
+    
+    $acts = searchTable("activities",["header","text"],["header","text"]);
+    $result = array_merge($result, $acts);
+    
+    $spec = searchTable("specialists",["name","descr","text","spec","phone"],["name","descr","text"]);
+    $result = array_merge($result, $spec);
+    
+    $vacancy = searchTable("vacancy",["name","descr","text"],["name","descr","text"]);
+    $result = array_merge($result, $vacancy);
+    $out->wbSetData(["result"=>$result]) ;
+    return $out;
+}
 
+function searchTable($table="pages",$flds=["text"],$ret=["text"]) {
+    $app = new wbApp();
+    $find = explode(" ",mb_strtolower($_POST["search"]));
+    $items = $app->json($table)->where("active","=","on")->get();
+    $_ENV["sitesearchkeys"]=["header","text","descr"];
+    $_ENV["sitesearchkeys"]=$flds;
+    $_ENV["sitesearchretn"]=$ret;
+    $result = [];
+    foreach($items as $item) {
+        $_ENV["sitesearchtext"]="";
+        $_ENV["sitesearchcont"]="";
+        $_ENV["sitesearchhead"]=$ret[0];
+        array_walk_recursive($item,function($item,$key){
+            if (in_array($key,$_ENV["sitesearchkeys"])) $_ENV["sitesearchtext"].= " ".strip_tags($item);
+            if (in_array($key,$_ENV["sitesearchretn"]) AND $_ENV["sitesearchhead"] !== $key) $_ENV["sitesearchcont"].= " ".strip_tags($item);
+            if ($_ENV["sitesearchhead"] == $key) $_ENV["sitesearchhead"]=strip_tags($item);
+        });
+        $_ENV["sitesearchtext"]=implode(" ",array_unique(explode(" ",mb_strtolower($_ENV["sitesearchtext"]))));
+        
+        $res = false;
+        foreach($find as $word) {
+            if (strpos(" ".$_ENV["sitesearchtext"],$word)) $res=true;
+        }
+        
+        if ($res == true) {
+            $result[] = [
+                 "id" =>  $item["id"]
+                ,"_table" => $item["_table"]
+                ,"header" => $_ENV["sitesearchhead"]
+                ,"text" => trim($_ENV["sitesearchcont"])
+            ];
+        }
+    }
+    return $result;
+}
 
 
 ?>

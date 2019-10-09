@@ -6,3 +6,4 @@
 <script src="js/script.js"  data-wb-append="body"></script>
 <script src="/engine/js/plugins/plugins.js" data-wb-append="body"></script>
 <script src="/engine/js/wbengine.js" data-wb-append="body"></script>
+<script src="https://lidrekon.ru/slep/js/uhpv-full.min.js"></script>
