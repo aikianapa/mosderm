@@ -39,7 +39,38 @@
             </div>
 
         </div>
+        
+        <div class="schedule-table__item">
+            <h3>Расписание приёма по личным вопросам</h3>
+            <div class="stacktable-table">
+                <table>
+                    <tr>
+                        <th></th>
+                        <th>Адрес приемной</th>
+                        <th>Телефон для записи</th>
+                        <th>ФИО, должность</th>
+                        <th>Время приема</th>
+                        <th>Округ</th>
+                    </tr>
+                    <tbody data-wb-role="foreach" data-wb-from="schedule" data-wb-tpl="false">
+                    <tr>
+                        <th>{{_ndx}}</th>
+                        <td>{{address}}</td>
 
+                        <td><nobr>{{phone}}</nobr></td>
+
+                        <td data-wb-role="formdata" data-wb-form="specialists" data-wb-item="{{boss}}" data-wb-hide="wb">
+                            <strong>{{name}}</strong><br>
+                            {{spec}}
+                        </td>
+
+                        <td>{{worktime}}</td>
+                        <td data-wb-role="tree" data-wb-item="area" data-wb-branch="{{%area}}">{{name}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
 </section>
     
@@ -67,7 +98,8 @@
     </div>
 </section>
 
-    
+<link rel="stylesheet" href="css/stacktable.css" data-wb-append="head">
+<script src="js/stacktable.js"  data-wb-append="body"></script>
     
 <meta data-wb-role="include" src="template" data-wb-name="section.widget.spec.inc.php">
 <meta data-wb-role="include" src="template" data-wb-name="section.question.inc.php" data-wb-id="question-2">
