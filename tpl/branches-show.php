@@ -22,7 +22,7 @@
                     Факс:<nobr> {{fax}}</nobr><br>
                     Телефон администратора и платных услуг: <nobr>{{phoneadm}}</nobr></p>
 
-                <strong>Заведующая филиалом:</strong>
+                <strong>Заведующий филиалом:</strong>
                 <p data-wb-role="formdata" data-wb-form="specialists" data-wb-item="{{boss}}">{{name}}</p>
 
                 <strong>Адрес электронной почты: </strong>
