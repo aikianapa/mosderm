@@ -4,7 +4,7 @@
             <div class="our-specialist__item">
                     <div class="our-specialist__img">
                         <a href="/specialists/{{id}}/{{wbFurlGenerate({{name}})}}"></a>
-                        <img data-wb-role="thumbnail" data-wb-size="242px;242px;src" src="/uploads/{{_table}}/{{id}}/{{image[0].img}}">
+                        <img data-wb-role="thumbnail" data-wb-size="240px;320px" offset="0%;50%" src="/uploads/{{_table}}/{{id}}/{{image[0].img}}">
                     </div>
                     <div class="our-specialist__text">
                         <p><strong>{{name}}</strong></p>

@@ -14,7 +14,7 @@
         <span>{{spec}}</span>
         <div class="spec-card__wrap flex">
             <div class="spec-card__img">
-                <img data-wb-role="thumbnail" data-wb-size="410px;477px;src" src="/uploads/{{_table}}/{{id}}/{{image[0].img}}" alt="{{name}} - {{spec}}" data-wb-hide="wb">
+                <img data-wb-role="thumbnail" data-wb-size="410px;500px" offset="0%;0%" src="/uploads/{{_table}}/{{id}}/{{image[0].img}}" alt="{{name}} - {{spec}}" data-wb-hide="wb">
             </div>
             <div class="spec-card__info">
                 <p data-wb-where='text=""'>{{descr}}</p>
