@@ -17,9 +17,11 @@
                 <p>{{address}}</p>
                 <strong>Как добраться:</strong>
                 <p>{{howto}}</p>
+                <strong>Время работы:</strong>
+                <p>{{worktime}}</p>
                 <strong>Единый телефон  для справок и предварительной записи МНПЦДК:</strong>
                 <p><nobr>{{phone}}</nobr><br>
-                    Факс:<nobr> {{fax}}</nobr><br>
+                    <span data-wb-where='"{{fax}}">""' data-wb-hidde="*">Факс:<nobr> {{fax}}</nobr><br></span>
                     Телефон администратора и платных услуг: <nobr>{{phoneadm}}</nobr></p>
 
                 <strong>Заведующий филиалом:</strong>

@@ -1,7 +1,7 @@
     <section id="{{_var.qid}}" data-name="Виджет - Задать вопрос">
         <div class="container">
             <h2>Задайте ваш вопрос</h2>
-            <form class="question__border">
+            <form class="question__border" data-wb-role="formdata" data-wb-json='{"phone"=>"","email"=>"","fullname"=>""}' data-wb-hide="wb">
                 <div class="question__wrap flex">
                     <div class="question__right">
                         <input type="text" name="_subject" value="Вопрос с сайта" style="display:none;">
