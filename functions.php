@@ -31,6 +31,30 @@ function wbAfterInit() {
 	}
 }
 
+function wbBeforeOutput() {
+    $check = "empty-control";
+    $remove = "empty-remove";
+    $out = $_ENV["DOM"];
+    $ec = $out->find("[class*='{$check}']");
+    foreach($ec as $c) {
+        if (strip_tags_smart($c->html()) == "") {
+            $ats = $c->attributes;
+            foreach ($ats as $at => $v) {
+                if (strpos(" ".$v,$check)) {
+                    $v = explode("-",$v);
+                    if (!isset($v[2])) {
+                        $c->parents(".{$remove}")->remove();
+                    } else {
+                        $out->find(".{$remove}-{$v[2]}")->remove();
+                    }
+                    $c->remove();
+                }
+            }
+        }
+    }
+    return $out;
+}
+
 function ajax_getBranchForm() {
     $out = wbGetForm("admin","branches");
     $content = "";

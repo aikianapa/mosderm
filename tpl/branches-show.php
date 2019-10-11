@@ -13,22 +13,23 @@
     <div class="container">
         <div class="branches-card__address flex">
             <div class="branches-card__address-info">
-                <strong>Адрес филиала:</strong>
-                <p>{{address}}</p>
-                <strong>Как добраться:</strong>
-                <p>{{howto}}</p>
-                <strong>Время работы:</strong>
-                <p>{{worktime}}</p>
-                <strong>Единый телефон  для справок и предварительной записи МНПЦДК:</strong>
-                <p><nobr>{{phone}}</nobr><br>
-                    <span data-wb-where='"{{fax}}">""' data-wb-hidde="*">Факс:<nobr> {{fax}}</nobr><br></span>
-                    Телефон администратора и платных услуг: <nobr>{{phoneadm}}</nobr></p>
+                <strong class="empty-remove-adr">Адрес филиала:</strong>
+                <p class="empty-control-adr">{{address}}</p>
+                <strong class="empty-remove-how">Как добраться:</strong>
+                <p class="empty-control-how">{{howto}}</p>
+                <strong class="empty-remove-wtm">Время работы:</strong>
+                <p class="empty-control-wtm">{{worktime}}</p>
+                <strong class="empty-remove-phone">Единый телефон  для справок и предварительной записи МНПЦДК:</strong>
+                <p><nobr class="empty-control-phone">{{phone}}</nobr><br>
+                    <span class="empty-remove-fax">Факс:<nobr class="empty-control-fax">{{fax}}</nobr><br></span>
+                    <span class="empty-remove-pha">Телефон администратора и платных услуг: <nobr class="empty-control-pha">{{phoneadm}}</nobr></span>
+                </p>
 
-                <strong>Заведующий филиалом:</strong>
-                <p data-wb-role="formdata" data-wb-form="specialists" data-wb-item="{{boss}}">{{name}}</p>
+                <strong class="empty-remove-zav">Заведующий филиалом:</strong>
+                <p data-wb-role="formdata" data-wb-form="specialists" data-wb-item="{{boss}}" data-wb-hide="wb" class="empty-control-zav">{{name}}</p>
 
-                <strong>Адрес электронной почты: </strong>
-                <p>{{email}}</p>
+                <strong class="empty-remove-eml">Адрес электронной почты: </strong>
+                <p class="empty-control-eml">{{email}}</p>
             </div>
             <div class="branches-card__address-map">
                 <meta data-wb-role="include" src="template" data-wb-name="section.widget.contactsmap.inc.php">
