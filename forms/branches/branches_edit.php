@@ -27,6 +27,17 @@
            </select>
         </div>
 	</div>
+    
+	<div class="form-group row">
+	  <label class="col-sm-3 form-control-label">Головная организация</label>
+	   <div class="col-sm-9">
+           <select class="form-control" name="main" placeholder="Выберите филиал"
+                   data-wb-role="foreach" data-wb-tpl="false" data-wb-form="branches" 
+                   data-wb-where='active="on" AND type="branch"' data-wb-sort="name">
+               <option value="{{id}}">{{name}}</option>
+           </select>
+        </div>
+	</div>
 
 <div class="nav-active-primary">
 <ul class="nav nav-tabs" role="tablist">
