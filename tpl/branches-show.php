@@ -26,7 +26,9 @@
                 </p>
 
                 <strong class="empty-remove-zav">Заведующий филиалом:</strong>
-                <p data-wb-role="formdata" data-wb-form="specialists" data-wb-item="{{boss}}" data-wb-hide="wb" class="empty-control-zav">{{name}}</p>
+                <p data-wb-role="formdata" data-wb-form="specialists" 
+                   data-wb-item="{{boss}}" data-wb-clear="true" data-wb-hide="wb" 
+                   class="empty-control-zav">{{name}}</p>
 
                 <strong class="empty-remove-eml">Адрес электронной почты: </strong>
                 <p class="empty-control-eml">{{email}}</p>
