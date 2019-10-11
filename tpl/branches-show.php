@@ -76,6 +76,33 @@
                 </table>
             </div>
         </div>
+
+        <div class="schedule-table__item" class="empty-remove-offices">
+            <h3>Отделения</h3>
+            <div class="stacktable-table">
+                <table>
+                    <thead>
+                    <tr>
+                        <th></th>
+                        <th>Адрес приемной</th>
+                        <th>Телефон для записи</th>
+                        <th>Время приема</th>
+                        <th>Округ</th>
+                    </tr>
+                    </thead>
+                    <tbody data-wb-role="foreach" data-wb-from="schedule" data-wb-tpl="false" class="empty-control-offices">
+                    <tr class="empty-remove-office{{_ndx}}">
+                        <th>{{_ndx}}</th>
+                        <td class="empty-control-office{{_ndx}}">{{address}}</td>
+                        <td><nobr>{{phone}}</nobr></td>
+                        <td>{{worktime}}</td>
+                        <td data-wb-role="tree" data-wb-item="area" data-wb-branch="{{%area}}">{{name}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
     </div>
 </section>
     

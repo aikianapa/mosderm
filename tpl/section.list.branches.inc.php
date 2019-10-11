@@ -19,7 +19,7 @@
 
             </div>
         </form>
-        <meta data-wb-role="variable" var="where" value='active = "on"'>
+        <meta data-wb-role="variable" var="where" value='active = "on" AND type="branch" '>
         <meta data-wb-role="variable" var="where" data-wb-where='"{{_post.branch_name}}" > ""' value='{{_var.where}} AND name LIKE "{{_post.branch_name}}"'>
         <div class="branches__wrap" data-wb-role="foreach" data-wb-form="branches" data-wb-size="12" data-wb-where='{{_var.where}}'>
             <div class="branches__item flex">
