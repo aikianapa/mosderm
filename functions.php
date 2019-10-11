@@ -31,37 +31,6 @@ function wbAfterInit() {
 	}
 }
 
-function wbBeforeOutput() {
-    emptyControl();
-    emptyControl(); // в два прохода!
-    return $_ENV["DOM"];
-}
-
-function emptyControl() {
-    $check = "empty-control";
-    $remove = "empty-remove";
-    $out = $_ENV["DOM"];
-    $ec = $out->find("[class*='{$check}']");
-    foreach($ec as $c) {
-        if (trim(strip_tags_smart($c->html())) == "") {
-            $ats = $c->attributes;
-            foreach ($ats as $at => $v) {
-                if (strpos(" ".$v,$check)) {
-                    $v = explode("-",$v);
-                    if (!isset($v[2])) {
-                        $c->parents(".{$remove}")->remove();
-                    } else {
-                        $out->find(".{$remove}-{$v[2]}")->remove();
-                    }
-                    $c->remove();
-                }
-            }
-        }
-    }
-    $_ENV["DOM"]=$out;
-    return $out;
-}
-
 function ajax_getBranchForm() {
     $out = wbGetForm("admin","branches");
     $content = "";

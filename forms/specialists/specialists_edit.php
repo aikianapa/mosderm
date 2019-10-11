@@ -48,7 +48,16 @@
                             <div class="form-group row">
                                 <label class="col-sm-3 form-control-label">Филиал</label>
                                 <div class="col-sm-9">
-                                <select class="form-control select-type" name="branch" placeholder="Филиал" data-wb-role="foreach" data-wb-tpl="false" data-wb-form="branches" data-wb-where='active = "on"'>
+                                <select class="form-control select-type control-value-branch" name="branch" placeholder="Филиал" data-wb-role="foreach" data-wb-tpl="false" data-wb-form="branches" data-wb-where='active = "on" AND type="branch"'>
+                                    <option value="{{id}}">{{name}}</option>
+                                </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="col-sm-3 form-control-label">Отделение</label>
+                                <div class="col-sm-9">
+                                <select class="form-control select-type control-update-branch" name="office" placeholder="Отделение" data-wb-role="foreach" data-wb-form="branches" data-wb-where='active = "on" AND type="office"'>
                                     <option value="{{id}}">{{name}}</option>
                                 </select>
                                 </div>

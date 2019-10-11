@@ -79,30 +79,16 @@
 
         <div class="schedule-table__item" class="empty-remove-offices">
             <h3>Отделения</h3>
-            <div class="stacktable-table">
-                <table>
-                    <thead>
-                    <tr>
-                        <th></th>
-                        <th>Адрес приемной</th>
-                        <th>Телефон для записи</th>
-                        <th>Время приема</th>
-                        <th>Округ</th>
-                    </tr>
-                    </thead>
-                    <tbody data-wb-role="foreach" data-wb-from="schedule" data-wb-tpl="false" class="empty-control-offices">
-                    <tr class="empty-remove-office{{_ndx}}">
-                        <th>{{_ndx}}</th>
-                        <td class="empty-control-office{{_ndx}}">{{address}}</td>
-                        <td><nobr>{{phone}}</nobr></td>
-                        <td>{{worktime}}</td>
-                        <td data-wb-role="tree" data-wb-item="area" data-wb-branch="{{%area}}">{{name}}</td>
-                    </tr>
-                    </tbody>
-                </table>
+            <div data-wb-role="foreach" data-wb-form="branches" data-wb-tpl="false" data-wb-where='main="{{id}}"' class="empty-control-offices">
+                <div class="sm-section">
+                    <h4 class="mb-3">{{name}}</h4>
+                    <p class="empty-control-this">{{text}}</p>
+                    <div data-wb-role="include" src="template" data-wb-name="section.widget.spec.inc.php" class="sm-section" data-wb-id="spec-{{_ndx}}" data-wb-json='{"office":"{{id}}"}' data-wb-hide="*">
+                        <meta data-wb-remove="h2"><br>
+                    </div>
+                </div>
             </div>
         </div>
-
     </div>
 </section>
     

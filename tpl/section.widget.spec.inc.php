@@ -4,7 +4,7 @@
             <meta data-wb-role="variable" var="where" data-wb-if='"{{_form}}"="branches" AND "{{_mode}}"="show"' value=' AND branch = "{{_item}}"' else=''>
             <div class="our-specialists__slider" data-wb-role="foreach" data-wb-tpl="false" data-wb-where='widget="on" {{_var[where]}}' data-wb-rand="true" data-wb-form="specialists">
                 <div class="our-specialist__item">
-                    <a href="/specialists/{{id}}/{{wbFurlGenerate({{name}})}}"></a>
+                    <a href="/specialists/{{id}}/{{wbFurlGenerate({{name}})}}">
                     <div class="our-specialist__slider-wrap">
                         <div class="our-specialist__img">
                             <img data-wb-role="thumbnail" data-wb-size="200px;200px;src" src="/uploads/{{_table}}/{{id}}/{{image[0].img}}" alt="{{name}} - {{spec}}">
@@ -15,6 +15,7 @@
                             <p>{{descr}}</p>
                         </div>
                     </div>
+                    </a>
                 </div>
             </div>
         </div>

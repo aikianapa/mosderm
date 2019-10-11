@@ -21,14 +21,14 @@
 	<div class="form-group row">
 	  <label class="col-sm-3 form-control-label">Тип</label>
 	   <div class="col-sm-9">
-           <select class="form-control" name="type" placeholder="Тип">
+           <select class="form-control control-value-main" name="type" placeholder="Тип" >
                <option value="branch">Филиал</option>
                <option value="office">Отделение</option>
            </select>
         </div>
 	</div>
     
-	<div class="form-group row">
+	<div class="form-group row control-show-main-branch">
 	  <label class="col-sm-3 form-control-label">Головная организация</label>
 	   <div class="col-sm-9">
            <select class="form-control" name="main" placeholder="Выберите филиал"
