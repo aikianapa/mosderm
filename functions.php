@@ -32,12 +32,18 @@ function wbAfterInit() {
 }
 
 function wbBeforeOutput() {
+    emptyControl();
+    emptyControl(); // в два прохода!
+    return $_ENV["DOM"];
+}
+
+function emptyControl() {
     $check = "empty-control";
     $remove = "empty-remove";
     $out = $_ENV["DOM"];
     $ec = $out->find("[class*='{$check}']");
     foreach($ec as $c) {
-        if (strip_tags_smart($c->html()) == "") {
+        if (trim(strip_tags_smart($c->html())) == "") {
             $ats = $c->attributes;
             foreach ($ats as $at => $v) {
                 if (strpos(" ".$v,$check)) {
@@ -52,6 +58,7 @@ function wbBeforeOutput() {
             }
         }
     }
+    $_ENV["DOM"]=$out;
     return $out;
 }
 

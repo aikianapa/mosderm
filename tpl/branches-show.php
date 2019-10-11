@@ -43,10 +43,11 @@
 
         </div>
         
-        <div class="schedule-table__item">
+        <div class="schedule-table__item" class="empty-remove-schedule">
             <h3>Расписание приёма по личным вопросам</h3>
             <div class="stacktable-table">
                 <table>
+                    <thead>
                     <tr>
                         <th></th>
                         <th>Адрес приемной</th>
@@ -55,12 +56,13 @@
                         <th>Время приема</th>
                         <th>Округ</th>
                     </tr>
-                    <tbody data-wb-role="foreach" data-wb-from="schedule" data-wb-tpl="false">
-                    <tr>
+                    </thead>
+                    <tbody data-wb-role="foreach" data-wb-from="schedule" data-wb-tpl="false" class="empty-control-schedule">
+                    <tr class="empty-remove-schtr{{_ndx}}">
                         <th>{{_ndx}}</th>
                         <td>{{address}}</td>
 
-                        <td><nobr>{{phone}}</nobr></td>
+                        <td><nobr class="empty-control-schtr{{_ndx}}">{{phone}}</nobr></td>
 
                         <td data-wb-role="formdata" data-wb-form="specialists" data-wb-item="{{boss}}" data-wb-hide="wb">
                             <strong>{{name}}</strong><br>
