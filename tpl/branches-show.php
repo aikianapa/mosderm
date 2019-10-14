@@ -83,7 +83,7 @@
                 <div class="sm-section">
                     <h4 class="mb-3">{{name}}</h4>
                     <p class="empty-control-this">{{text}}</p>
-                    <div data-wb-role="include" src="template" data-wb-name="section.widget.spec.inc.php" class="sm-section" data-wb-id="spec-{{_ndx}}" data-wb-json='{"office":"{{id}}"}' data-wb-hide="*">
+                    <div data-wb-role="include" src="template" data-wb-name="section.widget.spec.inc.php" class="sm-section" data-wb-json='{"office":"{{id}}"}' data-wb-hide="*">
                         <meta data-wb-remove="h2"><br>
                     </div>
                 </div>
@@ -119,7 +119,6 @@
 <link rel="stylesheet" href="css/stacktable.css" data-wb-append="head">
 <script src="js/stacktable.js"  data-wb-append="body"></script>
     
-<meta data-wb-role="include" src="template" data-wb-name="section.widget.spec.inc.php">
 <meta data-wb-role="include" src="template" data-wb-name="section.question.inc.php" data-wb-id="question-2">
 <meta data-wb-role="include" src="template" data-wb-name="section.footer.inc.php">
 <meta data-wb-role="include" src="template" data-wb-name="scripts.inc.php">

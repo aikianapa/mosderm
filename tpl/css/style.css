@@ -2925,6 +2925,10 @@ h2 > a:hover, .vacancy-content__item > a:hover, .activity__ancor:hover, .news-bl
     position: relative;
 }
 
+.slick-slide {
+    height:auto!important;
+}
+
 .our-specialist__item > a, .news__fb-item > a, .branches__img > a{
     position: absolute;
     top:0;
