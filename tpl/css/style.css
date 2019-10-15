@@ -3028,6 +3028,11 @@ h2 > a:hover, .vacancy-content__item > a:hover, .activity__ancor:hover, .news-bl
     .branches-card__address-map{
         width: 100%;
         max-width: 826px;
+        overflow: hidden;
+    }
+
+    .panzoom-parent{
+        position: relative;
     }
 
     .branches-card__address-map > img{
@@ -3529,6 +3534,10 @@ h2 > a:hover, .vacancy-content__item > a:hover, .activity__ancor:hover, .news-bl
 @media (max-width: 768px) {
     #map{
         transform: matrix(1.21, 0, 0, 1.21, -431.2, -72.0941);
+    }
+
+    #branches-card #map{
+        transform: matrix(1.21, 0, 0, 1.21, -182.2, 34.9059) scale(0.9);
     }
 
     .map-container{
@@ -5078,6 +5087,7 @@ h2 > a:hover, .vacancy-content__item > a:hover, .activity__ancor:hover, .news-bl
     border-radius: 50%;
     font-weight: bold;
     font-size: 20px;
+    cursor: pointer;
 }
 
 .zoom-buttons > button:focus{
@@ -5143,3 +5153,4 @@ margin-bottom: 10px;
 .link {
     color:#1a56a4;
 }
+
