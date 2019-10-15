@@ -57,7 +57,7 @@
                             <div class="form-group row">
                                 <label class="col-sm-3 form-control-label">Отделение</label>
                                 <div class="col-sm-9">
-                                <select class="form-control select-type control-update-branch" name="office" placeholder="Отделение" data-wb-role="foreach" data-wb-form="branches" data-wb-where='active = "on" AND type="office"'>
+                                <select class="form-control select-type control-update-branch" data-wb-update="/ajax/branches/offices/" name="office" placeholder="Отделение" data-wb-role="foreach" data-wb-form="branches" data-wb-where='active = "on" AND type="office"'>
                                     <option value="{{id}}">{{name}}</option>
                                 </select>
                                 </div>
@@ -103,10 +103,9 @@
 </div>
     <script type="text/locale" data-wb-role="include" src="products_common"></script>
     <script>
-        if ($("#{{_GET[form]}}EditForm [name=category]").val() == "") {
+        if ($("#{{_form}}EditForm [name=branch]").val() == "") {
             var url = $(".content-box").data("wb_ajax");
             url = explode("/", url);
-            $("#{{_GET[form]}}EditForm [name=category]").val(url[4]);
+            $("#{{_form}}EditForm [name=branch]").val(url[4]);
         }
-
     </script>
