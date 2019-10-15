@@ -11,10 +11,15 @@
     <div class="container">
         <meta data-wb-remove="#navigation h2">
         <h2>{{name}}</h2>
-        <span>{{spec}}</span>
+        <span>
+            {{spec}}
+            <small class="empty-control" data-wb-role="formdata" data-wb-form="branches" data-wb-item="{{branch}}" data-wb-hide="wb">
+                <br>{{name}}
+            </small>
+        </span>
         <div class="spec-card__wrap flex">
             <div class="spec-card__img">
-                <img data-wb-role="thumbnail" data-wb-size="400px;600px" offset="0%;50%" src="/uploads/{{_table}}/{{id}}/{{image[0].img}}" alt="{{name}} - {{spec}}" data-wb-hide="wb">
+                <img data-wb-role="thumbnail" data-wb-size="400px;550px;src" src="/uploads/{{_table}}/{{id}}/{{image[0].img}}" alt="{{name}} - {{spec}}" data-wb-hide="wb">
             </div>
             <div class="spec-card__info">
                 <p data-wb-where='text=""'>{{descr}}</p>

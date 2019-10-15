@@ -500,7 +500,7 @@
                                 </div>
                             </div>
 
-                            <div class="baloon-group-7 baloon-group" data-wb-where='mapnum = "6"'>
+                            <div class="baloon-group-7 baloon-group" data-wb-where='mapnum = "7"' idx="{{id}}" data-furl="{{wbFurlGenerate({{name}})}}">
                                 <div class="svg-map baloon-off nowb">
                                     <svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 150 160" width="30" height="30">
                                         <defs>
@@ -600,7 +600,7 @@
                                 </div>
                             </div>
 
-                            <div class="baloon-group-6 baloon-group" data-wb-where='mapnum = "7"' idx="{{id}}" data-furl="{{wbFurlGenerate({{name}})}}">
+                            <div class="baloon-group-6 baloon-group" data-wb-where='mapnum = "6"' idx="{{id}}" data-furl="{{wbFurlGenerate({{name}})}}">
                                 <div class="svg-map baloon-off nowb">
                                     <svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 150 160" width="30" height="30">
                                         <defs>
@@ -700,7 +700,7 @@
                                 </div>
                             </div>
 
-                            <div class="baloon-group-5 baloon-group" data-wb-where='mapnum = "8"' idx="{{id}}" data-furl="{{wbFurlGenerate({{name}})}}">
+                            <div class="baloon-group-5 baloon-group" data-wb-where='mapnum = "5"' idx="{{id}}" data-furl="{{wbFurlGenerate({{name}})}}">
                                 <div class="svg-map baloon-off nowb">
                                     <svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 150 160" width="30" height="30">
                                         <defs>
