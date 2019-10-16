@@ -1720,35 +1720,19 @@
     });
     
     $(window).on("resize",function(){
-        var def =  $("#auto-contain").data("def");
+        var def =  1134;
         var max = ($(".branches-card__address")[0]["offsetWidth"] - $(".branches-card__address-info")[0]["offsetWidth"]);
-        var type = 1;
         if (0 > max) {
             max = $(".branches-card__address-info")[0]["offsetWidth"] ;
-            type = 2;
-        }
-        if (def == undefined) {
-            var def = $("#auto-contain").width();
-            if (def) $("#auto-contain").data("def",def);
         }
         $("#auto-contain").removeAttr("style");
-        if (type == 1) {
-            var zoom = (max / def) * 100;    
-        } else {
-            console.log(max , def);
-            var zoom = (max / def) * 100 ;
-        }
-        
-        console.log(zoom);
-        
-        $("#auto-contain").css("zoom",zoom +"%");
-        
+        var zoom = (max / def) * 100;    
 
-                
-  
-        
+        $("#auto-contain").css("zoom",zoom +"%");
     });
+    setTimeout(function(){
+        $(window).trigger("resize");    
+    },100);
     
-    $(window).trigger("resize");
     
 </script>

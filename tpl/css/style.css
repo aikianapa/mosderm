@@ -3034,7 +3034,7 @@ h2 > a:hover, .vacancy-content__item > a:hover, .activity__ancor:hover, .news-bl
 
     .branches-card__address-map{
         width: 100%;
-        max-width: 800px;
+        
         overflow: hidden;
     }
 
