@@ -1700,20 +1700,27 @@
 
                 </div>
             </div>
+
+<script src="js/jquery.tap.js"  data-wb-append="body"></script>
 <script src="js/jquery.panzoom.min.js" data-wb-append="body"></script>
 <script data-wb-append="body">
+        var item = "{{_item}}";
+        $(".baloon-group .baloon-info strong[data-id="+item+"]").parent(".baloon-info").show();
+        $(".baloon-group .baloon-info strong[data-id="+item+"]").parent(".baloon-info").prev(".baloon-on").show();
+    
+    
         var $section = $('#auto-contain');
         $section.find('.panzoom').panzoom({
             $zoomIn: $section.find(".zoom-in"),
             $zoomOut: $section.find(".zoom-out"),
             startTransform: 'scale(1)',
             increment: 0.1,
-            minScale: 0.5,
+            minScale: 1,
             maxScale: 2,
             contain: 'automatic'
         }).panzoom('zoom');
-        
-    $(".baloon-group").on("click",function(){
+
+    $(".baloon-group").on("click tap",function(){
         var item = $(this).find(".baloon-info strong").attr("data-id");
         var furl = $(this).find(".baloon-info strong").attr("data-name");
        document.location.href = "/branches/"+item+"/"+furl;
