@@ -9,7 +9,7 @@
 
     
     
-<section id="branches-card" class="sm-section">
+<section id="branches-card" class="sm-section sm-section-bottom">
     <div class="container">
         <div class="branches-card__address flex">
             <div class="branches-card__address-info">
@@ -28,13 +28,13 @@
                 <strong class="empty-remove-zav">Заведующий филиалом:</strong>
                 <p data-wb-role="formdata" data-wb-form="specialists" 
                    data-wb-item="{{boss}}" data-wb-clear="true" data-wb-hide="wb" 
-                   class="empty-control-zav">{{name}}</p>
+                   class="empty-control-zav"><a href="/specialists/{{id}}/{{wbFurlGenerate({{name}})}}">{{name}}</p>
 
                 <strong class="empty-remove-eml">Адрес электронной почты: </strong>
                 <p class="empty-control-eml">{{email}}</p>
             </div>
             <div class="branches-card__address-map">
-                <meta data-wb-role="include" src="template" data-wb-name="section.widget.contactsmap.inc.php">
+                <meta data-!!!!!wb-role="include" src="template" data-wb-name="section.widget.contactsmap.inc.php">
                 <meta data-wb-selector="#auto-contain" data-wb-attr="style" value="zoom:70%">
                 <meta data-wb-remove="[idx={{_item}}] .baloon-off">
                 <meta data-wb-selector="[idx={{_item}}] .baloon-on" data-wb-attr="style" value="display:block;">
@@ -65,8 +65,10 @@
                         <td><nobr class="empty-control-schtr{{_ndx}}">{{phone}}</nobr></td>
 
                         <td data-wb-role="formdata" data-wb-form="specialists" data-wb-item="{{boss}}" data-wb-hide="wb">
-                            <strong>{{name}}</strong><br>
-                            {{spec}}
+                            <a href="/specialists/{{id}}/{{wbFurlGenerate({{name}})}}">
+                            <strong>{{name}}</strong>
+                            </a>
+                            <div><small>{{spec}}</small></div>
                         </td>
 
                         <td>{{worktime}}</td>
@@ -77,7 +79,7 @@
             </div>
         </div>
 
-        <div class="schedule-table__item" class="empty-remove-offices">
+        <div class="schedule-table__item" class="empty-remove-offices" data-wb-where='"{{type}}" = "branch"'>
             <h3>Отделения</h3>
             <div data-wb-role="foreach" data-wb-form="branches" data-wb-tpl="false" data-wb-where='main="{{id}}"' class="empty-control-offices">
                 <div class="sm-section">
@@ -89,6 +91,7 @@
                 </div>
             </div>
         </div>
+        
     </div>
 </section>
     
@@ -98,10 +101,12 @@
             <div class="record__left">
                 <div class="record__btn-box">
                     <div class="record__btn">
-                        <a href="/branches/{{id}}/order/">Онлайн запись</a>
+                        <a href="/branches/{{id}}/order/" data-wb-where='"{{type}}" = "branch"' data-wb-hide="wb">Онлайн запись</a>
+                        <a href="/branches/{{branch}}/order/" data-wb-where='"{{type}}" = "office"' data-wb-hide="wb">Онлайн запись</a>
                     </div>
                     <div class="record__btn">
-                        <a href="/branches/{{id}}/addresses/">Обслуживаемые адреса</a>
+                        <a href="/branches/{{id}}/addresses/" data-wb-where='"{{type}}" = "branch"' data-wb-hide="wb">Обслуживаемые адреса</a>
+                        <a href="/branches/{{branch}}/addresses/" data-wb-where='"{{type}}" = "office"' data-wb-hide="wb">Обслуживаемые адреса</a>
                     </div>
                 </div>
                 <div class="record__img">
@@ -115,7 +120,16 @@
         </div>
     </div>
 </section>
-
+<section id="specialists" class="sm-section-bottom" data-wb-where='"{{type}}" = "office"'>
+    <div class="container">
+        <h3>Наши специалисты</h3>
+            <div data-wb-role="include" src="template" data-wb-name="section.widget.spec.inc.php" class="sm-section" data-wb-json='{"office":"{{id}}"}' data-wb-hide="*">
+                <meta data-wb-remove="h2"><br>
+            </div>
+            <meta data-wb-selector="#our-specialists" data-wb-addclass="sm-section-bottom">
+    </div>
+</section>
+    
 <link rel="stylesheet" href="css/stacktable.css" data-wb-append="head">
 <script src="js/stacktable.js"  data-wb-append="body"></script>
     

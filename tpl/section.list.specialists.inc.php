@@ -1,6 +1,6 @@
 <section id="specialists" class="sm-section" data-name="Список специалистов">
     <div class="container">
-    <div class="specialists-desc flex" data-wb-role="foreach" data-wb-form="specialists" data-wb-where='active="on"' data-wb-size="12">
+    <div class="specialists-desc flex" data-wb-role="foreach" data-wb-form="specialists" data-wb-where='active="on"' data-wb-size="8">
             <div class="our-specialist__item">
                     <div class="our-specialist__img">
                         <a href="/specialists/{{id}}/{{wbFurlGenerate({{name}})}}"></a>

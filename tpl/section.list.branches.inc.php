@@ -7,8 +7,11 @@
                 <div class="branches__forms-list">
                     <input type="text" class="input-control" placeholder="Выбор из списка">
                     <div class="spec-dropdown">
-                        <ul data-wb-role="foreach" data-wb-form="branches" data-wb-tpl="false" data-wb-where='active="on"' data-wb-sort="name" data-wb-hide="wb">
-                            <a href="/branches/{{id}}/{{wbFurlGenerate({{name}})}}/">{{name}}</a>
+                        <ul data-wb-role="foreach" data-wb-form="branches" data-wb-tpl="false" data-wb-where='active="on" AND type="branch"' data-wb-sort="name" data-wb-hide="wb">
+                            <li><a href="/branches/{{id}}/{{wbFurlGenerate({{name}})}}/"><b>{{name}}</b></a></li>
+                            <ul  data-wb-role="foreach" data-wb-form="branches" data-wb-tpl="false" data-wb-where='active="on" AND type="office" AND main="{{id}}"' data-wb-sort="name" data-wb-hide="*">
+                                <li><a href="/branches/{{id}}/{{wbFurlGenerate({{name}})}}/">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{name}}</a></li>
+                            </ul>
                         </ul>
                     </div>
 
