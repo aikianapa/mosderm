@@ -1739,7 +1739,7 @@
     });
     setTimeout(function(){
         $(window).trigger("resize");    
-    },100);
+    },500);
     
     
 </script>
