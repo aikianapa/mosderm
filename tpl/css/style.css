@@ -3607,6 +3607,9 @@ h2 > a:hover, .vacancy-content__item > a:hover, .activity__ancor:hover, .news-bl
     .news-card__wrap.flex{
         flex-direction: column;
     }
+    .news-card__wrap p {
+        margin-bottom:20px;
+    }
 
     .news-card__img{
         width: 100%;
