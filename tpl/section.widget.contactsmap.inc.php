@@ -3,7 +3,7 @@
                     <div class="map-container" class="panzoom">
                         <div id="map" class="panzoom">
                             <img src="img/map.jpg">
-                            <div data-wb-role="foreach" data-wb-form="branches" data-wb-where='active="on" AND type="branch"' data-wb-hide="*">
+                            <div data-wb-role="foreach" data-wb-form="branches" data-wb-where='active="on" AND type="branch" AND mapnum > ""' data-wb-hide="*">
                                 <meta data-wb-role="variable" var="brid{{mapnum}}" value="{{id}}">
                             </div>
                             <div class="baloon-group-1 baloon-group">
@@ -686,7 +686,7 @@
                                         <path class="cls-7-2-4" d="M65.75,65.8l41.87-24.18v7.12l-24.82,70-10.22,5.9,24.09-67.4L65.74,75.1Z" />
                                     </svg>
                                 </div>
-                                <div class="baloon-info" data-wb-role="formdata" data-wb-form="branches" data-wb-item='{{_var.brid5}}' data-wb-hide="wb">
+                                <div class="baloon-info" data-wb-role="formdata" data-wb-form="branches" data-wb-item='{{_var.brid7}}' data-wb-hide="wb">
                                     <strong data-name="{{wbFurlGenerate({{name}})}}" data-id="{{id}}">{{name}}</strong>
                                     <p>{{address}} {{phone}}</p>
                                 </div>
