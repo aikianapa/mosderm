@@ -3607,9 +3607,6 @@ h2 > a:hover, .vacancy-content__item > a:hover, .activity__ancor:hover, .news-bl
     .news-card__wrap.flex{
         flex-direction: column;
     }
-    .news-card__wrap p {
-        margin-bottom:20px;
-    }
 
     .news-card__img{
         width: 100%;
@@ -3652,9 +3649,12 @@ h2 > a:hover, .vacancy-content__item > a:hover, .activity__ancor:hover, .news-bl
         margin-top: 25px;
     }
 
-    .activity-card-text > p, .spec-card__info > p{
-        font-size: 14px;
-        padding-bottom: 20px;
+    .activity-card-text > p, .spec-card__info > p,  .spec-card__info * {
+        font-family:Rubik, sans-serif!important;
+        margin-bottom:20px!important;
+        font-size: 14px!important;
+        padding-bottom: 20px!important;
+        color: #151B1F!important;
     }
 
     #activity-card{
