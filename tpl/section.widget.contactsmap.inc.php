@@ -1701,10 +1701,14 @@
                 </div>
             </div>
 
+<meta data-wb-role="variable" var="branch_id" value="{{_item}}">
+<meta data-wb-role="variable" var="branch_id" value="{{main}}" data-wb-where='main>""'>
+
+
 <script src="js/jquery.tap.js"  data-wb-append="body"></script>
 <script src="js/jquery.panzoom.min.js" data-wb-append="body"></script>
 <script data-wb-append="body">
-        var item = "{{_item}}";
+        var item = "{{_var.branch_id}}";
         $(".baloon-group .baloon-info strong[data-id="+item+"]").parent(".baloon-info").show();
         $(".baloon-group .baloon-info strong[data-id="+item+"]").parent(".baloon-info").prev(".baloon-on").show();
     
