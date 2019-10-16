@@ -1911,21 +1911,12 @@ max-width: none;
 }
 
 .spec-card__buttons{
-    position: relative;
+    position: absolute;
     bottom: 0;
-    margin-top: 20px;
 }
 
 .spec-card__info{
     position: relative;
-}
-
-.spec-card__info ul {
-    margin: 0 20px;
-}
-
-.spec-card__info li {
-    list-style-type: disc;
 }
 
 #spec-reviews{
@@ -2991,7 +2982,14 @@ h2 > a:hover, .vacancy-content__item > a:hover, .activity__ancor:hover, .news-bl
     text-align: center;
 }
 
+
+#branches-card .panzoom-parent{
+    position: relative;
+}
+
 @media (max-width: 1200px) {
+
+
 
     .center__title{
         width: 100%;
@@ -3036,13 +3034,11 @@ h2 > a:hover, .vacancy-content__item > a:hover, .activity__ancor:hover, .news-bl
 
     .branches-card__address-map{
         width: 100%;
-        max-width: 826px;
+        max-width: 800px;
         overflow: hidden;
     }
 
-    .panzoom-parent{
-        position: relative;
-    }
+
 
     .branches-card__address-map > img{
         width: 100%;
@@ -3209,6 +3205,7 @@ h2 > a:hover, .vacancy-content__item > a:hover, .activity__ancor:hover, .news-bl
 
 
 @media (max-width: 992px) {
+
     .spec-dropdown {
         top: calc(100% + -11px);
     }
@@ -3541,12 +3538,10 @@ h2 > a:hover, .vacancy-content__item > a:hover, .activity__ancor:hover, .news-bl
 
 
 @media (max-width: 768px) {
-    #map{
-        transform: matrix(1.21, 0, 0, 1.21, -431.2, -72.0941);
-    }
+
 
     #branches-card #map{
-        transform: matrix(1.21, 0, 0, 1.21, -182.2, 34.9059) scale(0.9);
+        transform: matrix(1.21, 0, 0, 1.21, -70.2, 34.9059) scale(0.9);
     }
 
     .map-container{
@@ -4499,6 +4494,10 @@ h2 > a:hover, .vacancy-content__item > a:hover, .activity__ancor:hover, .news-bl
         width: auto;
     }
 
+    #branches-card #map{
+        transform: matrix(1.21, 0, 0, 1.21, -263.2, -10.0941) scale(0.8);
+    }
+
     .other__item > a > img{
         width: 100%;
     }
@@ -5163,3 +5162,18 @@ margin-bottom: 10px;
     color:#1a56a4;
 }
 
+@media (max-width: 380px) {
+    #branches-card #map{
+        transform: matrix(1.21, 0, 0, 1.21, -304.2, -28.0941) scale(0.7);
+    }
+}
+
+@media (max-width: 320px) {
+    #branches-card #map{
+        transform: matrix(1.21, 0, 0, 1.21, -345.2, -59.0941) scale(0.6);
+}
+}
+
+#map{
+    transform: scale(0.6);
+}
