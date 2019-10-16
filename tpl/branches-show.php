@@ -35,7 +35,6 @@
             </div>
             <div class="branches-card__address-map">
                 <meta data-wb-role="include" src="template" data-wb-name="section.widget.contactsmap.inc.php">
-                <meta data-wb-selector="#auto-contain" data-wb-attr="style" value="zoom:70%">
                 <meta data-wb-remove="[idx={{_item}}] .baloon-off">
                 <meta data-wb-selector="[idx={{_item}}] .baloon-on" data-wb-attr="style" value="display:block;">
                 <meta data-wb-selector="[idx={{_item}}] .baloon-info" data-wb-attr="style" value="display:block;">

@@ -5173,7 +5173,3 @@ margin-bottom: 10px;
         transform: matrix(1.21, 0, 0, 1.21, -345.2, -59.0941) scale(0.6);
 }
 }
-
-#map{
-    transform: scale(0.6);
-}

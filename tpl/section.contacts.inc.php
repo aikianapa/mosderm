@@ -6,10 +6,11 @@
                 <div class="branches__forms-list">
                     <input type="text" class="select input-control" placeholder="Выбор из списка">
                     <div class="spec-dropdown">
-                        <ul data-wb-role="foreach" data-wb-form="branches" data-wb-tpl="false" data-wb-where='active="on"' data-wb-sort="name" data-wb-hide="wb">
-                            <li>
-                                <a href="/branches/{{id}}/{{wbFurlGenerate({{name}})}}/">{{name}}</a>
-                            </li>
+                        <ul data-wb-role="foreach" data-wb-form="branches" data-wb-tpl="false" data-wb-where='active="on" AND type="branch"' data-wb-sort="name" data-wb-hide="wb">
+                            <li><a href="/branches/{{id}}/{{wbFurlGenerate({{name}})}}/"><b>{{name}}</b></a></li>
+                            <ul  data-wb-role="foreach" data-wb-form="branches" data-wb-tpl="false" data-wb-where='active="on" AND type="office" AND main="{{id}}"' data-wb-sort="name" data-wb-hide="*">
+                                <li><a href="/branches/{{id}}/{{wbFurlGenerate({{name}})}}/">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{name}}</a></li>
+                            </ul>
                         </ul>
                     </div>
 
@@ -105,22 +106,11 @@
 
 
 </section>
-<script src="js/jquery.panzoom.min.js" data-wb-append="body"></script>
+
 <script src="js/stacktable.js"  data-wb-append="body"></script>
 <script data-wb-append="body">
     (function() {
-        var $section = $('#auto-contain');
-        $section.find('.panzoom').panzoom({
-            $zoomIn: $section.find(".zoom-in"),
-            $zoomOut: $section.find(".zoom-out"),
-            startTransform: 'scale(1)',
-            increment: 0.1,
-            minScale: 1,
-            maxScale: 2,
-            contain: 'automatic'
-        }).panzoom('zoom');
-        
-        
+
         $(".schedule-table__item tbody").each(function(){
            if ($(this).find("tr").length == 0) {
                $(this).parents(".schedule-table__item").remove();
