@@ -1728,9 +1728,13 @@
     
     $(window).on("resize",function(){
         var def =  1134;
-        var max = ($(".branches-card__address")[0]["offsetWidth"] - $(".branches-card__address-info")[0]["offsetWidth"]);
-        if (0 > max) {
-            max = $(".branches-card__address-info")[0]["offsetWidth"] ;
+        if ($(".branches-card__address").length) {
+            var max = ($(".branches-card__address")[0]["offsetWidth"] - $(".branches-card__address-info")[0]["offsetWidth"]);
+            if (0 > max) {
+                max = $(".branches-card__address-info")[0]["offsetWidth"] ;
+            }
+        } else {
+            var max = $(".container")[0]["offsetWidth"] ;
         }
         $("#auto-contain").removeAttr("style");
         var zoom = (max / def) * 100;    
