@@ -36,6 +36,11 @@ function clearStyles($text) {
     $out = $app->fromString("<div>".$text."</div>");
     $tags = $out->find("[style]");
     foreach($tags as $tag) $tag->removeAttr("style");
+    $spans = $out->find("span");
+    foreach($spans as $tag) {
+        $tag->after($tag->html());
+        $tag->remove();
+    }
     return $out->html();
 }
 
