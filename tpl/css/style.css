@@ -2638,14 +2638,7 @@ a.for-doctors__info-title{
 }
 
 .spec-card__info p {
-    padding-bottom: 20px!important;
     line-height: 20px;
-}
-
-.spec-card__info * {
-        font-family:Rubik, sans-serif!important;
-        font-size: 14px!important;
-        color: #151B1F!important;
 }
 
 .our-specialist__slider-wrap{
