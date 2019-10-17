@@ -21,9 +21,9 @@
             <div class="spec-card__img">
                 <img data-wb-role="thumbnail" data-wb-size="400px;550px;src" src="/uploads/{{_table}}/{{id}}/{{image[0].img}}" alt="{{name}} - {{spec}}" data-wb-hide="wb">
             </div>
-            <div class="spec-card__info">
+            <div class="spec-card__info text">
                 <p data-wb-where='text=""'>{{descr}}</p>
-                    {{text}}
+                    {{text->clearStyles()}}
                     <div class="spec-card__buttons flex">
                         <a href="#" class="btn spec-btn-reception">Записаться на прием</a>
                         <a href="#" class="btn spec-btn-review">Оставить отзыв</a>
@@ -49,7 +49,7 @@
                                 {{_value.name}}
                             </strong>
                             <p>
-                                {{_value.text}}
+                                {{_value.text->clearStyles()}}
                             </p>
 
                         </div>

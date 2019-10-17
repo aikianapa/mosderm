@@ -10,8 +10,8 @@
 <section id="vacancies">
     <div class="container">
         <div class="vacancies__wrap">
-            <div class="vacancies__block">
-            {{text}}
+            <div class="vacancies__block text">
+            {{text->clearStyles()}}
             </div>
         </div>
     </div>

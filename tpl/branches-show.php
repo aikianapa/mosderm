@@ -83,7 +83,7 @@
             <div data-wb-role="foreach" data-wb-form="branches" data-wb-tpl="false" data-wb-where='main="{{id}}"' class="empty-control-offices">
                 <div class="sm-section">
                     <h4 class="mb-3">{{name}}</h4>
-                    <p class="empty-control-this">{{text}}</p>
+                    <p class="empty-control-this text">{{text->clearStyles()}}</p>
                     <div data-wb-role="include" src="template" data-wb-name="section.widget.spec.inc.php" class="sm-section" data-wb-json='{"office":"{{id}}"}' data-wb-hide="*">
                         <meta data-wb-remove="h2"><br>
                     </div>
@@ -113,8 +113,8 @@
                 </div>
 
             </div>
-            <div class="record__right">
-                {{text}}
+            <div class="record__right text">
+                {{text->clearStyles()}}
             </div>
         </div>
     </div>

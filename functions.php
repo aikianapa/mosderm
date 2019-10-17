@@ -31,6 +31,15 @@ function wbAfterInit() {
 	}
 }
 
+function clearStyles($text) {
+    $app = new wbApp();
+    $out = $app->fromString("<div>".$text."</div>");
+    $tags = $out->find("[style]");
+    foreach($tags as $tag) $tag->removeAttr("style");
+    return $out->html();
+}
+
+
 function ajax_getBranchForm() {
     $out = wbGetForm("admin","branches");
     $content = "";

@@ -3,7 +3,6 @@
         <div class="navigation__wrap">
             <a href="/">Главная</a>
             <a href="/act-news" data-wb-where='"{{_form}}" = "news" OR "{{_form}}" = "activity"'>Новости</a>
-            <a href="/news" data-wb-where='"{{_form}}" = "news"'>Новости</a>
             <span data-wb-where='"{{_form}}" = "branches" AND main>""' data-wb-role="formdata" data-wb-form="branches" data-wb-item="{{main}}" data-wb-hide="*">
                 <a href="/branches/{{id}}/{{wbFurlGenerate({{name}})}}">{{name}}</a>
             </span>

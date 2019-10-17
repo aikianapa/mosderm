@@ -9,7 +9,7 @@
         <a href="{{data.content.link}}" class="for-doctors__info-title">
             <h3>{{data.content.header}}</h3>
         </a>
-        {{data.content.text}}
+        <div class="text">{{data.content.text->clearStyles()}}</div>
     </div>
 </div>
 <meta data-name="Блок контента изображение, текст, ссылка">
