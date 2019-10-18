@@ -4,7 +4,8 @@
         <div class="news__wrap flex" data-wb-role="foreach" data-wb-form="news" data-wb-size="6" data-wb-sort="date:d" data-wb-where='active = "on" {{_var.where}}' data-wb-hide="false">
             <div class="news-block flex">
                 <div class="news-block__img">
-                    <img data-wb-role="thumbnail" data-wb-size="251;169;src" src="/uploads/news/{{id}}/{{image[0].img}}" data-wb-noimg="/tpl/img/news/news-img.png" alt="{{header}}">
+                    <!--img data-wb-role="thumbnail" data-wb-size="251;169;src" src="/uploads/news/{{id}}/{{image[0].img}}" data-wb-noimg="/tpl/img/news/news-img.png" alt="{{header}}"-->
+                    <img data-wb-role="thumbnail" data-wb-size="251;169;src" src="/tpl/img/news/news-img.png" alt="{{header}}">
                 </div>
                 <div class="news-block__info">
                     <strong>
