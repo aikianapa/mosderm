@@ -11,7 +11,8 @@
                 </div>
                 <div  data-wb-role="foreach" data-wb-form="news" data-wb-limit="1" data-wb-sort="date:d"  data-wb-where='active = "on"' data-wb-tpl="false" data-wb-hide="*">
                     <div class="news__second-block">
-                        <img data-wb-role="thumbnail" data-wb-size="348;433;src" src="/uploads/news/{{id}}/{{image[0].img}}" data-wb-noimg="/tpl/img/news/news-img.png" alt="{{header}}">
+                        <!--img data-wb-role="thumbnail" data-wb-size="348;433;src" src="/uploads/news/{{id}}/{{image[0].img}}" data-wb-noimg="/tpl/img/news/news-img.png" alt="{{header}}"-->
+                        <img src="/tpl/img/news/news-img.png" alt="{{header}}">
                     </div>
                     <div class="news__third-block">
                         <div class="news__third-block-top">

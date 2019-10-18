@@ -1,5 +1,6 @@
 <section id="schedule-table" class="sm-section sm-section-bottom" data-name="Список работы филиалов по приёму граждан по личным вопросам">
-    <div class="container" data-wb-role="foreach" data-wb-form="branches" data-wb-where='active="on"'>
+    <!-- tpl/section.list.schedule.inc.php -->
+    <div class="container" data-wb-role="foreach" data-wb-form="branches" data-wb-where='active="on" AND type="branch" AND mapnum != "17"'>
         <div class="schedule-table__item">
             <h3>{{name}}</h3>
             <div class="stacktable-table">

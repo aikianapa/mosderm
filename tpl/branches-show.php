@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+<!-- tpl/branches-show.php -->
 <head data-wb-role="include" src="template" data-wb-name="head.inc.php">
 </head>
 <body>
@@ -9,10 +10,12 @@
 
     
     
-<section id="branches-card" class="sm-section sm-section-bottom">
+<section id="branches-card" class="sm-section">
     <div class="container">
         <div class="branches-card__address flex">
+            <meta data-wb-role="variable" var="branch" data-wb-if='type="branch"' value="{{id}}" else="{{main}}">
             <div class="branches-card__address-info">
+                <div  data-wb-role="formdata" data-wb-form="branches" data-wb-item="{{_var.branch}}" data-wb-hide="*">
                 <strong class="empty-remove-adr">Адрес филиала:</strong>
                 <p class="empty-control-adr">{{address}}</p>
                 <strong class="empty-remove-how">Как добраться:</strong>
@@ -25,13 +28,16 @@
                     <span class="empty-remove-pha">Телефон администратора и платных услуг: <nobr class="empty-control-pha">{{phoneadm}}</nobr></span>
                 </p>
 
-                <strong class="empty-remove-zav">Заведующий филиалом:</strong>
+                <strong class="empty-remove-eml">Адрес электронной почты: </strong>
+                <p class="empty-control-eml">{{email}}</p>
+                </div>
+
+                <strong data-wb-where='type="branch"' data-wb-hide="wb" class="empty-remove-zav">Заведующий филиалом:</strong>
+                <strong data-wb-where='type="office"' data-wb-hide="wb" class="empty-remove-zav">Заведующий отделением:</strong>
                 <p data-wb-role="formdata" data-wb-form="specialists" 
                    data-wb-item="{{boss}}" data-wb-clear="true" data-wb-hide="wb" 
                    class="empty-control-zav"><a href="/specialists/{{id}}/{{wbFurlGenerate({{name}})}}">{{name}}</p>
 
-                <strong class="empty-remove-eml">Адрес электронной почты: </strong>
-                <p class="empty-control-eml">{{email}}</p>
             </div>
             <div class="branches-card__address-map">
                 <meta data-wb-role="include" src="template" data-wb-name="section.widget.contactsmap.inc.php">
@@ -41,8 +47,35 @@
             </div>
 
         </div>
-        
-        <div class="schedule-table__item" class="empty-remove-schedule">
+</section>
+<section id="record" class="sm-section">
+    <div class="container">
+        <div class="record__wrap flex">
+            <div class="record__left">
+                <div class="record__btn-box" data-wb-where='mapnum != "17"'>
+                    <div class="record__btn">
+                        <a href="/branches/{{id}}/order/" data-wb-where='"{{type}}" = "branch"' data-wb-hide="wb">Онлайн запись</a>
+                        <a href="/branches/{{branch}}/order/" data-wb-where='"{{type}}" = "office"' data-wb-hide="wb">Онлайн запись</a>
+                    </div>
+                    <div class="record__btn">
+                        <a href="/branches/{{id}}/addresses/" data-wb-where='"{{type}}" = "branch"' data-wb-hide="wb">Обслуживаемые адреса</a>
+                        <a href="/branches/{{branch}}/addresses/" data-wb-where='"{{type}}" = "office"' data-wb-hide="wb">Обслуживаемые адреса</a>
+                    </div>
+                </div>
+                <div class="record__img">
+                    <img data-wb-role="thumbnail" data-wb-size="261;381;src" src="{{_image}}" data-wb-noimg="/tpl/img/record/record-img.png"/>
+                </div>
+
+            </div>
+            <div class="record__right text">
+                {{text->clearStyles()}}
+            </div>
+        </div>
+    </div>
+</section>
+<section  class="sm-section-bottom empty-remove-schedule">
+     <div class="container">
+        <div class="schedule-table__item">
             <h3>Расписание приёма по личным вопросам</h3>
             <div class="stacktable-table">
                 <table>
@@ -77,62 +110,35 @@
                 </table>
             </div>
         </div>
-
-        <div class="schedule-table__item" class="empty-remove-offices" data-wb-where='"{{type}}" = "branch"'>
-            <h3>Отделения</h3>
-            <div data-wb-role="foreach" data-wb-form="branches" data-wb-tpl="false" data-wb-where='main="{{id}}"' class="empty-control-offices">
-                <div class="sm-section">
-                    <h4 class="mb-3">{{name}}</h4>
-                    <p class="empty-control-this text">{{text->clearStyles()}}</p>
-                    <div data-wb-role="include" src="template" data-wb-name="section.widget.spec.inc.php" class="sm-section" data-wb-json='{"office":"{{id}}"}' data-wb-hide="*">
-                        <meta data-wb-remove="h2"><br>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
     </div>
 </section>
     
-<section id="record">
+<section class="empty-remove-offices" data-wb-where='"{{type}}" = "branch"'>
     <div class="container">
-        <div class="record__wrap flex">
-            <div class="record__left">
-                <div class="record__btn-box">
-                    <div class="record__btn">
-                        <a href="/branches/{{id}}/order/" data-wb-where='"{{type}}" = "branch"' data-wb-hide="wb">Онлайн запись</a>
-                        <a href="/branches/{{branch}}/order/" data-wb-where='"{{type}}" = "office"' data-wb-hide="wb">Онлайн запись</a>
-                    </div>
-                    <div class="record__btn">
-                        <a href="/branches/{{id}}/addresses/" data-wb-where='"{{type}}" = "branch"' data-wb-hide="wb">Обслуживаемые адреса</a>
-                        <a href="/branches/{{branch}}/addresses/" data-wb-where='"{{type}}" = "office"' data-wb-hide="wb">Обслуживаемые адреса</a>
-                    </div>
+        <div class="schedule-table__item">
+            <h3>Отделения</h3>
+            <div data-wb-role="foreach" data-wb-form="branches" data-wb-tpl="false" data-wb-where='main="{{id}}"' class="empty-control-offices">
+                <div class="sm-section">
+                    <h4 class="mb-3"> - <a href="/branches/{{id}}/{{wbFurlGenerate({{name}})}}">{{name}}</a></h4>
                 </div>
-                <div class="record__img">
-                    <img data-wb-role="thumbnail" data-wb-size="261;381;src" src="{{_image}}" data-wb-noimg="/tpl/img/record/record-img.png"/>
-                </div>
-
-            </div>
-            <div class="record__right text">
-                {{text->clearStyles()}}
             </div>
         </div>
     </div>
 </section>
+    
 <section id="specialists" class="sm-section-bottom" data-wb-where='"{{type}}" = "office"'>
     <div class="container">
         <h3>Наши специалисты</h3>
             <div data-wb-role="include" src="template" data-wb-name="section.widget.spec.inc.php" class="sm-section" data-wb-json='{"office":"{{id}}"}' data-wb-hide="*">
-                <meta data-wb-remove="h2"><br>
+                <meta data-wb-remove="#our-specialists h2"><br>
             </div>
-            <meta data-wb-selector="#our-specialists" data-wb-addclass="sm-section-bottom">
     </div>
 </section>
     
 <link rel="stylesheet" href="css/stacktable.css" data-wb-append="head">
 <script src="js/stacktable.js"  data-wb-append="body"></script>
     
-<meta data-wb-role="include" src="template" data-wb-name="section.question.inc.php" data-wb-id="question-2">
+<meta data-wb-role="include" src="template" data-wb-name="section.question.inc.php" data-wb-id="question-2" class="sm-section">
 <meta data-wb-role="include" src="template" data-wb-name="section.footer.inc.php">
 <meta data-wb-role="include" src="template" data-wb-name="scripts.inc.php">
 </body>

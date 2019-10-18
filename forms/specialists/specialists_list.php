@@ -31,7 +31,8 @@
                         <tr>
                             <th>Фото</th>
                             <th data-sort="name">Имя / Должность</th>
-                            <th data-sort="name">Статус</th>
+                            <th>Статус</th>
+                            <th>На главной</th>
                             <th class="text-right">Действие</th>
                         </tr>
                     </thead>
@@ -42,6 +43,10 @@
                             <td class="text-center">
                                 <div class="status-pill green" data-title="Отображается" data-wb-role="where" data='active="on"' data-toggle="tooltip"></div>
                                 <div class="status-pill red" data-title="Скрытый" data-wb-role="where" data='active=""' data-toggle="tooltip"></div>
+                            </td>
+                            <td class="text-center">
+                                <div class="status-pill green" data-title="Отображается" data-wb-role="where" data='widget="on"' data-toggle="tooltip"></div>
+                                <div class="status-pill red" data-title="Скрытый" data-wb-role="where" data='widget=""' data-toggle="tooltip"></div>
                             </td>
 
                             <td class="text-right" data-wb-role="include" src="form" data-wb-name="common_item_actions"></td>

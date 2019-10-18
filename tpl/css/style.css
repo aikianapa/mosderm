@@ -1019,17 +1019,17 @@ width: calc(100% /3);
     text-transform: uppercase;
     */
     display: block;
-    padding-bottom: 10px;
+    padding-bottom: 2px;
 }
 
 .inner-menu ul{
-    padding-bottom: 40px;
+    padding-bottom: 20px;
     padding-right: 90px;
 }
 
 
 .inner-menu li{
-    padding-bottom: 10px;
+    /*padding-bottom: 10px;*/
 }
 
 /*PROGRESS*/
@@ -1232,6 +1232,10 @@ width: calc(100% /3);
 #union-pdf p{
     font-size: 20px;
     text-transform: uppercase;
+}
+
+#record .record__wrap {
+    padding-top:60px;
 }
 
 .union-pdf__item{
@@ -1911,8 +1915,9 @@ max-width: none;
 }
 
 .spec-card__buttons{
-    position: absolute;
+    position: relative;
     bottom: 0;
+    margin-top: 20px;
 }
 
 .spec-card__info{
@@ -4500,10 +4505,11 @@ h2 > a:hover, .vacancy-content__item > a:hover, .activity__ancor:hover, .news-bl
         width: auto;
     }
 
+/*
     #branches-card #map{
         transform: matrix(1.21, 0, 0, 1.21, -263.2, -10.0941) scale(0.8);
     }
-
+*/
     .other__item > a > img{
         width: 100%;
     }
@@ -4931,6 +4937,11 @@ h2 > a:hover, .vacancy-content__item > a:hover, .activity__ancor:hover, .news-bl
     color: black;
 }
 
+
+#auto-contain {
+    zoom:50%;
+}
+
 #map.active{
     transform: scale(2.5);
 }
@@ -5172,8 +5183,18 @@ margin-bottom: 10px;
     margin:0;
     padding:0;
     padding-bottom:15px;
+    line-height: 1.1rem;
 }
 
+.text img.note-float-left {
+    padding-right: 15px;
+}
+
+.text img.note-right-left {
+    padding-left: 15px;
+}
+
+/*
 @media (max-width: 380px) {
     #branches-card #map{
         transform: matrix(1.21, 0, 0, 1.21, -304.2, -28.0941) scale(0.7);
@@ -5185,3 +5206,4 @@ margin-bottom: 10px;
         transform: matrix(1.21, 0, 0, 1.21, -345.2, -59.0941) scale(0.6);
 }
 }
+*/

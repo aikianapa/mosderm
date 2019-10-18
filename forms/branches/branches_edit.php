@@ -28,7 +28,7 @@
         </div>
 	</div>
     
-	<div class="form-group row control-show-main-branch">
+	<div class="form-group row control-show-main-office">
 	  <label class="col-sm-3 form-control-label">Головная организация</label>
 	   <div class="col-sm-9">
            <select class="form-control" name="main" placeholder="Выберите филиал"

@@ -34,8 +34,8 @@
 </div>
 
 <div class="form-group row"  data-wb-html="#newsImages">
-    <div class="col-sm-6">
-            <input type="hidden" name="image" data-wb-role="uploader" >
+    <div class="col-sm-12">
+            <input type="hidden" name="image" data-wb-role="uploader" multiple >
 	</div>
 </div>
 <script>

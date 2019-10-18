@@ -1,4 +1,5 @@
             <div id="auto-contain">
+                <!-- tpl/section.widget.contactmap.inc.php -->
                 <div class="panzoom-parent ">
                     <div class="map-container" class="panzoom">
                         <div id="map" class="panzoom">
@@ -1692,11 +1693,11 @@
                         </div>
 
                     </div>
-                    <div class="zoom-buttons">
+                    <!--div class="zoom-buttons">
                         <button class="zoom-in">+</button>
                         <button class="zoom-out">-</button>
 
-                    </div>
+                    </div-->
 
                 </div>
             </div>
@@ -1714,6 +1715,7 @@
     
     
         var $section = $('#auto-contain');
+    /*
         $section.find('.panzoom').panzoom({
             $zoomIn: $section.find(".zoom-in"),
             $zoomOut: $section.find(".zoom-out"),
@@ -1723,7 +1725,7 @@
             maxScale: 2,
             contain: 'automatic'
         }).panzoom('zoom');
-
+*/
     $(".baloon-group").on("click tap",function(){
         var item = $(this).find(".baloon-info strong").attr("data-id");
         var furl = $(this).find(".baloon-info strong").attr("data-name");

@@ -8,11 +8,11 @@
     <div class="row">
         <div class="col-sm-4">
             <div class="row">
-                <div class="content-left w-100">
+                <div class="content-left w-100" onClick="$('.kt-pagebody').scrollTop(0)">
                     <label class="content-left-label">
-                        Округи
+                        Филиалы
                     </label>
-                    <ul id="{{_form}}Catalog" data-wb-role="tree" data-wb-item="area" data-wb-where='' class="nav mg-t-1-force">
+                    <ul id="{{_form}}Catalog" data-wb-role="foreach" data-wb-form="branches" data-wb-tpl="false" data-wb-where='type = "branch"' class="nav mg-t-1-force">
                         <li class="nav-item">
                             <a class="nav-link" data-wb-ajax="/form/list/branches/{{id}}/" title="{{name}}" data-wb-html=".content-box">{{name}}</a>
                         </li>
@@ -20,6 +20,7 @@
                 </div>
             </div>
         </div>
+
         <div class="col-12 col-sm-8 list">
 
             <div class="table-responsive">
@@ -32,7 +33,7 @@
                             <th class="text-right">Действие</th>
                         </tr>
                     </thead>
-                    <tbody data-wb-role="foreach" data-wb-from="result" data-wb-add="true" data-wb-sort="area name" data-wb-size="{{_ENV[page_size]}}">
+                    <tbody data-wb-role="foreach" data-wb-from="result" data-wb-add="true" data-wb-sort="type name" data-wb-size="{{_ENV[page_size]}}">
                         <tr item="{{id}}">
                             <td><img data-wb-role="thumbnail" data-wb-size="40px;40px;src" src="/uploads/{{_form}}/{{id}}/{{images[0].img}}"></td>
                             <td>{{name}}

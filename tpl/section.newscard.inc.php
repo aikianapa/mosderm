@@ -5,9 +5,9 @@
             <div class="spec-card__info text">
                 {{text->clearStyles()}}
             </div>
-            <div class="news-card__img">
+            <!--div class="news-card__img">
                 <img data-wb-role="thumbnail" data-wb-size="330;309;src" src="/uploads/{{_form}}/{{id}}/{{image[0].img}}" data-wb-noimg="/tpl/img/news/news-img.png" alt="{{header}}">
-            </div>
+            </div-->
         </div>
     </div>
 </section>

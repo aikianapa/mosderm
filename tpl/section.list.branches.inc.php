@@ -1,4 +1,5 @@
 <section id="branches-top" class="sm-section sm-section-bottom" data-name="Список филиалов">
+    <!-- tpl/section.list.branches.inc.php -->
     <div class="container">
         <p>{{_sett.fullname}}</p>
         <form class="branches__forms" method="post">

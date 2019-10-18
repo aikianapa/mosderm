@@ -1,4 +1,5 @@
 <section class="sm-section" data-name="Таблица филиалов и контакты">
+    <!-- tpl/section.table.branches.inc.php -->
 <div class="container">
     <meta data-wb-role="variable" var="where" value='AND active = "on"'>
     <meta data-wb-role="variable" var="where" data-wb-where='"{{_post.branch_name}}" > ""' value='{{_var.where}} AND name LIKE "{{_post.branch_name}}"'>
@@ -29,7 +30,7 @@
                                     <a href="/branches/{{id}}/{{wbFurlGenerate({{name}})}}/">Показать на карте</a></td>
                                 <td>{{worktime}}
                                 </td>
-                                <td><a href="/branches/{{id}}/order/">Онлайн-запись</a></td>
+                                <td><a href="/branches/{{id}}/order/" data-wb-where='mapnum != "17"'>Онлайн-запись</a></td>
                             </tr>
                         </tbody>
 
