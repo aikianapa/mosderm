@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+<!-- tpl/site-find.php -->
 <head data-wb-role="include" src="template" data-wb-name="head.inc.php">
     <base href="/tpl/">
 </head>

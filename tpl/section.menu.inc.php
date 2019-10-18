@@ -1,4 +1,5 @@
 <section id="menu" data-name="Главное меню сайта">
+    <!-- tpl/section.menu.inc.php -->
     <div class="container">
         <div class="menu__content flex">
             <div class="menu__right-content flex">

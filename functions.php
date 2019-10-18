@@ -31,6 +31,10 @@ function wbAfterInit() {
 	}
 }
 
+function text2tel($str) {
+    return preg_replace("/\D/", '', $str);
+}
+
 function clearStyles($text) {
     $app = new wbApp();
     $out = $app->fromString("<div>".$text."</div>");

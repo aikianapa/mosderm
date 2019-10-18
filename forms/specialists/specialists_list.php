@@ -8,14 +8,17 @@
     <div class="row">
         <div class="col-sm-4">
             <div class="row">
-                <div class="content-left w-100">
+                <div class="content-left w-100" onClick="$('.kt-pagebody').scrollTop(0)">
                     <label class="content-left-label">
                         Филиалы
                     </label>
-                    <ul id="{{_form}}Catalog" data-wb-role="foreach" data-wb-form="branches" data-wb-tpl="false" data-wb-where='' class="nav mg-t-1-force">
+                    <ul id="{{_form}}Catalog" data-wb-role="foreach" data-wb-form="branches" data-wb-tpl="false" data-wb-where='type = "branch"' class="nav mg-t-1-force">
                         <li class="nav-item">
                             <a class="nav-link" data-wb-ajax="/form/list/specialists/{{id}}/" title="{{name}}" data-wb-html=".content-box">{{name}}</a>
                         </li>
+                        <ul  data-wb-role="foreach" data-wb-form="branches" data-wb-tpl="false" data-wb-where='type="office" AND main="{{id}}"' data-wb-sort="name" data-wb-hide="*">
+                            <li><a class="nav-link" data-wb-ajax="/form/list/specialists/{{id}}/" data-wb-html=".content-box">&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;{{name}}</a></li>
+                        </ul>
                     </ul>
                 </div>
             </div>

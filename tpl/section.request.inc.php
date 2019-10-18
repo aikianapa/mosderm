@@ -1,4 +1,5 @@
 <section id="request" data-name="Виджет поиска по сайту с логотипом">
+    <!-- tpl/section.request.inc.php -->
     <div class="container">
         <div class="request__content flex">
             <div class="request__logo">
@@ -14,7 +15,7 @@
                             $(this).parent('form').submit();"><img src="img/header/magnifying-glass.png"/></a>
             </form>
             <div class="request__number flex">
-                <p>{{_sett.phone}}</p>
+                <p><a href="tel:+{{text2tel({{_sett.phone}})}}">{{_sett.phone}}</a></p>
                 <a href="/direction" class="btn">
                     Онлайн запись
                 </a>

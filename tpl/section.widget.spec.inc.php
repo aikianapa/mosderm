@@ -1,8 +1,9 @@
     <section id="our-specialists" data-name="Виджет - Наши специалисты">
+        <!-- tpl/section.widget.spec.inc.php -->
         <div class="container">
             <h2>Наши специалисты <a href="/specialists">Все специалисты</a></h2>
             <meta data-wb-role="variable" var="where" data-wb-if='"{{_form}}"="branches" AND "{{_mode}}"="show"' value=' AND branch = "{{_item}}"' else=''>
-            <meta data-wb-role="variable" var="where" data-wb-if='"{{office}}">""' value=' AND office = "{{office}}" OR active=""' else='{{_var.where}}'>
+            <meta data-wb-role="variable" var="where" data-wb-if='"{{office}}">""' value=' AND office = "{{office}}" AND ( widget="" OR widget="on" AND active = "on")' else='{{_var.where}}'>
             <div class="our-specialists__slider" data-wb-role="foreach" data-wb-tpl="false" data-wb-where='active="on" AND widget="on" {{_var[where]}}' data-wb-rand="true" data-wb-form="specialists" data-wb-hide="wb">
                 <div class="our-specialist__item">
                     <a href="/specialists/{{id}}/{{wbFurlGenerate({{name}})}}"></a>

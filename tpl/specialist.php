@@ -25,8 +25,8 @@
                 <p data-wb-where='text=""'>{{descr}}</p>
                     {{text->clearStyles()}}
                     <div class="spec-card__buttons flex">
-                        <a href="#" class="btn spec-btn-reception">Записаться на прием</a>
-                        <a href="#" class="btn spec-btn-review">Оставить отзыв</a>
+                        <a href="/branches/{{branch}}/order/" class="btn spec-btn-reception">Записаться на прием</a>
+                        <a href="#question-2" class="btn spec-btn-review">Оставить отзыв</a>
                     </div>
             </div>
         </div>
