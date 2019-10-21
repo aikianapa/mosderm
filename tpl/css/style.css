@@ -114,6 +114,10 @@ h3{
     bottom: 554px;
 }
 
+.baloon-group-4 .baloon-info{
+    bottom: -65px;
+}
+
 .baloon-group-5{
     right: 451px;
     bottom: 332px;
@@ -162,6 +166,11 @@ h3{
 .baloon-group-13{
     right: 297px;
     bottom: 275px;
+}
+
+.baloon-group-13 .baloon-info{
+    left: -232px;
+    bottom: -82px;
 }
 
 .baloon-group-14{
@@ -5014,8 +5023,8 @@ h2 > a:hover, .vacancy-content__item > a:hover, .activity__ancor:hover, .news-bl
 }
 
 .baloon-group-5 {
-    right: 451px;
-    bottom: 332px;
+    right: 488px;
+    bottom: 420px;
 }
 
 .baloon-group-6{
@@ -5043,6 +5052,11 @@ h2 > a:hover, .vacancy-content__item > a:hover, .activity__ancor:hover, .news-bl
     bottom: 340px;
 }
 
+.baloon-group-10 .baloon-info{
+    left: -235px;
+    bottom: 35px;
+}
+
 .baloon-group-11 {
     right: 542px;
     bottom: 381px;
@@ -5061,6 +5075,12 @@ h2 > a:hover, .vacancy-content__item > a:hover, .activity__ancor:hover, .news-bl
 .baloon-group-14 {
     right: 365px;
     bottom: 245px;
+}
+
+
+.baloon-group-14 .baloon-info{
+    left: -230px;
+    bottom: 38px;
 }
 
 .baloon-group-15 {
