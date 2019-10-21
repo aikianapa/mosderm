@@ -1,4 +1,5 @@
 <section id="progress" data-name="Виджет с дипломами (малый)">
+    <!-- tpl/section.progress.inc.php -->
     <div class="container">
         <div class="progress__wrap flex">
             <div class="progress__text">

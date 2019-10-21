@@ -1,4 +1,5 @@
 <div id="activity-search" class="sm-section">
+    <!-- tpl/section.activitysearch.inc.php -->
     <meta  data-name="Поиск по мероприятиям">
     <div class="container">
         <form class="activity__search flex" action="{{uri}}" method="post">

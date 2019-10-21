@@ -1,4 +1,5 @@
 <section id="question-2" data-name="Форма - Отправить резюме">
+    <!-- tpl/section.form.resume.inc.php -->
     <div class="container">
         <h2>Отправить резюме</h2>
         <form class="question__border">

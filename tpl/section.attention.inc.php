@@ -1,4 +1,5 @@
 <section id="attention" data-name="Блок с предупреждением (синий фон)">
+    <!-- tpl/section.attention.inc.php -->
     <div class="container">
         <div class="attention__wrap">
             <h3>{{data.content.header}}</h3>

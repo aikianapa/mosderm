@@ -1,4 +1,5 @@
 <section id="certperson" class="sm-section" data-name="Виджет персональных сертификатов">
+    <!-- tpl/section.certperson.inc.php -->
     <div class="container">
         <div class="our-progress__box flex" data-wb-role="tree" data-wb-item="certificates" data-wb-hide="wb">
             <div class="our-porgress__item flex" data-wb-where='"{{data.content.type}}"="person" AND "{{data.content.visible}}"="on"'>

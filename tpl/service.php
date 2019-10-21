@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+    <!-- tpl/service.php -->
 <head data-wb-role="include" src="template" data-wb-name="head.inc.php">
     <link rel="stylesheet" href="css/stacktable.css" data-wb-append="head">
     <script src="js/stacktable.js"  data-wb-append="body"></script>

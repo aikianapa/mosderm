@@ -29,7 +29,7 @@
             <div class="branches__item flex">
                 <div class="branches__img">
                     <a href="/branches/{{id}}/{{wbFurlGenerate({{name}})}}"></a>
-                    <img data-wb-role="thumbnail" data-wb-size="320;187;src" src="{{_image}}" data-wb-noimg="/tpl/img/branches/branches.jpg"/>
+                    <img data-wb-role="thumbnail" data-wb-size="320;187;src" src="{{_image}}" data-wb-noimg="/tpl/img/branches/branches.jpg" data-wb-hide="wb,data-src"/>
                 </div>
                 <div class="branches__info">
                     <a href="/branches/{{id}}/{{wbFurlGenerate({{name}})}}"><strong>{{name}}</strong></a>

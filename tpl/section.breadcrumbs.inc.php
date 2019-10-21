@@ -1,4 +1,5 @@
 <section id="navigation" data-name="Путь к странице" data-wb-where='"{{_form}}_{{_item}}" != "pages_home"'>
+    <!-- tpl/section.breadcrumbs.inc.php -->
     <div class="container">
         <div class="navigation__wrap">
             <a href="/">Главная</a>

@@ -1,4 +1,5 @@
     <section id="news" data-name="Виджет новостей">
+        <!-- tpl/section.news.inc.php -->
         <div class="container">
             <h2>Новости <a href="/news">Все новости</a></h2>
             <div class="news__wrap flex">

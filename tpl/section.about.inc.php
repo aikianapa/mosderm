@@ -1,4 +1,5 @@
 <section id="center" class="sm-section" data-name="Блок о центре с видео">
+    <!-- tpl/section.about.inc.php -->
     <div class="container">
         <!--h2>{{header}}</h2-->
         <div class="center__title">

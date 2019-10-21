@@ -1,4 +1,5 @@
 <section id="other" data-name="Виджет - Ссылки на сайты партнёров">
+    <!-- tpl/section.widget.links.inc.php -->
         <div class="container">
             <div class="other__slider" data-wb-role="tree" data-wb-item="partners" data-wb-hide="wb">
                 <div class="other__wrap">

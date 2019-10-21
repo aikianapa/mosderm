@@ -1,4 +1,5 @@
 <section id="partners" data-name="Список сайтов партнёров">
+    <!-- tpl/section.list.partners.inc.php -->
     <div class="container">
         <div class="partners__wrap" data-wb-role="tree" data-wb-item="partners" data-wb-hide="wb">
             <div class="partners__item flex">

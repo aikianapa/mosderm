@@ -1,4 +1,5 @@
 <section id="specialists" class="sm-section" data-name="Список специалистов">
+    <!-- tpl/section.list.specialists.inc.php -->
     <div class="container">
     <div class="specialists-desc flex" data-wb-role="foreach" data-wb-form="specialists" data-wb-where='active="on"' data-wb-size="8">
             <div class="our-specialist__item">

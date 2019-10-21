@@ -1,4 +1,5 @@
 <section id="education"class="sm-section sm-section-bottom" data-name="Колонки с изображением и текстом">
+    <!-- tpl/section.cols.imgtext.inc.php -->
     <div class="container">
         <div class="education__wrap flex" data-wb-role="foreach" data-wb-from="data.content.slide" data-wb-tpl="false">
             <div class="education__item">

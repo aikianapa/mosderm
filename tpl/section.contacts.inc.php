@@ -1,4 +1,5 @@
 <section id="contacts" class="sm-section sm-section-bottom" data-name="Контакты">
+    <!-- tpl/section.contacts.inc.php -->
     <div class="container">
         <form class="branches__forms inner-pages-forms" method="post">
             <input type="text" name="branch_name" class="name input-control" placeholder="Поиск по названию филиала">

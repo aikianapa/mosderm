@@ -6,7 +6,7 @@
             <meta data-wb-role="variable" var="where" data-wb-if='"{{office}}">""' value=' AND office = "{{office}}" AND ( widget="" OR widget="on" ) ' else='{{_var.where}}'>
             <meta data-wb-role="variable" var="where" data-wb-if='"{{_form}}"="branches" AND "{{_mode}}"="show" AND type = "office"' value=' AND office = "{{_item}}"' else='{{_var.where}}'>
             
-            <div class="our-specialists__slider" data-wb-role="foreach" data-wb-tpl="false" data-wb-where='active="on" {{_var[where]}}' data-wb-rand="true" data-wb-form="specialists" data-wb-hide="wb">
+            <div class="our-specialists__slider" data-wb-role="foreach" data-wb-tpl="false" data-wb-where='active="on" {{_var[where]}}' data-wb-limit="10" data-wb-rand="true" data-wb-form="specialists" data-wb-hide="wb">
                 <div class="our-specialist__item">
                     <a href="/specialists/{{id}}/{{wbFurlGenerate({{name}})}}"></a>
                     <div class="our-specialist__slider-wrap">

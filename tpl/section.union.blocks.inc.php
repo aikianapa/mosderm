@@ -1,4 +1,5 @@
 <section id="union" data-name="Блок текст и серая панель справа">
+    <!-- tpl/section.union.blocks.inc.php -->
     <div class="container">
         <div class="union__wrap flex">
             <div class="union__left">

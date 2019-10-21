@@ -1,4 +1,5 @@
     <section id="{{_var.qid}}" data-name="Виджет - Задать вопрос">
+        <!-- tpl/section.question.inc.php -->
         <div class="container">
             <h2>Задайте ваш вопрос</h2>
             <form class="question__border" data-wb-role="formdata" data-wb-json='{"phone"=>"","email"=>"","fullname"=>""}' data-wb-hide="wb">

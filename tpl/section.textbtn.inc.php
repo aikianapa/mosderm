@@ -1,4 +1,5 @@
 <section  class="sm-section-bottom sm-section" data-name="Блок контента текст и кнопка">
+    <!-- tpl/section.textbtn.inc.php -->
     <div class="container">
         <div class="consultation__wrap">
             <div class="consultation__header flex">

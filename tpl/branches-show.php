@@ -23,13 +23,13 @@
                 <strong class="empty-remove-wtm">Время работы:</strong>
                 <p class="empty-control-wtm">{{worktime}}</p>
                 <strong class="empty-remove-phone">Единый телефон  для справок и предварительной записи МНПЦДК:</strong>
-                <p><nobr class="empty-control-phone">{{phone}}</nobr><br>
+                    <p><nobr class="empty-control-phone"><a href="tel:+{{text2tel({{phone}})}}">{{phone}}</a></nobr><br>
                     <span class="empty-remove-fax">Факс:<nobr class="empty-control-fax">{{fax}}</nobr><br></span>
-                    <span class="empty-remove-pha">Телефон администратора и платных услуг: <nobr class="empty-control-pha">{{phoneadm}}</nobr></span>
+                        <span class="empty-remove-pha">Телефон администратора и платных услуг: <nobr class="empty-control-pha"><a href="tel:+{{text2tel({{phoneadm}})}}">{{phoneadm}}</a></nobr></span>
                 </p>
 
                 <strong class="empty-remove-eml">Адрес электронной почты: </strong>
-                <p class="empty-control-eml">{{email}}</p>
+                    <p class="empty-control-eml"><a href="mailto:{{email}}">{{email}}</a></p>
                 </div>
 
                 <strong data-wb-where='type="branch"' data-wb-hide="wb" class="empty-remove-zav">Заведующий филиалом:</strong>
@@ -63,7 +63,7 @@
                     </div>
                 </div>
                 <div class="record__img">
-                    <img data-wb-role="thumbnail" data-wb-size="261;381;src" src="{{_image}}" data-wb-noimg="/tpl/img/record/record-img.png"/>
+                    <img data-wb-role="thumbnail" data-wb-size="261;381;src" src="{{_image}}" data-wb-noimg="/tpl/img/record/record-img.png" data-wb-hide="wb,data-src"/>
                 </div>
 
             </div>

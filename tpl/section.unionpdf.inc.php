@@ -1,4 +1,5 @@
 <section id="union-pdf" data-name="Блок с программами конференций">
+    <!-- tpl/section.unionpdf.inc.php -->
     <div class="container">
         <p>Программа конференции</p>
         <div class="union-pdf__wrap flex" >

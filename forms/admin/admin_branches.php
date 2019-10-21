@@ -39,7 +39,7 @@
     </div>
 
 
-	<div class="form-group row v-attention v-unionpdf">
+	<div class="form-group row v-attention v-unionpdf v-widget-services">
 	    <label class="col-sm-3 form-control-label">Заголовок</label>
         <div class="col-sm-9"><input type="text" name="header" class="form-control" ></div>
 	</div>
@@ -69,6 +69,24 @@
                     <div class="col-sm-4"><select name="btn_target" class="form-control"><option value="_self">_self</option><option value="_blank">_bank</option></select></div>
                 </div>
                 <input type="text" name="btn_link" class="form-control" placeholder="Ссылка кнопки">
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="form-group row v-widget-services">
+        <div class="col-12">
+        <div data-wb-role="multiinput" name="slide">
+            <div class="col-sm-3">
+                <input type="hidden" class="form-control" name="image" data-wb-path="/uploads/{{_post._form}}/{{_post._item}}" data-wb-role="uploader" >
+            </div>
+            <div class="col-sm-9">
+                <input type="text" name="header" class="form-control" placeholder="Заголовок">
+                <textarea class="w-100" rows="auto" name="text" placeholder="Текст"></textarea>
+                <div class="row" style="margin:0px -5px;">
+                    <div class="col-sm-8"><input type="text" name="btn_link" class="form-control" placeholder="Ссылка"></div>
+                    <div class="col-sm-4"><select name="btn_target" class="form-control"><option value="_self">_self</option><option value="_blank">_bank</option></select></div>
+                </div>
             </div>
         </div>
         </div>

@@ -1,4 +1,5 @@
 <meta data-name="Блок загрузки скриптов">
+<!-- tpl/scripts.inc.php -->
 <script src="/engine/js/jquery.min.js"></script>
 <script src="js/slick.min.js"></script>
 

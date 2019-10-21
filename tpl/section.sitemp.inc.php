@@ -1,4 +1,5 @@
 <section id="index" class="sm-section" data-name="Карта сайта">
+    <!-- tpl/section.sitemap.inc.php -->
     <style>
         #index a {display: block;padding-bottom: 10px;}
         #index b {padding-bottom:10px;}

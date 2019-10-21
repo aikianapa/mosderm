@@ -1,4 +1,5 @@
 <section id="activity" class="sm-section" data-name="Список мероприятий">
+    <!-- tpl/section.list.activity.inc.php -->
     <div class="container">
         <meta data-wb-role="variable" var="where" data-wb-if='"{{_post.search_name}}" > ""' value=' AND "{{_post.search_name}}" LIKE "{{header}}"' else="">
 

@@ -1,4 +1,5 @@
 <section id="paid-desc" class="sm-section sm-section-bottom" data-name="Список категорий услуг">
+    <!-- tpl/section.list.categories.inc.php -->
     <div class="container">
         
         <meta data-wb-role="include" src="template" data-wb-name="section.form.find.services.php">

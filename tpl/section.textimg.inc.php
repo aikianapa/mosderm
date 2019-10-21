@@ -1,4 +1,5 @@
 <section id="news-card" class="sm-section sm-section-bottom" data-name="Блок контента редактор и изображение">
+    <!-- tpl/section.textimg.inc.php -->
     <div class="container">
 
             <div class="history__box flex" data-wb-where='"{{data.content.position}}" = "right"'>

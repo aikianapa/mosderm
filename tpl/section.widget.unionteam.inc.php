@@ -1,4 +1,5 @@
 <section id="union-team" class="sm-section-bottom sm-section" data-name="Виджет - Сотрудники профсоюза">
+    <!-- tpl/section.widget.unionteam.inc.php -->
     <div class="container">
         <h2>Сотрудники профсоюза</h2>
         <div class="union-team__wrap flex" data-wb-role="foreach" data-wb-form="specialists" 

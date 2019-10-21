@@ -2948,6 +2948,7 @@ h2 > a:hover, .vacancy-content__item > a:hover, .activity__ancor:hover, .news-bl
     height: 100%;
     cursor: pointer;
     z-index: 1;
+    background: transparent!important;
 }
 
 .union-pdf__item:last-child{
@@ -5192,6 +5193,10 @@ margin-bottom: 10px;
 
 .text img.note-float-right {
     padding-left: 15px;
+}
+
+.slick-slide a, .slick-slide .banner__text {
+    background: transparent!important;
 }
 
 /*

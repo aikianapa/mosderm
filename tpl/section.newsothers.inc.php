@@ -1,4 +1,5 @@
 <section id="spec-reviews" data-name="Виджет Другие новости">
+    <!-- tpl/section.newsothers.inc.php -->
     <div class="container">
         <h2>Другие новости</h2>
         <meta data-wb-role="variable" var="exclude" value='"{{_item}}"'>
