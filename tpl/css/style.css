@@ -5215,7 +5215,7 @@ margin-bottom: 10px;
     padding-left: 15px;
 }
 
-.slick-slide a, .slick-slide .banner__text {
+.slick-slide a, .slick-slide .banner__text, .specialists-desc a {
     background: transparent!important;
 }
 

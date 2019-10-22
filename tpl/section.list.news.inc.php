@@ -6,7 +6,7 @@
             <div class="news-block flex">
                 <div class="news-block__img">
                     <!--img data-wb-role="thumbnail" data-wb-size="251;169;src" src="/uploads/news/{{id}}/{{image[0].img}}" data-wb-noimg="/tpl/img/news/news-img.png" alt="{{header}}"-->
-                    <img data-wb-role="thumbnail" data-wb-size="251;169;src" src="/tpl/img/news/news-img.png" alt="{{header}}">
+                    <img data-wb-role="thumbnail" data-wb-size="251;169;src" src="/tpl/img/news/news-img.png" alt="{{header}}" data-wb-hide="wb,data-src">
                 </div>
                 <div class="news-block__info">
                     <strong>

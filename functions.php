@@ -38,6 +38,7 @@ function text2tel($str) {
 function clearStyles($text) {
     $app = new wbApp();
     $out = $app->fromString("<div>".$text."</div>");
+    /*
     $tags = $out->find("[style]:not(img)");
     foreach($tags as $tag) $tag->removeAttr("style");
     $spans = $out->find("span");
@@ -45,6 +46,7 @@ function clearStyles($text) {
         $tag->after($tag->html());
         $tag->remove();
     }
+    */
     return $out->html();
 }
 

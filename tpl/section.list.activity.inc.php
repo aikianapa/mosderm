@@ -6,7 +6,7 @@
         <div class="activity__wrap flex"  data-wb-role="foreach" data-wb-form="activities" data-wb-sort="date:d" data-wb-size="9" data-wb-where='active="on" {{_var.where}}' >
             <div class="activity__block">
                 <a href="/activity/{{id}}/{{wbFurlGenerate({{header}})}}" class="activity__item">
-                    <img data-wb-role="thumbnail" data-wb-size="367;242;src" src="/uploads/activities/{{id}}/{{image[0].img}}" data-wb-noimg="/tpl/img/activity/activ-1.jpg" alt="{{header}}">
+                    <img data-wb-role="thumbnail" data-wb-size="367;242;src" src="/uploads/activities/{{id}}/{{image[0].img}}" data-wb-noimg="/tpl/img/activity/activ-1.jpg" alt="{{header}}" data-wb-hide="wb,data-src">
                     <div class="activity__text">
                         <p><span>{{date("d.m.Y",strtotime({{date}}))}}</span></p>
                         <p>{{header}}</p>
