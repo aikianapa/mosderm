@@ -64,6 +64,9 @@
                             </div>
                             
                             <div class="form-group row">
+                                <label class="col-sm-4 form-control-label">В платное отделение</label>
+                                <div class="col-sm-2"><label class="switch switch-success"><input type="checkbox" name="commerce"><span></span></label></div>
+
                                 <label class="col-sm-3 form-control-label">В виджет</label>
                                 <div class="col-sm-2"><label class="switch switch-success"><input type="checkbox" name="widget"><span></span></label></div>
                             </div>

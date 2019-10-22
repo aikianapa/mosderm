@@ -1,11 +1,12 @@
     <section id="our-specialists" data-name="Виджет - Наши специалисты">
         <!-- tpl/section.widget.spec.inc.php -->
-        <div class="container">
+        <div class="container" data-wb-role="formdata" data-wb-form="branches" data-wb-item="{{office}}" data-wb-json='{"office":"{{office}}"}'  data-wb-hide="wb">
             <h2>Наши специалисты <a href="/specialists">Все специалисты</a></h2>
+            
             <meta data-wb-role="variable" var="where" data-wb-if='"{{_form}}"="branches" AND "{{_mode}}"="show"' value=' AND branch = "{{_item}}"' else='AND widget="on" '>
             <meta data-wb-role="variable" var="where" data-wb-if='"{{office}}">""' value=' AND office = "{{office}}" AND ( widget="" OR widget="on" ) ' else='{{_var.where}}'>
             <meta data-wb-role="variable" var="where" data-wb-if='"{{_form}}"="branches" AND "{{_mode}}"="show" AND type = "office"' value=' AND office = "{{_item}}"' else='{{_var.where}}'>
-            
+            <meta data-wb-role="variable" var="where" data-wb-if='{{strpos(strtolower({{name}}),"платн")}}>0 AND "{{_mode}}"="show" AND type = "office"' value='{{_var.where}} OR (active="on" AND branch = "{{main}}" AND commerce = "on" )' else='{{_var.where}}'>
             <div class="our-specialists__slider" data-wb-role="foreach" data-wb-tpl="false" data-wb-where='active="on" {{_var[where]}}' data-wb-limit="10" data-wb-rand="true" data-wb-form="specialists" data-wb-hide="wb">
                 <div class="our-specialist__item">
                     <a href="/specialists/{{id}}/{{wbFurlGenerate({{name}})}}"></a>

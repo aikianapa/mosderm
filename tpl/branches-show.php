@@ -135,6 +135,15 @@
     </div>
 </section>
     
+<section id="specialists" class="sm-section-bottom" data-wb-where='"{{type}}" = "branch"'>
+    <div class="container">
+        <h3>Наши специалисты</h3>
+            <div data-wb-role="include" src="template" data-wb-name="section.widget.spec.inc.php" class="sm-section" data-wb-hide="*">
+                <meta data-wb-remove="#our-specialists h2"><br>
+            </div>
+    </div>
+</section>
+    
 <link rel="stylesheet" href="css/stacktable.css" data-wb-append="head">
 <script src="js/stacktable.js"  data-wb-append="body"></script>
     
