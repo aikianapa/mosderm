@@ -20,7 +20,7 @@
                             </tr>
                         </thead>
                         <tbody data-wb-role="foreach" data-wb-form="branches" data-wb-tpl="false" data-wb-size="false" data-wb-where='type = "branch" {{_var.where}}' data-wb-hide="wb">
-                            <tr>
+                            <tr data-wb-where='mapnum != "17"'>
                                 <td>{{_ndx}}</td>
                                 <td>{{name}}</td>
                                 <td>
@@ -30,7 +30,7 @@
                                     <a href="/branches/{{id}}/{{wbFurlGenerate({{name}})}}/">Показать на карте</a></td>
                                 <td>{{worktime}}
                                 </td>
-                                <td><a href="/branches/{{id}}/order/" data-wb-where='mapnum != "17"'>Онлайн-запись</a></td>
+                                <td><a href="/branches/{{id}}/order/">Онлайн-запись</a></td>
                             </tr>
                         </tbody>
 
