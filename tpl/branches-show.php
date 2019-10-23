@@ -29,14 +29,14 @@
                 </p>
 
                 <strong class="empty-remove-eml">Адрес электронной почты: </strong>
-                    <p class="empty-control-eml"><a href="mailto:{{email}}">{{email}}</a></p>
+                    <p class="empty-control-eml"><a class="link" href="mailto:{{email}}">{{email}}</a></p>
                 </div>
 
                 <strong data-wb-where='type="branch"' data-wb-hide="wb" class="empty-remove-zav">Заведующий филиалом:</strong>
                 <strong data-wb-where='type="office"' data-wb-hide="wb" class="empty-remove-zav">Заведующий отделением:</strong>
                 <p data-wb-role="formdata" data-wb-form="specialists" 
                    data-wb-item="{{boss}}" data-wb-clear="true" data-wb-hide="wb" 
-                   class="empty-control-zav"><a href="/specialists/{{id}}/{{wbFurlGenerate({{name}})}}">{{name}}</p>
+                   class="empty-control-zav"><a class="link" href="/specialists/{{id}}/{{wbFurlGenerate({{name}})}}">{{name}}</p>
 
             </div>
             <div class="branches-card__address-map">
