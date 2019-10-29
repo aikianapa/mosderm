@@ -16,10 +16,10 @@
                     </div>
                     <div class="news__third-block">
                         <div class="news__third-block-top">
-                            <p>{{header}}</p>
+                            <p><a href="/news/{{id}}/{{wbFurlGenerate({{header}})}}">{{header}}</a></p>
                             <span>{{date("d.m.Y",strtotime({{date}}))}}</span>
                             <div class='news__gray-text'>
-                            <p>{{strip_tags(wbGetWords({{text}},"55"))}}</p>
+                                <p><a href="/news/{{id}}/{{wbFurlGenerate({{header}})}}">{{strip_tags(wbGetWords({{text}},"55"))}}</a></p>
                             </div>
                         </div>
                         <div class="news__third-block-bottom">
