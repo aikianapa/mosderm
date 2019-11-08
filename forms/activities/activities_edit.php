@@ -31,6 +31,11 @@
                     </div>
                     
                     <div class="form-group row">
+                        <label class="col-sm-7 form-control-label">Клиническая конференция</label>
+                        <div class="col-sm-2"><label class="switch switch-success"><input type="checkbox" name="conf"><span></span></label></div>
+                    </div>
+                    
+                    <div class="form-group row">
                         <label class="col-sm-2 form-control-label">{{_LANG[header]}}</label>
                         <div class="col-sm-10"><input type="text" class="form-control" name="header" placeholder="{{_LANG[header]}}" required></div>
                     </div>

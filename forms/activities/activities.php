@@ -10,6 +10,10 @@ function activities_show() {
     if (!isset($item["title"]) OR $item["title"]=="") {$item["title"]=$item["header"];}
 	$out=wbGetTpl($act["template"]);
 	$out->wbSetData($item);
+    if ($item["conf"] !== "on") {
+        $out->find("#attention")->remove();
+        $out->find("#unionpdfplan")->remove();
+    }
 	return $out;
 }
 
