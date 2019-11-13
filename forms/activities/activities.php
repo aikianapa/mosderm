@@ -11,8 +11,7 @@ function activities_show() {
 	$out=wbGetTpl($act["template"]);
 	$out->wbSetData($item);
     if ($item["conf"] !== "on") {
-        $out->find("#attention")->remove();
-        $out->find("#unionpdfplan")->remove();
+        $out->find("#attention, #further, #unionpdfplan")->remove();
     }
 	return $out;
 }
