@@ -2,13 +2,13 @@
     <!-- tpl/section.widget.unionteam.inc.php -->
     <div class="container">
         <h2>Сотрудники профсоюза</h2>
-        <div class="union-team__wrap flex" data-wb-role="foreach" data-wb-form="specialists" 
-             data-wb-where='active = "on" AND union = "on" AND uniwidget = "on"' 
+        <div class="union-team__wrap flex" data-wb-role="foreach" data-wb-form="specialists"
+             data-wb-where='active = "on" AND union = "on" AND uniwidget = "on"'
              data-wb-tpl="false" data-wb-rand="on">
             <div class="union-team__item">
                 <div class="our-specialist__img">
-                    <a href="spec-card.html"></a>
-                    <img src="img/our-specialists/spec-1.jpg"/>
+                    <a href="/specialists/{{id}}/{{wbFurlGenerate({{name}})}}"></a>
+                    <img data-wb-role="thumbnail" data-wb-size="200px;260px;src" src="/uploads/{{_table}}/{{id}}/{{image[0].img}}" alt="{{name}} - {{spec}}">
                 </div>
                 <div class="union-team__text">
                     <strong>{{name}}</strong>
