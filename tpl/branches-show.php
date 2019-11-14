@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-<!-- tpl/branches-show.php -->
+
 <head data-wb-role="include" src="template" data-wb-name="head.inc.php">
 </head>
 <body>
@@ -8,8 +8,8 @@
 <meta data-wb-role="include" src="template" data-wb-name="section.request.inc.php">
 <meta data-wb-role="include" src="template" data-wb-name="section.breadcrumbs.inc.php">
 
-    
-    
+    <!-- tpl/branches-show.php -->
+
 <section id="branches-card" class="sm-section">
     <div class="container">
         <div class="branches-card__address flex">
@@ -34,8 +34,8 @@
 
                 <strong data-wb-where='type="branch"' data-wb-hide="wb" class="empty-remove-zav">Заведующий филиалом:</strong>
                 <strong data-wb-where='type="office"' data-wb-hide="wb" class="empty-remove-zav">Заведующий отделением:</strong>
-                <p data-wb-role="formdata" data-wb-form="specialists" 
-                   data-wb-item="{{boss}}" data-wb-clear="true" data-wb-hide="wb" 
+                <p data-wb-role="formdata" data-wb-form="specialists"
+                   data-wb-item="{{boss}}" data-wb-clear="true" data-wb-hide="wb"
                    class="empty-control-zav"><a class="link" href="/specialists/{{id}}/{{wbFurlGenerate({{name}})}}">{{name}}</p>
 
             </div>
@@ -55,11 +55,11 @@
                 <div class="record__btn-box" data-wb-where='mapnum != "17"'>
                     <div class="record__btn">
                         <a href="/branches/{{id}}/order/" data-wb-where='"{{type}}" = "branch"' data-wb-hide="wb">Онлайн запись</a>
-                        <a href="/branches/{{branch}}/order/" data-wb-where='"{{type}}" = "office"' data-wb-hide="wb">Онлайн запись</a>
+                        <a href="/branches/{{main}}/order/" data-wb-where='"{{type}}" = "office"' data-wb-hide="wb">Онлайн запись</a>
                     </div>
                     <div class="record__btn">
                         <a href="/branches/{{id}}/addresses/" data-wb-where='"{{type}}" = "branch"' data-wb-hide="wb">Обслуживаемые адреса</a>
-                        <a href="/branches/{{branch}}/addresses/" data-wb-where='"{{type}}" = "office"' data-wb-hide="wb">Обслуживаемые адреса</a>
+                        <a href="/branches/{{main}}/addresses/" data-wb-where='"{{type}}" = "office"' data-wb-hide="wb">Обслуживаемые адреса</a>
                     </div>
                 </div>
                 <div class="record__img">
@@ -112,7 +112,7 @@
         </div>
     </div>
 </section>
-    
+
 <section class="empty-remove-offices" data-wb-where='"{{type}}" = "branch"'>
     <div class="container">
         <div class="schedule-table__item">
@@ -125,7 +125,7 @@
         </div>
     </div>
 </section>
-    
+
 <section id="specialists" class="sm-section-bottom" data-wb-where='"{{type}}" = "office"'>
     <div class="container">
         <h3>Наши специалисты</h3>
@@ -134,7 +134,7 @@
             </div>
     </div>
 </section>
-    
+
 <section id="specialists" class="sm-section-bottom" data-wb-where='"{{type}}" = "branch"'>
     <div class="container">
         <h3>Наши специалисты</h3>
@@ -143,10 +143,10 @@
             </div>
     </div>
 </section>
-    
+
 <link rel="stylesheet" href="css/stacktable.css" data-wb-append="head">
 <script src="js/stacktable.js"  data-wb-append="body"></script>
-    
+
 <meta data-wb-role="include" src="template" data-wb-name="section.question.inc.php" data-wb-id="question-2" class="sm-section">
 <meta data-wb-role="include" src="template" data-wb-name="section.footer.inc.php">
 <meta data-wb-role="include" src="template" data-wb-name="scripts.inc.php">
