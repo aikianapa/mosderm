@@ -5,7 +5,9 @@
         <form class="question__border">
             <div class="question__wrap flex">
                 <div class="question__right">
-                    <input type="text" name="_subject" value="Резюме с сайта" style="display:none;">
+                    <meta data-wb-role="variable" var="mailto" data-wb-if='"{{_sett.email_resume}}">""' value="{{_sett.email_resume}}" else="{{_sett.email}}">
+                    <input type="hidden" name="_subject" value="Резюме с сайта">
+                    <input type="hidden" name="_mailto" value="{{_var.mailto}}">
                     <input type="text" name="fullname" placeholder="Ваше Имя" required>
                     <input type="phone" data-mask="+7 (999) 999-99-99" name="phone" placeholder="Телефон"  required>
                     <input type="email" name="email" placeholder="E-mail"  required>
@@ -24,7 +26,7 @@
     </div>
     <script data-wb-append="body">
         $(".question-file").on("click",function(e){
-            $(this).prev('input').trigger('click'); 
+            $(this).prev('input').trigger('click');
         });
     </script>
 </section>
