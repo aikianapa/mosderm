@@ -15,7 +15,7 @@
         <div class="consultation__wrap">
             <div class="consultation__header flex">
                 <div class="consultation__btn">
-                    <a href="#">Запись на прием</a>
+                    <a href="#question-2">Запись на прием</a>
                 </div>
                 <div class="consultation__header-text">
                     <p>{{data.text}}</p>
@@ -32,14 +32,14 @@
     </div>
     </div>
 </section>
-    
+
 <section class="sm-section-bottom sm-section consultation__footer" data-wb-where='"{{strip_tags({{data.descr}})}}" > ""'>
     <div class="container">
     {{data.descr}}
     </div>
 </section>
-    
-    
+
+
 <section id="price-list" class="sm-section-bottom big-table">
     <div class="container">
         <div class="schedule-table__item">
@@ -92,11 +92,11 @@
                 $("#question-2 .total").html(total);
                 $("#question-2 input[name=total]").val(total+ ' руб.');
             });
-        
+
         </script>
     </div>
 </section>
-    
+
 <section id="question-2" class="consultation__question sm-section-bottom">
     <div class="container">
         <form>
@@ -110,7 +110,9 @@
         <div class="question__border">
             <div class="question__wrap flex">
                 <div class="question__right">
-                    <input type="hidden" name="_subject" value="Запись на консуьтацию">
+                    <meta data-wb-role="variable" var="mailto" data-wb-if='"{{_sett.email_quote}}">""' value="{{_sett.email_quote}}" else="{{_sett.email}}">
+                    <input type="hidden" name="_subject" value="Запись на приём">
+                    <input type="hidden" name="_mailto" value="{{_var.mailto}}">
                     <input type="text" name="fullname" placeholder="Ваше Имя">
                     <input type="phone" name="phone" data-wb-mask="+7 (999) 999-99-99" placeholder="Телефон">
                     <input type="email" name="email" placeholder="E-mail">
@@ -134,7 +136,7 @@
 
 
 <meta data-wb-role="include" src="template" data-wb-name="section.widget.spec.inc.php" >
-    
+
 <meta data-wb-role="include" src="template" data-wb-name="section.footer.inc.php">
 <meta data-wb-role="include" src="template" data-wb-name="scripts.inc.php">
 </body>
