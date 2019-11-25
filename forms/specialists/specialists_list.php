@@ -33,6 +33,7 @@
                             <th data-sort="name">Имя / Должность</th>
                             <th>Статус</th>
                             <th>На главной</th>
+                            <th>Профсоюз</th>
                             <th class="text-right">Действие</th>
                         </tr>
                     </thead>
@@ -48,7 +49,10 @@
                                 <div class="status-pill green" data-title="Отображается" data-wb-role="where" data='widget="on"' data-toggle="tooltip"></div>
                                 <div class="status-pill red" data-title="Скрытый" data-wb-role="where" data='widget=""' data-toggle="tooltip"></div>
                             </td>
-
+                            <td class="text-center">
+                                <div class="status-pill green" data-title="Член профсоюза" data-wb-role="where" data='union="on"' data-toggle="tooltip"></div>
+                                <div class="status-pill red" data-title="Не в профсоюзе" data-wb-role="where" data='union=""' data-toggle="tooltip"></div>
+                            </td>
                             <td class="text-right" data-wb-role="include" src="form" data-wb-name="common_item_actions"></td>
                         </tr>
                     </tbody>
