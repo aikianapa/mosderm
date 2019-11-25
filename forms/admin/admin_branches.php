@@ -12,13 +12,13 @@
         <div class="col-sm-9"><input type="text" placeholder="Добавить .class" name="class" class="form-control" ></div>
     </div>
 
-        
+
     <div class="form-group row v-all">
         <label class="col-sm-3 form-control-label">Отображать</label>
         <div class="col-sm-2"><label class="switch switch-success"><input type="checkbox" name="visible"><span></span></label></div>
     </div>
 
-    <div class="form-group row v-question">
+    <div class="form-group row v-question v-quote">
         <label class="col-sm-3 form-control-label">Цвет блока</label>
         <div class="col-sm-9">
         <select class="form-control" name="color">
@@ -189,7 +189,7 @@
             <input type="hidden" name="image" data-wb-path="/uploads/{{_form}}/{{_item}}" data-wb-role="uploader" >
         </label>
         <div class="col-sm-9"><textarea data-wb-role="module" src="summernote" class="summernote" name="testimonial"></textarea></div>
-        
+
         <label class="col-sm-3 form-control-label">Ссылка на видео</label>
         <div class="col-sm-9"><input type="text" name="youtube" class="form-control" placeholder="Ссылка на видео"></div>
 	</div>
@@ -273,7 +273,7 @@ $(".modal.tree-edit form .select-type, .modal#tree_edit form .select-type").on("
     console.log(type);
     $(form).find(".form-group[class*='v-']:not(.v-all)").hide();
     $(form).find(".form-group[class*='v-'].v-"+type).show();
-    
+
     $(form).find(".form-group[class*='v-']:not(.v-all) [name]").each(function(){
         var name = $(this).attr("name");
         $(this).attr("data-fldname",name);
@@ -283,7 +283,7 @@ $(".modal.tree-edit form .select-type, .modal#tree_edit form .select-type").on("
             $(this).removeAttr("value");
         }
     });
-    
+
     $(form).find(".form-group[class*='v-'].v-"+type+" [data-fldname]").each(function(){
         var that = this;
         var name = $(this).attr("data-fldname");
