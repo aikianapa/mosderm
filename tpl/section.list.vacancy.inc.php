@@ -2,7 +2,7 @@
     <!-- tpl/section.list.vacancy.inc.php -->
     <div class="container">
         <h3>У нас открыты следующие вакансии:</h3>
-        <div class="vacancy-content__box flex" data-wb-role="foreach" data-wb-form="vacancy" data-wb-tpl="false" >
+        <div class="vacancy-content__box flex" data-wb-role="foreach" data-wb-form="vacancy" data-wb-tpl="false" data-wb-where='active = "on"' data-wb-hide="wb" >
             <div class="vacancy-content__item">
                 <strong>{{name}}</strong>
                 <p>{{descr}}</p>
