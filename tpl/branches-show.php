@@ -58,8 +58,7 @@
                         <a href="/branches/{{main}}/order/" data-wb-where='"{{type}}" = "office"' data-wb-hide="wb">Онлайн запись</a>
                     </div>
                     <div class="record__btn">
-                        <a href="/branches/{{id}}/addresses/" data-wb-where='"{{type}}" = "branch"' data-wb-hide="wb">Обслуживаемые адреса</a>
-                        <a href="/branches/{{main}}/addresses/" data-wb-where='"{{type}}" = "office"' data-wb-hide="wb">Обслуживаемые адреса</a>
+                        <a data-wb-where='"{{srvaddr[0][img]}}">""' href="/uploads/branches/{{id}}/{{srvaddr[0][img]}}" data-wb-hide="wb">Обслуживаемые адреса</a>
                     </div>
                 </div>
                 <div class="record__img">

@@ -17,22 +17,24 @@
 	  <label class="col-sm-3 form-control-label">Наименование</label>
 	   <div class="col-sm-9"><input type="text" class="form-control" name="name" placeholder="Наименование"></div>
 	</div>
-    
+
 	<div class="form-group row">
 	  <label class="col-sm-3 form-control-label">Тип</label>
-	   <div class="col-sm-9">
+	   <div class="col-sm-3">
            <select class="form-control control-value-main" name="type" placeholder="Тип" >
                <option value="branch">Филиал</option>
                <option value="office">Отделение</option>
            </select>
         </div>
+        <label class="col-sm-3 form-control-label text-right">Отображать</label>
+        <div class="col-sm-2"><label class="switch switch-success"><input type="checkbox" name="active"><span></span></label></div>
 	</div>
-    
+
 	<div class="form-group row control-show-main-office">
 	  <label class="col-sm-3 form-control-label">Головная организация</label>
 	   <div class="col-sm-9">
            <select class="form-control" name="main" placeholder="Выберите филиал"
-                   data-wb-role="foreach" data-wb-tpl="false" data-wb-form="branches" 
+                   data-wb-role="foreach" data-wb-tpl="false" data-wb-form="branches"
                    data-wb-where='active="on" AND type="branch"' data-wb-sort="name">
                <option value="{{id}}">{{name}}</option>
            </select>
@@ -66,7 +68,7 @@
 		   </select>
         </div>
 	</div>
-    
+
 	<div class="form-group row">
 	  <label class="col-sm-3 form-control-label">Как добраться</label>
 	   <div class="col-sm-9">
@@ -78,12 +80,12 @@
 	  <label class="col-sm-3 form-control-label">Время работы</label>
 	   <div class="col-sm-9"><input type="text" class="form-control" name="worktime" placeholder="Время работы"></div>
 	</div>
-    
+
 	<div class="form-group row">
 	  <label class="col-sm-3 form-control-label">Скрипт записи</label>
 	   <div class="col-sm-9"><input type="text" class="form-control" name="script" placeholder="Скрипт записи"></div>
 	</div>
-    
+
 	<div class="form-group row">
 	  <label class="col-sm-3 form-control-label">Заведующий</label>
 	   <div class="col-sm-9">
@@ -92,7 +94,12 @@
 		   </select>
 		</div>
 	</div>
-    
+
+	<div class="form-group row">
+	  <label class="col-sm-3 form-control-label">Обслуживаемые адреса</label>
+	   <div class="col-sm-1"><meta data-wb-role="uploader" name="srvaddr" data-wb-ext="pdf,zip,doc,docx,xls,xlsx"></div>
+	</div>
+
     <div class="form-group row">
         <div class="col-sm-3">
             <label class="form-control-label">Единый телефон</label>
@@ -110,13 +117,10 @@
             <label class="form-control-label">Эл.почта</label>
             <input type="email" class="form-control" name="email" placeholder="Электронная почта">
         </div>
-        
+
     </div>
 
-  <div class="form-group row">
-    <label class="col-sm-3 form-control-label">Отображать</label>
-    <div class="col-sm-2"><label class="switch switch-success"><input type="checkbox" name="active"><span></span></label></div>
-	</div>
+
 </div>
 <div id="{{_form}}Schedule" class="tab-pane fade" role="tabpanel">
 <p>Расписание приёма граждан по личным вопросам</p>
@@ -124,12 +128,12 @@
         <input type="hidden">
         <div class="col-4">
             <label class="form-control-label">Адрес приёмной</label>
-            <textarea class="summernote" name="address" data-height="90" 
+            <textarea class="summernote" name="address" data-height="90"
             data-toolbar="[['style', ['bold', 'italic', 'codeview', 'clear']]]"></textarea>
         </div>
         <div class="col-4">
             <label class="form-control-label">Время приёма</label>
-            <textarea class="summernote" name="worktime" data-height="90" 
+            <textarea class="summernote" name="worktime" data-height="90"
             data-toolbar="[['style', ['bold', 'italic', 'codeview', 'clear']]]"></textarea>
         </div>
         <div class="col mt-4">
@@ -149,7 +153,7 @@
             </div>
         </div>
     </div>
-    
+
 </div>
 <div id="{{_form}}Text" class="tab-pane fade" data-wb-role="include" src="editor" role="tabpanel"></div>
 <div id="{{_form}}Images" class="tab-pane fade" data-wb-role="include" src="uploader" role="tabpanel"></div>
@@ -164,4 +168,3 @@
 		</div>
 </div>
 </div>
-
