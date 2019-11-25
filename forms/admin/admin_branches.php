@@ -129,6 +129,17 @@
                     <div class="col-12">
                         <input type="text" name="link" class="form-control" placeholder="Ссылка">
                     </div>
+                    <div class="col-12">
+                        <select name="direction" class="form-control" >
+                            <option value="h">Картинка горизонтально</a>
+                            <option value="v">Картинка вертикально</option>
+                            <option value="c">Квадратная картинка</option>
+                        </select>
+                    </div>
+                    <div class="col-12">
+                        <input type="text" name="width" class="form-control" placeholder="Базовая ширина: 300px">
+                    </div>
+
                 </div>
                 <input type="hidden" class="form-control" name="image" data-wb-path="/uploads/{{_post._form}}/{{_post._item}}" data-wb-role="uploader" >
             </div>
