@@ -5127,6 +5127,7 @@ margin-bottom: 10px;
     opacity: 0.66;
 }
 
+
 .activity__item:hover:before{
     background-color: #151b1f55;
 }
