@@ -1492,6 +1492,7 @@ padding-bottom: 20px;
 
 .union-pdf__item.knd-pdf{
     width: 290px;
+    overflow-y: hidden;
 }
 
 .specialists__text > ul > li{
