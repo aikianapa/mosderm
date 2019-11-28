@@ -1906,13 +1906,12 @@ max-width: none;
 .spec-card__buttons.flex{
     justify-content: flex-start;
     align-items: center;
-    clear: both;
 }
 
 .spec-card__buttons{
     position: relative;
+    margin-top: 30px;
     bottom: 0;
-    margin-top:30px;
 }
 
 .spec-card__info{
