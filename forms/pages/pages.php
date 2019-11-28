@@ -34,16 +34,16 @@ function pages_search() {
     $result = [];
     $pages = searchTable("pages",["header","text"],["header","text"]);
     $result = array_merge($result, $pages);
-    
+
     $news = searchTable("news",["header","text"],["header","text"]);
     $result = array_merge($result, $news);
-    
+
     $acts = searchTable("activities",["header","text"],["header","text"]);
     $result = array_merge($result, $acts);
-    
+
     $spec = searchTable("specialists",["name","descr","text","spec","phone"],["name","descr","text"]);
     $result = array_merge($result, $spec);
-    
+
     $vacancy = searchTable("vacancy",["name","descr","text"],["name","descr","text"]);
     $result = array_merge($result, $vacancy);
     $out->wbSetData(["result"=>$result,"header"=>"Результаты поиска"]) ;
@@ -69,13 +69,13 @@ function searchTable($table="pages",$flds=["text"],$ret=["text"]) {
             if ($_ENV["sitesearchhead"] == $key) $_ENV["sitesearchhead"]=strip_tags($item);
         });
         $_ENV["sitesearchtext"]=implode(" ",array_unique(explode(" ",mb_strtolower($_ENV["sitesearchtext"]))));
-        
-        $res = false;
+
+        $res = 0;
         foreach($find as $word) {
-            if (strpos(" ".$_ENV["sitesearchtext"],$word)) $res=true;
+            if (strpos(" ".$_ENV["sitesearchtext"],$word)) $res++;
         }
-        
-        if ($res == true) {
+				if ($res == count($find)) $res = true;
+        if ($res === true) {
             $result[] = [
                  "id" =>  $item["id"]
                 ,"_table" => $table
