@@ -1,15 +1,15 @@
 <section id="paid-desc" class="sm-section sm-section-bottom" data-name="Список категорий услуг">
     <!-- tpl/section.list.categories.inc.php -->
     <div class="container">
-        
+
         <meta data-wb-role="include" src="template" data-wb-name="section.form.find.services.php">
-        
-        <div class="activity__wrap flex" 
-                data-wb-role="tree" 
-                data-wb-item="products_category" 
-                data-wb-branch="{{data.content.category}}" 
-                data-wb-parent="false" 
-                data-wb-children="false" 
+
+        <div class="activity__wrap flex sm-section" 
+                data-wb-role="tree"
+                data-wb-item="products_category"
+                data-wb-branch="{{data.content.category}}"
+                data-wb-parent="false"
+                data-wb-children="false"
                 data-wb-hide="wb">
             <div class="activity__block">
                 <a href="/products/{{id}}/{{wbFurlGenerate({{name}})}}" class="activity__item">

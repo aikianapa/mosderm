@@ -1,4 +1,4 @@
-<section id="diplomas" data-name="Дипломы и сертификаты (большой)">
+<section id="diplomas" data-name="Виджет: Дипломы и сертификаты (на синем фоне)">
     <!-- tpl/section.diplomas.inc.php -->
     <div class="container">
         <h2>Дипломы, лицензии, сертификаты</h2>
@@ -12,7 +12,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div data-wb-where='"{{spec_id}}">""' data-wb-hide="*">
             <div class="diplomas__wrap flex" data-wb-role="tree" data-wb-item="certificates" data-wb-hide="wb">
                 <div class="diplomas__item" data-wb-where='"{{data.content.type}}"="person" AND "{{data.content.visible}}"="on" AND "{{data.content.specialist}}" = "{{%spec_id}}"'>
