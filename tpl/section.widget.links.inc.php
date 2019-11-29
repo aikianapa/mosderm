@@ -5,7 +5,7 @@
                 <div class="other__wrap">
                     <div class="other__item">
                         <a href="{{data.link}}" target="_blank">
-                            <img data-wb-role="thumbnail" data-wb-size="323;187" src="/uploads/tree/partners/{{id}}/{{data.image[0].img}}" data-wb-noimg="/tpl/img/progress/partners.jpg"/>
+                            <img data-wb-role="thumbnail" data-wb-size="323;187;src" src="/uploads/tree/partners/{{id}}/{{data.image[0].img}}" data-wb-noimg="/tpl/img/progress/partners.jpg"/>
                         </a>
                         <p>{{name}}</p>
                     </div>
