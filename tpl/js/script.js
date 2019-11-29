@@ -176,7 +176,7 @@ $(document).ready(function() {
 
     if ($('.other__slider').length > 0) {
 
-      if ($(window).width() > 1024) {
+      if ($(window).width() > 1200) {
         if (!$('.other__slider').hasClass('slick-initialized')) {
           $('.other__slider').slick({
             slidesToShow: 3,

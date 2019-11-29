@@ -3887,7 +3887,7 @@ h2 > a:hover, .vacancy-content__item > a:hover, .activity__ancor:hover, .news-bl
     }
 
     .spec-reviews__slider .slick-prev, .consultation__slider .slick-prev{
-        left: auto;
+        
         right: 55%;
     }
 
@@ -5205,7 +5205,6 @@ margin-bottom: 10px;
     display: flex;
     align-items: center;
 }
-
 
 
 @media (max-width: 992px){
