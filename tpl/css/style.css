@@ -3872,7 +3872,7 @@ h2 > a:hover, .vacancy-content__item > a:hover, .activity__ancor:hover, .news-bl
     }
 
     .spec-reviews__slider .slick-prev, .consultation__slider .slick-prev{
-        
+
         right: 55%;
     }
 
@@ -5068,7 +5068,7 @@ margin-bottom: 10px;
 
 .our-services__item:before{
     width: 100%;
-    height: calc(100% - 4px);
+    height: calc(100% - 2px);
 
     opacity: 0.66;
     box-shadow: 0 0 10px rgba(0, 1, 5, 0.07);
@@ -5234,7 +5234,7 @@ margin-bottom: 10px;
 }
 
 #banner .slick-dots li.slick-active button{
-   width: 18px;  
+   width: 18px;
     height: 18px;
     background: url("../new-img/slider-dot-1.svg") no-repeat;
 }
