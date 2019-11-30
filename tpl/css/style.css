@@ -1909,6 +1909,7 @@ max-width: none;
 .spec-card__buttons{
     position: relative;
     bottom: 0;
+    padding-top: 30px;
 }
 
 .spec-card__info{
