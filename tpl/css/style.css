@@ -5083,16 +5083,11 @@ margin-bottom: 10px;
 }
 
 
-
-
-
-
 /*26.11.19*/
 
 .our-services__item:before{
     width: 100%;
-    height: calc(100% - 4px);
-
+    height: calc(100% - 2px);
     opacity: 0.66;
     box-shadow: 0 0 10px rgba(0, 1, 5, 0.07);
     border-radius: 10px;
@@ -5229,7 +5224,6 @@ margin-bottom: 10px;
    }
 
 }
-
 
 @media (max-width: 768px){
     .banner__text {
