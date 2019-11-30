@@ -48,7 +48,7 @@
 
         </div>
 </section>
-<section id="record" class="sm-section">
+<section id="record">
     <div class="container">
         <div class="record__wrap flex">
             <div class="record__left">
