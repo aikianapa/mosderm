@@ -33,13 +33,13 @@
         </div>
     </div>
 </section>
-    
+
     <meta data-wb-role="include" src="template" name="section.diplomas.inc.php" data-wb-vars='{"spec_id":"{{_item}}"}'>
-    
-    <section id="spec-reviews">
+
+    <section id="spec-reviews" class="empty-remove-reviews">
         <div class="container">
             <h2>Отзывы</h2>
-            <div class="spec-reviews__slider" data-wb-role="foreach" data-wb-form="comments" data-wb-call="getChunkComments" data-wb-where='active="on"'>
+            <div class="spec-reviews__slider empty-control-reviews" data-wb-role="foreach" data-wb-form="comments" data-wb-call="getChunkComments" data-wb-where='active="on" AND spec = "{{_item}}" ' >
                 <div class="spec-reviews__slider-item">
                     <div class="spec-reviews__slider-wrap flex" data-wb-role="foreach" data-wb-from="_value" data-wb-sort="date:d" data-wb-tpl="false" data-wb-step="2">
                         <div class="spec-reviews__item">
@@ -59,11 +59,11 @@
             </div>
         </div>
     </section>
-    
+
 <section id="question-2">
     <div class="container">
         <h2>Оставьте отзыв</h2>
-        <div class="question__border" data-wb-role="formdata" data-wb-json='{"name":"","text":"","phone":"","email"}:""'>
+        <div class="question__border" data-wb-role="formdata" data-wb-json='{"name":"","text":"","phone":"","email":""}'>
             <form class="question__wrap flex" id="Comment" data-wb-form="comments" data-wb-item="_new">
                 <div class="question__right">
                     <input type="text" placeholder="Ваше Имя" name="name" required value="">
@@ -86,7 +86,7 @@
 
     </div>
 </section>
-    
+
 <meta data-wb-role="include" src="template" data-wb-name="section.footer.inc.php">
 <meta data-wb-role="include" src="template" data-wb-name="scripts.inc.php">
 </body>

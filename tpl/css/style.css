@@ -637,6 +637,7 @@ section{
 
 .our-specialist__item{
     width: 200px;
+    height: auto;
     padding: 0 16px;
 }
 
