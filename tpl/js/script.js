@@ -43,7 +43,6 @@ $(document).ready(function() {
       slidesToScroll: 1,
       arrows: true,
       lazyLoad: 'ondemand',
-
       infinite: true,
       centerMode: true,
       variableWidth: true,
