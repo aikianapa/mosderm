@@ -1004,19 +1004,19 @@ width: calc(100% /3);
 }
 
 .inner-menu{
-    background: white;
-    width: 947px;
+    max-width: 1130px;
     background: white;
     padding: 40px 50px;
     position: absolute;
     z-index: 1;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-    top:30px;
+    top: 30px;
     display: none;
+    width: calc(100vw - 49px);
 
 }
 
-.inner-menu strong{
+.inner-menu strong, .inner-menu b{
     display: block;
     font-size: 20px;
     padding-bottom: 30px;
@@ -1032,6 +1032,27 @@ width: calc(100% /3);
 .inner-menu li{
     padding-bottom: 10px;
 }
+
+
+.inner-menu__close-btn{
+    position: fixed;
+    right: 0px;
+    top:0px;
+    opacity: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.inner-menu__wrap{
+    z-index: 10;
+    position: relative;
+}
+
+.inner-menu strong {
+    font-size: 16px;
+    padding-bottom: 10px;
+}
+
 
 /*PROGRESS*/
 
@@ -1741,21 +1762,6 @@ max-width: none;
      padding: 0;
     transition: all ease .3s;
  }
-
-.inner-menu__close-btn{
-    position: fixed;
-    right: 0px;
-    top:0px;
-    opacity: 0;
-    width: 100vw;
-    height: 100vh;
-}
-
-.inner-menu__wrap{
-    z-index: 10;
-    position: relative;
-}
-
 
 .activity__search > a.btn:hover{
     background-color: #357DF9;
@@ -3257,11 +3263,6 @@ h2 > a:hover, .vacancy-content__item > a:hover, .activity__ancor:hover, .news-bl
 
     .spec-card__img {
         padding-bottom: 20px;
-    }
-
-    .inner-menu strong {
-        font-size: 16px;
-        padding-bottom: 10px;
     }
 
     .specialists__fio {
