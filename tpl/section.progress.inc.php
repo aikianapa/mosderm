@@ -11,7 +11,7 @@
                 <div class="progress__slider-wrap" data-wb-where='"{{data.content.type}}"="common" AND "{{data.content.visible}}"="on"' data-wb-hide="wb">
                     <div class="progress__slider-item">
                         <a data-fancybox="gallery" href="/uploads/tree/certificates/{{data.content.image[0].img}}">
-                            <img data-wb-role="thumbnail" data-wb-size="185;265;src" src="/uploads/tree/certificates/{{data.content.image[0].img}}" data-wb-noimg="/tpl/img/our-progress/diplom.jpg" alt="{{name}}">
+                            <img data-wb-role="thumbnail" data-wb-size="185;265;src" contain="true" src="/uploads/tree/certificates/{{data.content.image[0].img}}" data-wb-noimg="/tpl/img/our-progress/diplom.jpg" alt="{{name}}">
                         </a>
                     </div>
                 </div>

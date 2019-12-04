@@ -6,7 +6,7 @@
             <div class="news-block flex">
                 <div class="news-block__img">
                   <a href="/news/{{id}}/{{wbFurlGenerate({{header}})}}">
-                    <img data-wb-role="thumbnail" data-wb-size="251;312;src" offset="50;0" src="/uploads/news/{{id}}/{{image[0].img}}"  data-wb-hide="wb,data-src" data-wb-noimg="/tpl/img/news/news-img.png" alt="{{header}}">
+                    <img data-wb-role="thumbnail" data-wb-size="251;312;src" contain="true" offset="50;50" src="/uploads/news/{{id}}/{{image[0].img}}"  data-wb-hide="wb,data-src" data-wb-noimg="/tpl/img/news/news-img.png" alt="{{header}}">
                   </a>
                 </div>
                 <div class="news-block__info">
