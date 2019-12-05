@@ -5182,7 +5182,6 @@ margin-bottom: 10px;
 .inner-menu{
     position: fixed;
     width: 100%;
-    right: 0;
     box-sizing: border-box;
     height: calc(100vh - 30px);
     overflow: scroll;
