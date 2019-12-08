@@ -34,11 +34,18 @@ function ajax_branches() {
             $str->fetch($item);
             $out.=$str."\n\r";
         }
-        
+
     }
     return wbJsonEncode([
         "content"=>$out,
         "error"=>false
     ]);
 }
+
+function branchesAfterItemSave($Item) {
+		exec("wget -q -b {$_ENV['hostp']}/branches/{$Item['id']}/".wbFurlGenerate($Item["name"])."?wbcache=update > null &");
+		return $Item;
+}
+
+
 ?>

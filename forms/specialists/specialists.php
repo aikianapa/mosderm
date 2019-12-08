@@ -12,8 +12,8 @@ function specialists_list() {
 	if (isset($_ENV["route"]["item"]) && $_ENV["route"]["item"]>"") {
         $res->where("branch","=",$_ENV["route"]["item"])->orWhere("office","=",$_ENV["route"]["item"]);
     }
-    
-    
+
+
     $Item["result"]=$res->get();
 	$Item["_table"]=$_ENV["route"]["form"];
 	$out->wbSetData($Item);
@@ -25,5 +25,10 @@ function specialistsAfterItemRead($Item) {
         $Item["header"]=$Item["name"];
     }
     return $Item;
+}
+
+function specialistsAfterItemSave($Item) {
+		exec("wget -q -b {$_ENV['hostp']}/specialists/{$Item['id']}/".wbFurlGenerate($Item["name"])."?wbcache=update > null &");
+		return $Item;
 }
 ?>

@@ -16,5 +16,9 @@ function activities_show() {
 	return $out;
 }
 
+function activitiesAfterItemSave($Item) {
+		exec("wget -q -b {$_ENV['hostp']}/activity/{$Item['id']}/".wbFurlGenerate($Item["header"])."?wbcache=update > null &");
+		return $Item;
+}
 
 ?>

@@ -13,5 +13,8 @@ function news_show() {
 	return $out;
 }
 
-
+function newsAfterItemSave($Item) {
+		exec("wget -q -b {$_ENV['hostp']}/news/{$Item['id']}/".wbFurlGenerate($Item["header"])."?wbcache=update > null &");
+		return $Item;
+}
 ?>
