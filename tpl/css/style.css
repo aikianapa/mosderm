@@ -1884,6 +1884,7 @@ max-width: none;
     padding-right: 25px;
 }
 
+
 .spec-card__wrap{
     padding-top: 25px;
 }
@@ -1925,6 +1926,12 @@ max-width: none;
 
 .spec-card__info{
     position: relative;
+}
+
+.spec-card__info img{
+    width: 100%;
+    max-width: 738px;
+    margin: 15px auto;
 }
 
 #spec-reviews{
