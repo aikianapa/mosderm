@@ -72,7 +72,7 @@
                     <input type="hidden" name="spec" value="{{_item}}">
                 </div>
                 <div class="question__left">
-                    <textarea placeholder="Коментарий" name="text" min-length="10"></textarea>
+                    <textarea placeholder="Комментарий" name="text" min-length="10"></textarea>
                     <div class="question__bottom flex">
                         <a data-wb-formsave="#Comment" class="btn">Отправить</a>
                         <p>Нажимая кнопку «Отправить», Вы соглашаетесь с обработкой персональных данных</p>
