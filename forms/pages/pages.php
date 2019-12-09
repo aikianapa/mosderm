@@ -72,7 +72,7 @@ function searchTable($table="pages",$flds=["text"],$ret=["text"]) {
 
         $res = 0;
         foreach($find as $word) {
-            if (strpos(" ".$_ENV["sitesearchtext"],$word)) $res++;
+            if ($word > "" AND strpos(" ".$_ENV["sitesearchtext"],$word)) $res++;
         }
 				if ($res == count($find)) $res = true;
         if ($res === true) {

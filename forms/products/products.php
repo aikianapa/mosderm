@@ -29,6 +29,7 @@ function  products_find() {
     if (isset($_POST["category_id"]) AND $_POST["category_id"]>"") $where.= 'AND category LIKE "'.$_POST["category_id"].'"';
     if (isset($_POST["branch_id"]) AND $_POST["branch_id"]>"") $where.= 'AND branches LIKE "'.$_POST["branch_id"].'"';
     $out=wbGetTpl("services-find.php");
+    if (trim($_POST["service_name"]) == "") $where = 'active = "__empty"';
     $Item=[
         "header"=> $out->find("#paid-desc")->attr("data-name"),
         "where" => $where
