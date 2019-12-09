@@ -1928,8 +1928,8 @@ max-width: none;
 }
 
 .spec-card__info img{
-    width: 100%;
-    max-width: 738px;
+    width: auto;
+    max-width: 100%;
     margin: 15px auto;
 }
 
