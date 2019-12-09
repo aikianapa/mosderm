@@ -52,7 +52,7 @@ function pages_search() {
 
 function searchTable($table="pages",$flds=["text"],$ret=["text"]) {
     $result = [];
-    if (!isset($_POST["search"])) return $result;
+    if (!isset($_POST["search"]) OR trim($_POST["search"]) == "") return $result;
     $app = new wbApp();
     $find = explode(" ",mb_strtolower($_POST["search"]));
     $items = $app->json($table)->where("active","=","on")->get();
