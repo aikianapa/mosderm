@@ -1,5 +1,4 @@
 User-agent: *
-Disallow: /
 Disallow: /database
 Disallow: /ajax
 Disallow: /engine
