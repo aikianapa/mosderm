@@ -8,6 +8,6 @@
 
     <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/stacktable.css">
     <link rel="stylesheet" href="css/jquery.fancybox.min.css">
     <link rel="stylesheet" href="css/style.css">
-
