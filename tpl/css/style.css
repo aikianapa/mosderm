@@ -4544,7 +4544,7 @@ h2 > a:hover, .vacancy-content__item > a:hover, .activity__ancor:hover, .news-bl
     }
 
     .spec-card__img > img{
-        width: 100%;
+        width: calc( 100vw - 30px);
     }
 
     .spec-card__wrap{

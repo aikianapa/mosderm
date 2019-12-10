@@ -10,12 +10,12 @@
 
             <meta data-wb-role="variable" var="limit" data-wb-if='"{{_form}}" = "branches" AND "{{_mode}}" = "show"' value="" else='10'>
 
-            <div class="our-specialists__slider" data-wb-role="foreach" data-wb-tpl="false" data-wb-where='active="on" {{_var[where]}}' data-wb-limit="{{_var.limit}}" data-wb-rand="true" data-wb-form="specialists" data-wb-hide="wb">
+            <div class="our-specialists__slider" data-wb-role="foreach" data-wb-tpl="false" data-wb-where='active="on" AND "{{image[0][img]}}" > "" {{_var[where]}}' data-wb-limit="{{_var.limit}}" data-wb-rand="true" data-wb-form="specialists" data-wb-hide="wb">
                 <div class="our-specialist__item">
                     <a href="/specialists/{{id}}/{{wbFurlGenerate({{name}})}}"></a>
                     <div class="our-specialist__slider-wrap">
                         <div class="our-specialist__img">
-                            <img data-wb-role="thumbnail" data-wb-size="200px;200px;src" offset="0;5" src="/uploads/{{_table}}/{{id}}/{{image[0].img}}" alt="{{name}} - {{spec}}">
+                            <img data-wb-role="thumbnail" data-wb-size="200px;200px;src" offset="50;5" src="/uploads/{{_table}}/{{id}}/{{image[0].img}}" alt="{{name}} - {{spec}}">
                         </div>
                         <div class="our-specialist__text">
                             <p><strong>{{name}}</strong></p>
