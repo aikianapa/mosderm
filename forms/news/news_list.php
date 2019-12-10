@@ -20,7 +20,7 @@
                 <tbody data-wb-role="foreach" data-wb-table="{{_GET[form]}}" data-wb-add="true" data-wb-size="12" data-wb-sort="date:d">
                     <tr>
                         <td class="nowrap"> {{datetime}} </td>
-                        <td class="nowrap"> {{header}} </td>
+                        <td class=""> {{header}} </td>
                         <td class="text-center">
                             <div class="status-pill green" data-title="{{_LANG[home]}}" data-wb-role="where" data='home="on"' data-toggle="tooltip"></div>
                             <div class="status-pill red" data-title="{{_LANG[home]}}" data-wb-role="where" data='home=""' data-toggle="tooltip"></div>
