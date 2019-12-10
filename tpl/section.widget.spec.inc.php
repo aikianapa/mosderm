@@ -3,11 +3,12 @@
         <div class="container" data-wb-role="formdata" data-wb-form="branches" data-wb-item="{{office}}" data-wb-json='{"office":"{{office}}"}'  data-wb-hide="wb">
             <h2>Наши специалисты <a href="/specialists">Все специалисты</a></h2>
 
-            <meta data-wb-role="variable" var="where" data-wb-if='"{{_form}}"="pages" AND "{{_item}}"="home"' value=' AND "{{image[0][img]}}" > "" ' else=' AND widget="on" '>
             <meta data-wb-role="variable" var="where" data-wb-if='"{{_form}}"="branches" AND "{{_mode}}"="show"' value=' AND branch = "{{_item}}"' else='AND widget="on" '>
             <meta data-wb-role="variable" var="where" data-wb-if='"{{office}}">""' value=' AND office = "{{office}}" AND ( widget="" OR widget="on" ) ' else='{{_var.where}}'>
             <meta data-wb-role="variable" var="where" data-wb-if='"{{_form}}"="branches" AND "{{_mode}}"="show" AND type = "office"' value=' AND office = "{{_item}}"' else='{{_var.where}}'>
             <meta data-wb-role="variable" var="where" data-wb-if='{{strpos(strtolower({{name}}),"платн")}}>0 AND "{{_mode}}"="show" AND type = "office"' value='{{_var.where}} OR (active="on" AND branch = "{{main}}" AND commerce = "on" )' else='{{_var.where}}'>
+
+            <meta data-wb-role="variable" var="where" data-wb-if='"{{_form}}"="pages" AND "{{_item}}"="home"' value=' AND "{{image[0][img]}}" > "" ' else=' {{_var.where}} '>
 
             <meta data-wb-role="variable" var="limit" data-wb-if='"{{_form}}" = "branches" AND "{{_mode}}" = "show"' value="" else='10'>
 
