@@ -25,4 +25,4 @@ RewriteRule ^(.*)$ index.php [L,QSA]
 RewriteCond %{REQUEST_URI} ^/tpl/$
 RewriteRule ^.*$ /? [R=301,L]
 
-
+Options All -Indexes
