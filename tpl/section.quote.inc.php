@@ -1,7 +1,7 @@
     <section id="{{_var.qid}}" data-name="Виджет - Запись на приём">
         <!-- tpl/section.quote.inc.php -->
         <div class="container">
-            <h2>Запись на приём</h2>
+            <h2>Предварительная запись на приём</h2>
             <form class="question__border" data-wb-role="formdata" data-wb-json='{"phone"=>"","email"=>"","fullname"=>""}' data-wb-hide="wb">
                 <div class="question__wrap flex">
                     <div class="question__right">
