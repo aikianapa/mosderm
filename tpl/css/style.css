@@ -3353,11 +3353,12 @@ h2 > a:hover, .vacancy-content__item > a:hover, .activity__ancor:hover, .news-bl
 
     .news__fb-item, .news__third-block {
         width: 100%;
+        padding-bottom: 15px;
     }
 
     .news__wrap.flex {
         justify-content: center;
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: center;
     }
 
@@ -3547,9 +3548,17 @@ h2 > a:hover, .vacancy-content__item > a:hover, .activity__ancor:hover, .news-bl
         top: 20px;
     }
 
+    .branches-card__address{
+        overflow: hidden;
+    }
+
 
     #map{
         transform: matrix(1.21, 0, 0, 1.21, -431.2, -72.0941);
+    }
+
+    #branches-card #map{
+        transform: none;
     }
 
     .map-container{
@@ -4522,7 +4531,13 @@ h2 > a:hover, .vacancy-content__item > a:hover, .activity__ancor:hover, .news-bl
     }
     .consultation__slider-item img{
         position: relative;
-        left: -130px;
+        /*left: -130px;*/
+        width: 100%;
+        height: auto;
+    }
+
+    .consultation__slider-item{
+        padding: 0;
     }
 
     .branches__img{
@@ -5303,3 +5318,28 @@ margin-bottom: 10px;
     background-color: #e7edf3;
 }
 /*30.11.19*/
+
+
+.special #menu{
+    top: 54px;
+}
+
+.special .news__fb-item a{
+    background: transparent !important;
+}
+
+.special .banner-img{
+    display: none !important;
+}
+
+ .special #banner .slick-dots li{
+     display: none !important;
+ }
+
+.special .other__item img{
+    width: 100%;
+}
+
+.special .our-specialist__item > a{
+    background: transparent !important;
+}
