@@ -1,12 +1,12 @@
     <section id="{{_var.qid}}" data-name="Виджет - Отзыв о нашей работе">
-        <!-- tpl/section.question.inc.php -->
+        <!-- tpl/section.comment.inc.php -->
         <div class="container">
             <h2>Оставьте отзыв о нашей работе</h2>
             <form class="question__border" data-wb-role="formdata" data-wb-json='{"phone"=>"","email"=>"","fullname"=>""}' data-wb-hide="wb">
                 <div class="question__wrap flex">
                     <div class="question__right">
                         <meta data-wb-role="variable" var="mailto" data-wb-if='"{{_sett.email_comment}}">""' value="{{_sett.email_comment}}" else="{{_sett.email}}">
-                        <input type="hidden" name="_subject" value="Вопрос с сайта">
+                        <input type="hidden" name="_subject" value="Отзыв о нашей работе">
                         <input type="hidden" name="_mailto" value="{{_var.mailto}}">
                         <input type="text" name="fullname" placeholder="Ваше Имя" required>
                         <input type="phone" data-mask="+7 (999) 999-99-99" name="phone" placeholder="Телефон" required>
