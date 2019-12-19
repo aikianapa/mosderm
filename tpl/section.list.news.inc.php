@@ -11,7 +11,7 @@
                 </div>
                 <div class="news-block__info">
                     <strong>
-                        {{header}} {{_var.where}}
+                        {{header}}
                     </strong>
                     <span>{{date("d.m.Y",strtotime({{date}}))}}</span>
                     <p>
