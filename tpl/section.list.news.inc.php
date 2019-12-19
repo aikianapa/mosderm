@@ -1,7 +1,7 @@
 <section id="news-desc" class="sm-section" data-name="Список новостей">
     <!-- tpl/section.list.news.inc.php -->
     <div class="container">
-        <meta data-wb-role="variable" var="where" data-wb-if='"{{_post.search_name}}" > ""' value=' AND "{{_post.search_name}}" LIKE "{{header}}"' else="">
+        <meta data-wb-role="variable" var="where" data-wb-if='"{{_post.search_name}}" > ""' value=' AND search LIKE "{{_post.search_name}}" ' else="">
         <div class="news__wrap flex" data-wb-role="foreach" data-wb-form="news" data-wb-size="6" data-wb-sort="date:d" data-wb-where='active = "on" {{_var.where}}' data-wb-hide="false">
             <div class="news-block flex">
                 <div class="news-block__img">
@@ -11,7 +11,7 @@
                 </div>
                 <div class="news-block__info">
                     <strong>
-                        {{header}}
+                        {{header}} {{_var.where}}
                     </strong>
                     <span>{{date("d.m.Y",strtotime({{date}}))}}</span>
                     <p>
