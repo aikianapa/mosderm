@@ -1,7 +1,7 @@
 <section id="activity" class="sm-section" data-name="Список мероприятий">
     <!-- tpl/section.list.activity.inc.php -->
     <div class="container">
-        <meta data-wb-role="variable" var="where" data-wb-if='"{{_post.search_name}}" > ""' value=' AND search LIKE "{{_post.search_name}}"' else="">
+        <meta data-wb-role="variable" var="where" data-wb-if='"{{_post.search_name}}" > ""' value=' AND header LIKE "{{_post.search_name}}"' else="">
 
         <div class="activity__wrap flex"  data-wb-role="foreach" data-wb-form="activities" data-wb-sort="date:d" data-wb-size="9" data-wb-where='active="on" {{_var.where}}' >
             <div class="activity__block">

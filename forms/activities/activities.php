@@ -21,10 +21,4 @@ function activitiesAfterItemSave($Item) {
 		return $Item;
 }
 
-function activitiesAfterItemRead($Item) {
-    if ($_ENV["route"]["item"] == "activities" && isset($_POST["search_name"])) {
-      $Item["search"]=str_replace('"',"",strip_tags($Item["header"]." ".$Item["text"]));
-    }
-    return $Item;
-}
 ?>
