@@ -3362,6 +3362,10 @@ h2 > a:hover, .vacancy-content__item > a:hover, .activity__ancor:hover, .news-bl
         align-items: center;
     }
 
+    #news .news__wrap.flex {
+      flex-direction: column-reverse;
+    }
+
     .news__first-block {
         padding-right: 0;
     }
