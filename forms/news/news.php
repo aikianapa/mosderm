@@ -18,10 +18,4 @@ function newsAfterItemSave($Item) {
 		return $Item;
 }
 
-function newsAfterItemRead($Item) {
-    if ($_ENV["route"]["item"] == "news" && isset($_POST["search_name"])) {
-      //$Item["search"]=str_replace('"',"",strip_tags($Item["header"]." ".$Item["text"]));
-    }
-    return $Item;
-}
 ?>
