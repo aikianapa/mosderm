@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+img {
+  height: auto;
+}
+
 iframe {
   max-width: 100%;
 }
