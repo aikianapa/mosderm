@@ -23,7 +23,7 @@
         </form>
 
         <div class="contacts-btn contact-us-btn flex">
-            <a href="#">
+            <a href="javascript:$('#ip-table,#contacts-map').toggle();">
                 <div class="contacts-btn__item flex svg-color active map-btn">
                     <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
                         <g>
@@ -44,7 +44,7 @@
                     <p>Показать на карте</p>
                 </div>
             </a>
-            <a href="#">
+            <a href="javascript:$('#ip-table,#contacts-map').toggle();">
                 <div class="contacts-btn__item flex svg-color list-btn">
                     <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
                         <g>
@@ -89,7 +89,7 @@
 
 
         </div>
-        
+
 
     <div id="ip-table" class="sm-section sm-section-bottom">
         <div class="container">
@@ -101,7 +101,7 @@
             <meta data-wb-role="include" src="template" data-wb-name="section.widget.contactsmap.inc.php">
         </div>
     </div>
-        
+
     </div>
 
 
@@ -117,7 +117,7 @@
                $(this).parents(".schedule-table__item").remove();
            }
         });
-        
+
     })();
 
 </script>
