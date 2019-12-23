@@ -23,7 +23,7 @@
         </form>
 
         <div class="contacts-btn contact-us-btn flex">
-            <a href="javascript:$('#ip-table,#contacts-map').toggle();">
+            <a href="#" onclick="$('#contacts-map').show();$('#ip-table').hide();">
                 <div class="contacts-btn__item flex svg-color active map-btn">
                     <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
                         <g>
@@ -44,7 +44,7 @@
                     <p>Показать на карте</p>
                 </div>
             </a>
-            <a href="javascript:$('#ip-table,#contacts-map').toggle();">
+            <a href="#" onclick="$('#contacts-map').hide();$('#ip-table').show();">
                 <div class="contacts-btn__item flex svg-color list-btn">
                     <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
                         <g>
