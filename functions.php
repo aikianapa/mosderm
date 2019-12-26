@@ -31,6 +31,20 @@ function wbAfterInit() {
 	}
 }
 
+function registerComment($result) {
+    $year = date("Y");
+    $count = autoinc_id(__FUNCTION__ . $year,1);
+    $regnum = $year."/".$count;
+    $client = wbGetTpl("regCommentClient.php");
+    $client->wbSetData(["regnum"=>$regnum]);
+    $mosderm = wbGetTpl("regCommentMosderm.php");
+    $mosderm->wbSetData(["regnum"=>$regnum]);
+    $res=wbMail("{$_POST["email"]};{$_POST["name"]}",$_ENV["settings"]["email_comment"], "Регистрация отзыва № {$regnum}", $mosderm->outerHtml());
+    $res=wbMail("{$_POST["email"]};{$_POST["name"]}",$_POST["email"], "Регистрация отзыва № {$regnum}", $client->outerHtml());
+    return $result;
+}
+
+
 function text2tel($str) {
     return preg_replace("/\D/", '', $str);
 }

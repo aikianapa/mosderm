@@ -8,6 +8,7 @@
                         <meta data-wb-role="variable" var="mailto" data-wb-if='"{{_sett.email_comment}}">""' value="{{_sett.email_comment}}" else="{{_sett.email}}">
                         <input type="hidden" name="_subject" value="Отзыв о нашей работе">
                         <input type="hidden" name="_mailto" value="{{_var.mailto}}">
+                        <input type="hidden" name="_callback" value="registerComment">
                         <input type="text" name="fullname" placeholder="Ваше Имя" required>
                         <input type="phone" data-mask="+7 (999) 999-99-99" name="phone" placeholder="Телефон" required>
                         <input type="email" name="email" placeholder="E-mail" required>
