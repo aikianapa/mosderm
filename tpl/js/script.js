@@ -1,6 +1,24 @@
 $(document).ready(function() {
 
-
+  $("[data-wb-ajax='/ajax/mail/']").on("click", function () {
+      $(this).on("wb_mail_done", function (ev, el, ajax, data) {
+          data = $.parseJSON(data);
+          var type = "success";
+          if (data.error && $(el).parents("form").find(".form-fail").length) {
+              $(el).parents("form").find(".form-body").addClass("d-none");
+              $(el).parents("form").find(".form-fail").removeClass("d-none");
+          } else if (!data.error && $(el).parents("form").find(".form-success").length) {
+              $(el).parents("form").find(".form-body").addClass("d-none");
+              $(el).parents("form").find(".form-success").removeClass("d-none");
+          } else {
+              if (data.error) {
+                  type = "danger";
+              }
+              wbapp.baloon(data.msg, type);
+          }
+          $(el).parents("form").find("[data-wb-ajax]").addClass("d-none");
+      });
+  });
 
 
   $('.toggle-btn').on('click', function() {

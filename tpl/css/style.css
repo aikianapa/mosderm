@@ -5351,3 +5351,26 @@ margin-bottom: 10px;
 .special .our-specialist__item > a{
     background: transparent !important;
 }
+
+.d-none {
+    display: none;
+}
+
+.d-block {
+    display: block;
+}
+
+.alert {
+  padding: 20px;
+  text-align: center;
+  color: white;
+  margin: 20px 0px;
+}
+
+.alert.alert-success {
+    background: #619bff;
+}
+
+.alert.alert-warning {
+    background: #ff5462;
+}

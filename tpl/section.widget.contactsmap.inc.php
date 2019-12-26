@@ -398,7 +398,7 @@
                                     <p>{{address}} {{phone}}</p>
                                 </div>
                             </div>
-                            
+
                             <div class="baloon-group-5 baloon-group">
                                 <div class="svg-map baloon-off nowb ">
                                     <svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 150 160" width="30" height="30">
@@ -692,7 +692,7 @@
                                     <p>{{address}} {{phone}}</p>
                                 </div>
                             </div>
-                            
+
                             <div class="baloon-group-8 baloon-group">
                                 <div class="svg-map baloon-off nowb ">
                                     <svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 150 160" width="30" height="30">
@@ -1712,8 +1712,8 @@
         var item = "{{_var.branch_id}}";
         $(".baloon-group .baloon-info strong[data-id="+item+"]").parent(".baloon-info").show();
         $(".baloon-group .baloon-info strong[data-id="+item+"]").parent(".baloon-info").prev(".baloon-on").show();
-    
-    
+
+
         var $section = $('#auto-contain');
     /*
         $section.find('.panzoom').panzoom({
@@ -1731,7 +1731,7 @@
         var furl = $(this).find(".baloon-info strong").attr("data-name");
        document.location.href = "/branches/"+item+"/"+furl;
     });
-    
+
     $(window).on("resize",function(){
         var def =  1134;
         if ($(".branches-card__address").length) {
@@ -1743,13 +1743,13 @@
             var max = $(".container")[0]["offsetWidth"] ;
         }
         $("#auto-contain").removeAttr("style");
-        var zoom = (max / def) * 100;    
+        var zoom = (max / def) * 100;
 
         $("#auto-contain").css("zoom",zoom +"%");
     });
     setTimeout(function(){
-        $(window).trigger("resize");    
+        $(window).trigger("resize");
     },500);
-    
-    
+
+
 </script>
