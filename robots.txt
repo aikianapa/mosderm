@@ -6,3 +6,4 @@ Disallow: /forms
 Disallow: /tpl
 Disallow: /backup
 Disallow: /cgi-bin
+Disallow: /phones2
