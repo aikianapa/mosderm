@@ -67,7 +67,16 @@ h3{
     position: absolute;
 }
 
-
+.baloon-off.svg-map:after {
+    content: "_";
+    font-size: 30px;
+    color: transparent;
+    text-shadow: 18px 18px 8px black;
+    position: absolute;
+    top: -14px;
+    left: -14px;
+    z-index: 1;
+}
 
 
 .baloon-info{
@@ -3562,15 +3571,11 @@ h2 > a:hover, .vacancy-content__item > a:hover, .activity__ancor:hover, .news-bl
 
 
     #map{
-        transform: matrix(1.21, 0, 0, 1.21, -431.2, -72.0941);
-    }
+     transform: matrix(1.21, 0, 0, 1.21, -169.2, 51.9059);
+        }
 
     #branches-card #map{
         transform: none;
-    }
-
-    .map-container{
-        height: 400px;
     }
 
     #adressess-result .stacktable-table, #price-list.big-table .stacktable-table{
@@ -5020,8 +5025,8 @@ h2 > a:hover, .vacancy-content__item > a:hover, .activity__ancor:hover, .news-bl
 }
 
 .baloon-group-5 {
-    right: 451px;
-    bottom: 332px;
+    right: 486px;
+    bottom: 430px;
 }
 
 .baloon-group-6{
@@ -5095,7 +5100,9 @@ h2 > a:hover, .vacancy-content__item > a:hover, .activity__ancor:hover, .news-bl
 .baloon-group:hover .baloon-on, .baloon-group:hover .baloon-info {
     display: block;
 }
-
+.baloon-group-4.baloon-group .baloon-info{
+    bottom: -65px;
+}
 .map-container {
     overflow: hidden;
 }
