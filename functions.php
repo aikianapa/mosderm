@@ -32,6 +32,7 @@ function wbAfterInit() {
 }
 
 function registerComment($result) {
+    if (isset($_POST["_fakesend"])) unset($_POST["_fakesend"]);
     $year = date("Y");
     $count = autoinc_id(__FUNCTION__ . $year,1);
     $regnum = $year."/".$count;

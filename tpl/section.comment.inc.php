@@ -16,7 +16,7 @@
                     <div class="question__left">
                         <textarea placeholder="Комментарий"></textarea>
                         <div class="question__bottom flex">
-                            <a href="javascript:void(0)" data-wb-ajax="/ajax/mail/" class="btn" style="cursor:pointer;">Отправить</a>
+                            <a href="javascript:void(0)" data-wb-ajax="/ajax/mail/" data-fakesend="false" class="btn" style="cursor:pointer;">Отправить</a>
                             <p>Нажимая кнопку «Отправить», Вы соглашаетесь с обработкой персональных данных</p>
                         </div>
                     </div>
