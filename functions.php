@@ -39,14 +39,19 @@ function registerComment($result) {
     $client->wbSetData(["regnum"=>$regnum]);
     $mosderm = wbGetTpl("regCommentMosderm.php");
     $mosderm->wbSetData(["regnum"=>$regnum]);
-    $res=wbMail("{$_POST["email"]};{$_POST["name"]}",$_ENV["settings"]["email_comment"], "Регистрация отзыва № {$regnum}", $mosderm->outerHtml());
+    $tmp = explode(",",$_ENV["settings"]["email_comment"]);
+    $sent = [];
+    foreach($tmp as $val) $sent[] = [$val,$val];
+
+    $res=wbMail("{$_POST["email"]};{$_POST["name"]}",$sent, "Регистрация отзыва № {$regnum}", $mosderm->outerHtml());
+
     $res=wbMail("{$_POST["email"]};{$_POST["name"]}",$_POST["email"], "Регистрация отзыва № {$regnum}", $client->outerHtml());
     return $result;
 }
 
 
 function getFirstMail($mail) {
-    $mail=explode(";",$mail);
+    $mail=explode(",",$mail);
     return $mail[0];
 }
 
