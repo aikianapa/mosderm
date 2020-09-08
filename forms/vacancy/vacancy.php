@@ -6,4 +6,12 @@ function vacancyAfterItemRead($Item) {
     return $Item;
 }
 
+function vacancyAfterItemSave($Item) {
+		$_ENV["_callback_{$Item['_table']}_{$Item['_id']}"] = "
+			$.get('/vacancy/{$Item['id']}/".wbFurlGenerate($Item["name"])."?wbcache=update');
+			$.get('/vacancy?wbcache=update');
+		";
+		return $Item;
+}
+
 ?>

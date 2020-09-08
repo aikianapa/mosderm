@@ -17,7 +17,10 @@ function activities_show() {
 }
 
 function activitiesAfterItemSave($Item) {
-		exec("wget -q -b {$_ENV['hostp']}/activity/{$Item['id']}/".wbFurlGenerate($Item["header"])."?wbcache=update > null &");
+		$_ENV["_callback_{$Item['_table']}_{$Item['_id']}"] = "
+			$.get('/activity/{$Item['_id']}/".wbFurlGenerate($Item["header"])."?wbcache=update');
+			$.get('/activities?wbcache=update');
+		";
 		return $Item;
 }
 

@@ -1,3 +1,4 @@
+<head>
     <meta data-name="Мета-данные сайта, стили">
     <!-- tpl/head.inc.php -->
     <meta charset="UTF-8">
@@ -52,3 +53,4 @@ accurateTrackBounce:true
     <link rel="stylesheet" href="css/stacktable.css">
     <link rel="stylesheet" href="css/jquery.fancybox.min.css">
     <link rel="stylesheet" href="css/style.css">
+</head>

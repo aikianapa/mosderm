@@ -28,7 +28,11 @@ function specialistsAfterItemRead($Item) {
 }
 
 function specialistsAfterItemSave($Item) {
-		exec("wget -q -b {$_ENV['hostp']}/specialists/{$Item['id']}/".wbFurlGenerate($Item["name"])."?wbcache=update > null &");
+		$_ENV["_callback_{$Item['_table']}_{$Item['_id']}"] = "
+			$.get('/specialists/{$Item['id']}/".wbFurlGenerate($Item["name"])."?wbcache=update');
+			$.get('/specialists?wbcache=update');
+			$.get('/?wbcache=update');
+		";
 		return $Item;
 }
 ?>

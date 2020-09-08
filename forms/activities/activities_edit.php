@@ -57,7 +57,7 @@
                             </div-->
 
                             <div class="form-group row">
-                                <div class="col-sm-12" data-wb-role="include" src="editor"></div>
+                                <textarea data-wb-role="module" src="jodit" class="jodit" name="text"></textarea>
                             </div>
 
                         </div>

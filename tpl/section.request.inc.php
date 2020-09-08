@@ -17,7 +17,7 @@
             <div class="request__number flex">
                 <p><a href="tel:+{{text2tel({{_sett.phone}})}}">{{_sett.phone}}</a></p>
                 <a href="/direction" class="btn">
-                    Онлайн запись
+                    Онлайн - запись
                 </a>
             </div>
         </div>

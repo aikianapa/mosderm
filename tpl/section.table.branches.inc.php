@@ -19,9 +19,9 @@
                                 <th>Онлайн-запись</th>
                             </tr>
                         </thead>
-                        <tbody data-wb-role="foreach" data-wb-form="branches" data-wb-tpl="false" data-wb-size="false" data-wb-where='type = "branch" {{_var.where}}' data-wb-hide="wb">
+                        <tbody data-wb-role="foreach" data-wb-form="branches" data-wb-sort="mapnum" data-wb-tpl="false" data-wb-size="false" data-wb-where='active="on" AND type = "branch" {{_var.where}}' data-wb-hide="wb">
                             <tr data-wb-where='mapnum != "17"'>
-                                <td>{{_ndx}}</td>
+                                <td>{{mapnum}}</td>
                                 <td>{{name}}</td>
                                 <td>
                                     <nobr>{{phone}}</nobr>

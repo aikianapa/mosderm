@@ -29,7 +29,7 @@
 
 <div class="form-group row"  data-wb-html="#newsDescr">
     <div class="col-sm-12">
-            <meta data-wb-role="include" src="editor" name="text">
+			<textarea data-wb-role="module" src="jodit" class="jodit" name="text"></textarea>
 	</div>
 </div>
 

@@ -14,7 +14,11 @@ function news_show() {
 }
 
 function newsAfterItemSave($Item) {
-		exec("wget -q -b {$_ENV['hostp']}/news/{$Item['id']}/".wbFurlGenerate($Item["header"])."?wbcache=update > null &");
+		$_ENV["_callback_{$Item['_table']}_{$Item['_id']}"] = "
+			$.get('/news/{$Item['_id']}/".wbFurlGenerate($Item["header"])."?wbcache=update');
+			$.get('/news?wbcache=update');
+			$.get('/?wbcache=update');
+		";
 		return $Item;
 }
 

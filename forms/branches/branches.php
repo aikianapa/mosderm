@@ -43,7 +43,10 @@ function ajax_branches() {
 }
 
 function branchesAfterItemSave($Item) {
-		exec("wget -q -b {$_ENV['hostp']}/branches/{$Item['id']}/".wbFurlGenerate($Item["name"])."?wbcache=update > null &");
+		$_ENV["_callback_{$Item['_table']}_{$Item['_id']}"] = "
+			$.get('/branches/{$Item['id']}/".wbFurlGenerate($Item["name"])."?wbcache=update');
+			$.get('/branches?wbcache=update');
+		";
 		return $Item;
 }
 

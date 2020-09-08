@@ -29,6 +29,17 @@ function wbAfterInit() {
 			die;
 		}
 	}
+	if ($_ENV["route"]["form"] == "pages" && $_ENV["route"]["item"] == "home" && $_ENV["route"]["mode"] == "show") {
+			$files = scandir(__DIR__."/uploads/pages/home/lazyslide");
+			$lazylist = [];
+			foreach($files as $file) {
+				if (strtolower(substr($file,-4)) == ".jpg") {
+					$file = str_replace(" ","%20",$file);
+					$lazylist[] = ["img"=>$file];
+				}
+			}
+			$_ENV["lazylist"] = $lazylist;
+	}
 }
 
 function registerComment($result) {

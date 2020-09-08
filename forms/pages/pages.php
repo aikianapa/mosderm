@@ -29,6 +29,14 @@ function pagesAfterItemRead($Item=null) {
 	return $Item;
 }
 
+function pagesAfterItemSave($Item) {
+		$_ENV["_callback_{$Item['_table']}_{$Item['_id']}"] = "
+			$.get('/".$Item['_id']."?wbcache=update');
+			$.get('/?wbcache=update');
+		";
+		return $Item;
+}
+
 function pages_search() {
     $out=wbGetTpl("site-find.php");
     $result = [];

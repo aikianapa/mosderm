@@ -74,6 +74,16 @@
         </div>
     </div>
 
+    <div class="form-group row v-slideshow-lazy">
+        <label class="col-3 form-control-label">Интервал отображения<br>(сек)</label>
+        <div class="col-9">
+            <input type="number" name="lazyspeed" min="1" max="60" class="form-control" placeholder="Интервал отображения (сек)">
+        </div>
+
+        <label class="col-sm-3 form-control-label">Отображать стрелки</label>
+        <div class="col-sm-2"><label class="switch switch-success"><input type="checkbox" name="lazyarrows"><span></span></label></div>
+    </div>
+
     <div class="form-group row v-widget-services">
         <div class="col-12">
         <div data-wb-role="multiinput" name="slide">
@@ -99,7 +109,7 @@
                 <input type="hidden" class="form-control" name="image" data-wb-path="/uploads/{{_post._form}}/{{_post._item}}" data-wb-role="uploader" >
             </div>
             <div class="col-sm-8">
-                <textarea data-wb-role="module" src="summernote" class="summernote" name="text"></textarea>
+                <textarea data-wb-role="module" src="jodit" class="jodit" name="text"></textarea>
             </div>
         </div>
         </div>
@@ -116,7 +126,7 @@
                     </div>
 
             <div class="col-sm-12">
-                <textarea data-wb-role="module" src="summernote" class="summernote" name="text"></textarea>
+                <textarea data-wb-role="module" src="jodit" class="jodit" name="text"></textarea>
             </div>
     </div>
 
@@ -144,18 +154,18 @@
                 <input type="hidden" class="form-control" name="image" data-wb-path="/uploads/{{_post._form}}/{{_post._item}}" data-wb-role="uploader" >
             </div>
             <div class="col-sm-8">
-                <textarea data-wb-role="module" src="summernote" class="summernote" name="text"></textarea>
+                <textarea data-wb-role="module" src="jodit" class="jodit" name="text"></textarea>
             </div>
     </div>
 
     <div class="form-group row v-union-blocks">
             <label class="col-12 form-control-label">Левый блок (белый фон)</label>
             <div class="col-12">
-                <textarea data-wb-role="module" src="summernote" class="summernote" name="left"></textarea>
+                <textarea data-wb-role="module" src="jodit" class="jodit" name="left"></textarea>
             </div>
             <label class="col-12 form-control-label">Правый блок (серый фон)</label>
             <div class="col-12">
-                <textarea data-wb-role="module" src="summernote" class="summernote" name="right"></textarea>
+                <textarea data-wb-role="module" src="jodit" class="jodit" name="right"></textarea>
             </div>
 
     </div>
@@ -199,7 +209,7 @@
             Превью видео<br>
             <input type="hidden" name="image" data-wb-path="/uploads/{{_form}}/{{_item}}" data-wb-role="uploader" >
         </label>
-        <div class="col-sm-9"><textarea data-wb-role="module" src="summernote" class="summernote" name="testimonial"></textarea></div>
+        <div class="col-sm-9"><textarea data-wb-role="module" src="jodit" class="jodit" name="testimonial"></textarea></div>
 
         <label class="col-sm-3 form-control-label">Ссылка на видео</label>
         <div class="col-sm-9"><input type="text" name="youtube" class="form-control" placeholder="Ссылка на видео"></div>
@@ -218,13 +228,13 @@
                 <option value="bottom">снизу</option>
             </select>
         </label>
-        <div class="col-sm-9"><textarea data-wb-role="module" src="summernote" class="summernote" name="text"></textarea></div>
+        <div class="col-sm-9"><textarea data-wb-role="module" src="jodit" class="jodit" name="text"></textarea></div>
     </div>
 
     <div class="form-group row v-textonly">
 	    <div class="col-sm-12">
         <label class="form-control-label">Текст</label>
-        <textarea data-wb-role="module" src="summernote" class="summernote" name="text"></textarea>
+        <textarea data-wb-role="module" src="jodit" class="jodit" name="text"></textarea>
         </div>
     </div>
 

@@ -20,7 +20,6 @@ $(document).ready(function() {
       });
   });
 
-
   $('.toggle-btn').on('click', function() {
     $(this).parent().find('.toggle-active').fadeToggle();
   });
@@ -215,11 +214,57 @@ $(document).ready(function() {
   });
   $(window).trigger('resize');
 
-
-
-
 });
 
 if ($('.stacktable-table').length > 0) {
   $('.stacktable-table table').stacktable()
+}
+
+if ($("#lazyslide").length) {
+  var slider = "/tpl/js/jquery.slide.min.js";
+  var speed = 3000;
+  var arrows = false;
+  wb_include(slider);
+  $(document).on("wb_include",function(e, res){
+      if (res.url == slider) {
+
+        if ($('#lazyslide .slide').data("speed") > "") speed = $('#lazyslide .slide').data("speed") *1;
+        if ($('#lazyslide .slide').data("arrows") == "on") arrows = true;
+
+
+        $('#lazyslide .slide').slide({
+          isAutoSlide: true,
+          slideSpeed: speed,
+          switchSpeed: 900,
+          isShowArrow: arrows,
+          isShowDots: false,
+          dotsEvent: 'mouseenter'
+        });
+      }
+
+      /*
+
+      ``` javascript
+      $(function() {
+        $('.slide').slide({
+          isAutoSlide: true,                // 自动轮播
+          isHoverStop: true,                // 鼠标移上是否停止轮播
+          isBlurStop: true,                 // Window失去焦点是否停止轮播
+          isShowDots: true,                 // 是否显示状态点
+          isShowArrow: true,                // 是否显示左右箭头
+          isHoverShowArrow: true,           // 是否鼠标移上才显示箭头
+          isLoadAllImgs: false,             // 是否一次性加载完全部图片
+          slideSpeed: 10000,                // 轮播速度 (ms)
+          switchSpeed: 500,                 // 图片切换速度 (ms)
+          dotsClass: 'dots',                // 状态点样式
+          dotActiveClass: 'active',         // 状态点激活样式
+          dotsEvent: 'click',               // 状态点事件，click或mouseover或mouseenter
+          arrowClass: 'arrow',              // 箭头样式
+          arrowLeftClass: 'arrow-left',     // 左箭头样式
+          arrowRightClass: 'arrow-right'    // 右箭头样式
+        });
+      });
+      */
+
+  })
 }

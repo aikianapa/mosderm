@@ -14,12 +14,30 @@ function products_vitrina() {
 	return $out;
 }
 
+function productsAfterItemSave($Item) {
+		$tree=wbTreeRead("products_category");
+		$tree=wbTreeFindBranchById($tree["tree"],$Item['category'],"category");
+		$header=$tree["name"];
+		$_ENV["_callback_{$Item['_table']}_{$Item['_id']}"] = "
+			$.get('/products/{$Item['category']}/".wbFurlGenerate($header)."?wbcache=update');
+			$.get('/services-paid?wbcache=update');
+		";
+		return $Item;
+}
+
+function productsAfterItemRemove($Item) {
+		$_ENV["_callback_{$Item['_table']}_{$Item['_id']}"] = "
+			$.get('/services-paid?wbcache=update');
+		";
+	return $Item;
+}
+
+
 function productsAfterItemRead($Item) {
 	if ($_ENV["route"]["mode"] == "show") {
 		$Item=wbItemToArray($Item);
 		$Item["header"]=$Item["name"];
 	}
-
 	return $Item;
 }
 
