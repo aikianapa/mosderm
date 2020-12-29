@@ -1944,6 +1944,7 @@ max-width: none;
     width: auto;
     max-width: 100%;
     margin: 15px auto;
+    height: auto!important;
 }
 
 #spec-reviews{

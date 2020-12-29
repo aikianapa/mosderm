@@ -3,6 +3,26 @@ if (!isset($_SESSION['lang'])) {
     $_SESSION['lang'] = 'eng';
 }
 
+function get_starred($str) {
+	$str .= ' ';
+	$len = mb_strlen($str, 'UTF-8');
+	$flag = true;
+	$prev = ' ';
+	$arr=[];
+	for ($i=0; $i<=$len; $i++) {
+		$sym = mb_substr($str,$i,1);
+		$flag == true ? $arr[$i] = $sym : $arr[$i] = '*';
+		$flag = false;
+		if ($sym == ' ') {
+			$flag = true;
+			$arr[$i] = ' ';
+			if ($prev !== ' ') $arr[$i-1] = $prev;
+		} 
+		$prev = $sym;
+	}
+	return implode($arr,'');
+}
+
 function wbAfterInit() {
 	$demo = false;
 	if ($demo == true) {

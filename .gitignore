@@ -2,6 +2,14 @@
 /uploads/_sess/
 /engine
 /database
+/landing
+/phones3
+/Documents
+*.rar
+*.7z
+*.zip
+*.docx
+*.pdf
 
 uploads/
 
