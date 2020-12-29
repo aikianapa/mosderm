@@ -48,7 +48,7 @@
                     </div>
 
                     <div class="form-group row">
-						<label class="col-sm-3 form-control-label">Результат ПЦР</label>
+						<label class="col-sm-3 form-control-label">Результат</label>
 					<div class="col-sm-9">
 					<div class="form-group row">
 					<div class="col-6">
@@ -66,7 +66,7 @@
                     </div>
 
                     <div class="form-group row">
-                        <label class="col-sm-3 form-control-label">Результат</label>
+                        <label class="col-sm-3 form-control-label">Результат ПЦР</label>
                         <div class="col-sm-9">
 							<select name="result" class="form-control" required >
 							<option value="Y">ОБНАРУЖЕНО</option>
